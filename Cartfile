@@ -1,0 +1,2 @@
+github "cherrywoods/swift-meta-serialization" "master"
+github "cherrywoods/swift-no-serialization" >= 1.0

@@ -1,0 +1,1928 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6315DB5D1FC3F775009F99F1 /* RawMsgpack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315DB5C1FC3F775009F99F1 /* RawMsgpack.swift */; };
+		6315DB5E1FC3F775009F99F1 /* RawMsgpack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315DB5C1FC3F775009F99F1 /* RawMsgpack.swift */; };
+		6315DB5F1FC3F775009F99F1 /* RawMsgpack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315DB5C1FC3F775009F99F1 /* RawMsgpack.swift */; };
+		6315DB601FC3F775009F99F1 /* RawMsgpack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315DB5C1FC3F775009F99F1 /* RawMsgpack.swift */; };
+		6315DB621FC40707009F99F1 /* GeneralUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315DB611FC40707009F99F1 /* GeneralUtilities.swift */; };
+		6315DB631FC40707009F99F1 /* GeneralUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315DB611FC40707009F99F1 /* GeneralUtilities.swift */; };
+		6315DB641FC40707009F99F1 /* GeneralUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315DB611FC40707009F99F1 /* GeneralUtilities.swift */; };
+		6315DB651FC40707009F99F1 /* GeneralUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315DB611FC40707009F99F1 /* GeneralUtilities.swift */; };
+		63368C3C1FC9ACFA0069D052 /* OptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63368C3B1FC9ACFA0069D052 /* OptionSet.swift */; };
+		63368C3D1FC9ACFA0069D052 /* OptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63368C3B1FC9ACFA0069D052 /* OptionSet.swift */; };
+		63368C3E1FC9ACFA0069D052 /* OptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63368C3B1FC9ACFA0069D052 /* OptionSet.swift */; };
+		63368C3F1FC9ACFA0069D052 /* OptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63368C3B1FC9ACFA0069D052 /* OptionSet.swift */; };
+		637982F81FC1D639008BD5D5 /* MsgpackSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		637983171FC1D734008BD5D5 /* MsgpackSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		637983181FC1D735008BD5D5 /* MsgpackSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6379832C1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6379832B1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift */; };
+		6379832D1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6379832B1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift */; };
+		6379832E1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6379832B1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift */; };
+		6379832F1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6379832B1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift */; };
+		6379839A1FC1E9C2008BD5D5 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983341FC1E9BE008BD5D5 /* Errors.swift */; };
+		6379839B1FC1E9C2008BD5D5 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983341FC1E9BE008BD5D5 /* Errors.swift */; };
+		6379839C1FC1E9C2008BD5D5 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983341FC1E9BE008BD5D5 /* Errors.swift */; };
+		6379839D1FC1E9C2008BD5D5 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983341FC1E9BE008BD5D5 /* Errors.swift */; };
+		637983A21FC1E9C2008BD5D5 /* MsgpackExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983371FC1E9BE008BD5D5 /* MsgpackExtension.swift */; };
+		637983A31FC1E9C2008BD5D5 /* MsgpackExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983371FC1E9BE008BD5D5 /* MsgpackExtension.swift */; };
+		637983A41FC1E9C2008BD5D5 /* MsgpackExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983371FC1E9BE008BD5D5 /* MsgpackExtension.swift */; };
+		637983A51FC1E9C2008BD5D5 /* MsgpackExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983371FC1E9BE008BD5D5 /* MsgpackExtension.swift */; };
+		637983A61FC1E9C2008BD5D5 /* MsgpackExtensionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983381FC1E9BE008BD5D5 /* MsgpackExtensionValue.swift */; };
+		637983A71FC1E9C2008BD5D5 /* MsgpackExtensionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983381FC1E9BE008BD5D5 /* MsgpackExtensionValue.swift */; };
+		637983A81FC1E9C2008BD5D5 /* MsgpackExtensionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983381FC1E9BE008BD5D5 /* MsgpackExtensionValue.swift */; };
+		637983A91FC1E9C2008BD5D5 /* MsgpackExtensionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983381FC1E9BE008BD5D5 /* MsgpackExtensionValue.swift */; };
+		637983D21FC1E9C2008BD5D5 /* MsgpackTranslator + Encoding Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983441FC1E9BF008BD5D5 /* MsgpackTranslator + Encoding Stage.swift */; };
+		637983D31FC1E9C2008BD5D5 /* MsgpackTranslator + Encoding Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983441FC1E9BF008BD5D5 /* MsgpackTranslator + Encoding Stage.swift */; };
+		637983D41FC1E9C2008BD5D5 /* MsgpackTranslator + Encoding Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983441FC1E9BF008BD5D5 /* MsgpackTranslator + Encoding Stage.swift */; };
+		637983D51FC1E9C2008BD5D5 /* MsgpackTranslator + Encoding Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983441FC1E9BF008BD5D5 /* MsgpackTranslator + Encoding Stage.swift */; };
+		637983E21FC1E9C2008BD5D5 /* MsgpackTranslator + Decoding Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983491FC1E9BF008BD5D5 /* MsgpackTranslator + Decoding Stage.swift */; };
+		637983E31FC1E9C2008BD5D5 /* MsgpackTranslator + Decoding Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983491FC1E9BF008BD5D5 /* MsgpackTranslator + Decoding Stage.swift */; };
+		637983E41FC1E9C2008BD5D5 /* MsgpackTranslator + Decoding Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983491FC1E9BF008BD5D5 /* MsgpackTranslator + Decoding Stage.swift */; };
+		637983E51FC1E9C2008BD5D5 /* MsgpackTranslator + Decoding Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983491FC1E9BF008BD5D5 /* MsgpackTranslator + Decoding Stage.swift */; };
+		637983FE1FC1E9C2008BD5D5 /* FloatFormatMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983531FC1E9C0008BD5D5 /* FloatFormatMeta.swift */; };
+		637983FF1FC1E9C2008BD5D5 /* FloatFormatMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983531FC1E9C0008BD5D5 /* FloatFormatMeta.swift */; };
+		637984001FC1E9C2008BD5D5 /* FloatFormatMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983531FC1E9C0008BD5D5 /* FloatFormatMeta.swift */; };
+		637984011FC1E9C2008BD5D5 /* FloatFormatMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983531FC1E9C0008BD5D5 /* FloatFormatMeta.swift */; };
+		637984021FC1E9C2008BD5D5 /* IntFormatMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983541FC1E9C0008BD5D5 /* IntFormatMeta.swift */; };
+		637984031FC1E9C2008BD5D5 /* IntFormatMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983541FC1E9C0008BD5D5 /* IntFormatMeta.swift */; };
+		637984041FC1E9C2008BD5D5 /* IntFormatMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983541FC1E9C0008BD5D5 /* IntFormatMeta.swift */; };
+		637984051FC1E9C2008BD5D5 /* IntFormatMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983541FC1E9C0008BD5D5 /* IntFormatMeta.swift */; };
+		637984061FC1E9C2008BD5D5 /* MsgpackBinaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983561FC1E9C0008BD5D5 /* MsgpackBinaryData.swift */; };
+		637984071FC1E9C2008BD5D5 /* MsgpackBinaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983561FC1E9C0008BD5D5 /* MsgpackBinaryData.swift */; };
+		637984081FC1E9C2008BD5D5 /* MsgpackBinaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983561FC1E9C0008BD5D5 /* MsgpackBinaryData.swift */; };
+		637984091FC1E9C2008BD5D5 /* MsgpackBinaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983561FC1E9C0008BD5D5 /* MsgpackBinaryData.swift */; };
+		6379840A1FC1E9C2008BD5D5 /* MsgpackString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983571FC1E9C0008BD5D5 /* MsgpackString.swift */; };
+		6379840B1FC1E9C2008BD5D5 /* MsgpackString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983571FC1E9C0008BD5D5 /* MsgpackString.swift */; };
+		6379840C1FC1E9C2008BD5D5 /* MsgpackString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983571FC1E9C0008BD5D5 /* MsgpackString.swift */; };
+		6379840D1FC1E9C2008BD5D5 /* MsgpackString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983571FC1E9C0008BD5D5 /* MsgpackString.swift */; };
+		637984161FC1E9C2008BD5D5 /* MsgpackTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6379835A1FC1E9C0008BD5D5 /* MsgpackTranslator.swift */; };
+		637984171FC1E9C2008BD5D5 /* MsgpackTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6379835A1FC1E9C0008BD5D5 /* MsgpackTranslator.swift */; };
+		637984181FC1E9C2008BD5D5 /* MsgpackTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6379835A1FC1E9C0008BD5D5 /* MsgpackTranslator.swift */; };
+		637984191FC1E9C2008BD5D5 /* MsgpackTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6379835A1FC1E9C0008BD5D5 /* MsgpackTranslator.swift */; };
+		6379846E1FC1E9C2008BD5D5 /* DecodingUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983741FC1E9C2008BD5D5 /* DecodingUtilities.swift */; };
+		6379846F1FC1E9C2008BD5D5 /* DecodingUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983741FC1E9C2008BD5D5 /* DecodingUtilities.swift */; };
+		637984701FC1E9C2008BD5D5 /* DecodingUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983741FC1E9C2008BD5D5 /* DecodingUtilities.swift */; };
+		637984711FC1E9C2008BD5D5 /* DecodingUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983741FC1E9C2008BD5D5 /* DecodingUtilities.swift */; };
+		637984721FC1E9C2008BD5D5 /* EncodingUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983751FC1E9C2008BD5D5 /* EncodingUtilities.swift */; };
+		637984731FC1E9C2008BD5D5 /* EncodingUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983751FC1E9C2008BD5D5 /* EncodingUtilities.swift */; };
+		637984741FC1E9C2008BD5D5 /* EncodingUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983751FC1E9C2008BD5D5 /* EncodingUtilities.swift */; };
+		637984751FC1E9C2008BD5D5 /* EncodingUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983751FC1E9C2008BD5D5 /* EncodingUtilities.swift */; };
+		637984761FC1E9C2008BD5D5 /* MsgpackExtensionValue+Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983761FC1E9C2008BD5D5 /* MsgpackExtensionValue+Coding.swift */; };
+		637984771FC1E9C2008BD5D5 /* MsgpackExtensionValue+Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983761FC1E9C2008BD5D5 /* MsgpackExtensionValue+Coding.swift */; };
+		637984781FC1E9C2008BD5D5 /* MsgpackExtensionValue+Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983761FC1E9C2008BD5D5 /* MsgpackExtensionValue+Coding.swift */; };
+		637984791FC1E9C2008BD5D5 /* MsgpackExtensionValue+Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983761FC1E9C2008BD5D5 /* MsgpackExtensionValue+Coding.swift */; };
+		637984C51FC1EBA0008BD5D5 /* MetaSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637984C41FC1EBA0008BD5D5 /* MetaSerialization.framework */; };
+		637984C71FC1EBA8008BD5D5 /* MetaSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637984C61FC1EBA7008BD5D5 /* MetaSerialization.framework */; };
+		637984C91FC1EBAB008BD5D5 /* MetaSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637984C81FC1EBAB008BD5D5 /* MetaSerialization.framework */; };
+		637984CB1FC1EBB6008BD5D5 /* MetaSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637984CA1FC1EBB6008BD5D5 /* MetaSerialization.framework */; };
+		637984D81FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637984D71FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift */; };
+		637984D91FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637984D71FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift */; };
+		637984DA1FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637984D71FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift */; };
+		637984DB1FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637984D71FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift */; };
+		639372891FEBD30800840D11 /* CustomTestClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639372881FEBD30800840D11 /* CustomTestClasses.swift */; };
+		639372981FEC4CBE00840D11 /* ExtensionTestClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639372971FEC4CBE00840D11 /* ExtensionTestClasses.swift */; };
+		6393729E1FEC532C00840D11 /* MsgpackSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63BB6CFE1FED1C65001DD28A /* MsgpackCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB6CFD1FED1C65001DD28A /* MsgpackCoder.swift */; };
+		63BB6CFF1FED1C65001DD28A /* MsgpackCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB6CFD1FED1C65001DD28A /* MsgpackCoder.swift */; };
+		63BB6D001FED1C65001DD28A /* MsgpackCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB6CFD1FED1C65001DD28A /* MsgpackCoder.swift */; };
+		63BB6D011FED1C65001DD28A /* MsgpackCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB6CFD1FED1C65001DD28A /* MsgpackCoder.swift */; };
+		63DA929E1FE5364400069F31 /* RawMsgpack + Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA929D1FE5364400069F31 /* RawMsgpack + Decoding.swift */; };
+		63DA929F1FE5364400069F31 /* RawMsgpack + Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA929D1FE5364400069F31 /* RawMsgpack + Decoding.swift */; };
+		63DA92A01FE5364400069F31 /* RawMsgpack + Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA929D1FE5364400069F31 /* RawMsgpack + Decoding.swift */; };
+		63DA92A11FE5364400069F31 /* RawMsgpack + Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA929D1FE5364400069F31 /* RawMsgpack + Decoding.swift */; };
+		63E965EF1FE6AF1000BA87BB /* MsgpackSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E965ED1FE6AF1000BA87BB /* MsgpackSerialization.swift */; };
+		63E965F01FE6AF1000BA87BB /* MsgpackSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E965ED1FE6AF1000BA87BB /* MsgpackSerialization.swift */; };
+		63E965F11FE6AF1000BA87BB /* MsgpackSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E965ED1FE6AF1000BA87BB /* MsgpackSerialization.swift */; };
+		63E965F21FE6AF1000BA87BB /* MsgpackSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E965ED1FE6AF1000BA87BB /* MsgpackSerialization.swift */; };
+		63E965F31FE6AF1000BA87BB /* Msgpack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E965EE1FE6AF1000BA87BB /* Msgpack.swift */; };
+		63E965F41FE6AF1000BA87BB /* Msgpack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E965EE1FE6AF1000BA87BB /* Msgpack.swift */; };
+		63E965F51FE6AF1000BA87BB /* Msgpack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E965EE1FE6AF1000BA87BB /* Msgpack.swift */; };
+		63E965F61FE6AF1000BA87BB /* Msgpack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E965EE1FE6AF1000BA87BB /* Msgpack.swift */; };
+		63E9668F1FE6AF9900BA87BB /* Decode arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966841FE6AF9800BA87BB /* Decode arrays.swift */; };
+		63E966901FE6AF9900BA87BB /* Decode arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966841FE6AF9800BA87BB /* Decode arrays.swift */; };
+		63E966911FE6AF9900BA87BB /* Decode arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966841FE6AF9800BA87BB /* Decode arrays.swift */; };
+		63E966921FE6AF9900BA87BB /* Decode arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966841FE6AF9800BA87BB /* Decode arrays.swift */; };
+		63E966931FE6AF9900BA87BB /* Decode exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966851FE6AF9800BA87BB /* Decode exts.swift */; };
+		63E966941FE6AF9900BA87BB /* Decode exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966851FE6AF9800BA87BB /* Decode exts.swift */; };
+		63E966951FE6AF9900BA87BB /* Decode exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966851FE6AF9800BA87BB /* Decode exts.swift */; };
+		63E966961FE6AF9900BA87BB /* Decode exts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966851FE6AF9800BA87BB /* Decode exts.swift */; };
+		63E966971FE6AF9900BA87BB /* Decode maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966861FE6AF9800BA87BB /* Decode maps.swift */; };
+		63E966981FE6AF9900BA87BB /* Decode maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966861FE6AF9800BA87BB /* Decode maps.swift */; };
+		63E966991FE6AF9900BA87BB /* Decode maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966861FE6AF9800BA87BB /* Decode maps.swift */; };
+		63E9669A1FE6AF9900BA87BB /* Decode maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966861FE6AF9800BA87BB /* Decode maps.swift */; };
+		63E9669B1FE6AF9900BA87BB /* Decode int8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966871FE6AF9900BA87BB /* Decode int8.swift */; };
+		63E9669C1FE6AF9900BA87BB /* Decode int8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966871FE6AF9900BA87BB /* Decode int8.swift */; };
+		63E9669D1FE6AF9900BA87BB /* Decode int8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966871FE6AF9900BA87BB /* Decode int8.swift */; };
+		63E9669E1FE6AF9900BA87BB /* Decode int8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966871FE6AF9900BA87BB /* Decode int8.swift */; };
+		63E9669F1FE6AF9900BA87BB /* Decode int32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966881FE6AF9900BA87BB /* Decode int32.swift */; };
+		63E966A01FE6AF9900BA87BB /* Decode int32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966881FE6AF9900BA87BB /* Decode int32.swift */; };
+		63E966A11FE6AF9900BA87BB /* Decode int32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966881FE6AF9900BA87BB /* Decode int32.swift */; };
+		63E966A21FE6AF9900BA87BB /* Decode int32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966881FE6AF9900BA87BB /* Decode int32.swift */; };
+		63E966A31FE6AF9900BA87BB /* Decode floats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966891FE6AF9900BA87BB /* Decode floats.swift */; };
+		63E966A41FE6AF9900BA87BB /* Decode floats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966891FE6AF9900BA87BB /* Decode floats.swift */; };
+		63E966A51FE6AF9900BA87BB /* Decode floats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966891FE6AF9900BA87BB /* Decode floats.swift */; };
+		63E966A61FE6AF9900BA87BB /* Decode floats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966891FE6AF9900BA87BB /* Decode floats.swift */; };
+		63E966A71FE6AF9900BA87BB /* Decode int16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668A1FE6AF9900BA87BB /* Decode int16.swift */; };
+		63E966A81FE6AF9900BA87BB /* Decode int16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668A1FE6AF9900BA87BB /* Decode int16.swift */; };
+		63E966A91FE6AF9900BA87BB /* Decode int16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668A1FE6AF9900BA87BB /* Decode int16.swift */; };
+		63E966AA1FE6AF9900BA87BB /* Decode int16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668A1FE6AF9900BA87BB /* Decode int16.swift */; };
+		63E966AB1FE6AF9900BA87BB /* Decode int64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668B1FE6AF9900BA87BB /* Decode int64.swift */; };
+		63E966AC1FE6AF9900BA87BB /* Decode int64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668B1FE6AF9900BA87BB /* Decode int64.swift */; };
+		63E966AD1FE6AF9900BA87BB /* Decode int64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668B1FE6AF9900BA87BB /* Decode int64.swift */; };
+		63E966AE1FE6AF9900BA87BB /* Decode int64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668B1FE6AF9900BA87BB /* Decode int64.swift */; };
+		63E966AF1FE6AF9900BA87BB /* Decode strs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668C1FE6AF9900BA87BB /* Decode strs.swift */; };
+		63E966B01FE6AF9900BA87BB /* Decode strs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668C1FE6AF9900BA87BB /* Decode strs.swift */; };
+		63E966B11FE6AF9900BA87BB /* Decode strs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668C1FE6AF9900BA87BB /* Decode strs.swift */; };
+		63E966B21FE6AF9900BA87BB /* Decode strs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668C1FE6AF9900BA87BB /* Decode strs.swift */; };
+		63E966B31FE6AF9900BA87BB /* Decode bins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668D1FE6AF9900BA87BB /* Decode bins.swift */; };
+		63E966B41FE6AF9900BA87BB /* Decode bins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668D1FE6AF9900BA87BB /* Decode bins.swift */; };
+		63E966B51FE6AF9900BA87BB /* Decode bins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668D1FE6AF9900BA87BB /* Decode bins.swift */; };
+		63E966B61FE6AF9900BA87BB /* Decode bins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668D1FE6AF9900BA87BB /* Decode bins.swift */; };
+		63E966B71FE6AF9900BA87BB /* Decode timestamps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668E1FE6AF9900BA87BB /* Decode timestamps.swift */; };
+		63E966B81FE6AF9900BA87BB /* Decode timestamps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668E1FE6AF9900BA87BB /* Decode timestamps.swift */; };
+		63E966B91FE6AF9900BA87BB /* Decode timestamps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668E1FE6AF9900BA87BB /* Decode timestamps.swift */; };
+		63E966BA1FE6AF9900BA87BB /* Decode timestamps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668E1FE6AF9900BA87BB /* Decode timestamps.swift */; };
+		63E966C61FE6AFDA00BA87BB /* Encode Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BB1FE6AFD900BA87BB /* Encode Date.swift */; };
+		63E966C71FE6AFDA00BA87BB /* Encode Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BB1FE6AFD900BA87BB /* Encode Date.swift */; };
+		63E966C81FE6AFDA00BA87BB /* Encode Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BB1FE6AFD900BA87BB /* Encode Date.swift */; };
+		63E966C91FE6AFDA00BA87BB /* Encode Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BB1FE6AFD900BA87BB /* Encode Date.swift */; };
+		63E966CA1FE6AFDA00BA87BB /* Encode BinaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BC1FE6AFDA00BA87BB /* Encode BinaryInteger.swift */; };
+		63E966CB1FE6AFDA00BA87BB /* Encode BinaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BC1FE6AFDA00BA87BB /* Encode BinaryInteger.swift */; };
+		63E966CC1FE6AFDA00BA87BB /* Encode BinaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BC1FE6AFDA00BA87BB /* Encode BinaryInteger.swift */; };
+		63E966CD1FE6AFDA00BA87BB /* Encode BinaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BC1FE6AFDA00BA87BB /* Encode BinaryInteger.swift */; };
+		63E966CE1FE6AFDA00BA87BB /* Encode MsgpackExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BD1FE6AFDA00BA87BB /* Encode MsgpackExtension.swift */; };
+		63E966CF1FE6AFDA00BA87BB /* Encode MsgpackExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BD1FE6AFDA00BA87BB /* Encode MsgpackExtension.swift */; };
+		63E966D01FE6AFDA00BA87BB /* Encode MsgpackExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BD1FE6AFDA00BA87BB /* Encode MsgpackExtension.swift */; };
+		63E966D11FE6AFDA00BA87BB /* Encode MsgpackExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BD1FE6AFDA00BA87BB /* Encode MsgpackExtension.swift */; };
+		63E966D21FE6AFDA00BA87BB /* Encode Nil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BE1FE6AFDA00BA87BB /* Encode Nil.swift */; };
+		63E966D31FE6AFDA00BA87BB /* Encode Nil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BE1FE6AFDA00BA87BB /* Encode Nil.swift */; };
+		63E966D41FE6AFDA00BA87BB /* Encode Nil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BE1FE6AFDA00BA87BB /* Encode Nil.swift */; };
+		63E966D51FE6AFDA00BA87BB /* Encode Nil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BE1FE6AFDA00BA87BB /* Encode Nil.swift */; };
+		63E966D61FE6AFDA00BA87BB /* Encode Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BF1FE6AFDA00BA87BB /* Encode Bool.swift */; };
+		63E966D71FE6AFDA00BA87BB /* Encode Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BF1FE6AFDA00BA87BB /* Encode Bool.swift */; };
+		63E966D81FE6AFDA00BA87BB /* Encode Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BF1FE6AFDA00BA87BB /* Encode Bool.swift */; };
+		63E966D91FE6AFDA00BA87BB /* Encode Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BF1FE6AFDA00BA87BB /* Encode Bool.swift */; };
+		63E966DA1FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C01FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift */; };
+		63E966DB1FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C01FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift */; };
+		63E966DC1FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C01FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift */; };
+		63E966DD1FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C01FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift */; };
+		63E966DE1FE6AFDA00BA87BB /* Encode String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C11FE6AFDA00BA87BB /* Encode String.swift */; };
+		63E966DF1FE6AFDA00BA87BB /* Encode String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C11FE6AFDA00BA87BB /* Encode String.swift */; };
+		63E966E01FE6AFDA00BA87BB /* Encode String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C11FE6AFDA00BA87BB /* Encode String.swift */; };
+		63E966E11FE6AFDA00BA87BB /* Encode String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C11FE6AFDA00BA87BB /* Encode String.swift */; };
+		63E966E21FE6AFDA00BA87BB /* Encode Float and Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C21FE6AFDA00BA87BB /* Encode Float and Double.swift */; };
+		63E966E31FE6AFDA00BA87BB /* Encode Float and Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C21FE6AFDA00BA87BB /* Encode Float and Double.swift */; };
+		63E966E41FE6AFDA00BA87BB /* Encode Float and Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C21FE6AFDA00BA87BB /* Encode Float and Double.swift */; };
+		63E966E51FE6AFDA00BA87BB /* Encode Float and Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C21FE6AFDA00BA87BB /* Encode Float and Double.swift */; };
+		63E966E61FE6AFDA00BA87BB /* Encode Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C31FE6AFDA00BA87BB /* Encode Data.swift */; };
+		63E966E71FE6AFDA00BA87BB /* Encode Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C31FE6AFDA00BA87BB /* Encode Data.swift */; };
+		63E966E81FE6AFDA00BA87BB /* Encode Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C31FE6AFDA00BA87BB /* Encode Data.swift */; };
+		63E966E91FE6AFDA00BA87BB /* Encode Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C31FE6AFDA00BA87BB /* Encode Data.swift */; };
+		63E966EA1FE6AFDA00BA87BB /* Encode MapMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C41FE6AFDA00BA87BB /* Encode MapMeta.swift */; };
+		63E966EB1FE6AFDA00BA87BB /* Encode MapMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C41FE6AFDA00BA87BB /* Encode MapMeta.swift */; };
+		63E966EC1FE6AFDA00BA87BB /* Encode MapMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C41FE6AFDA00BA87BB /* Encode MapMeta.swift */; };
+		63E966ED1FE6AFDA00BA87BB /* Encode MapMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C41FE6AFDA00BA87BB /* Encode MapMeta.swift */; };
+		63E966EE1FE6AFDA00BA87BB /* Encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C51FE6AFDA00BA87BB /* Encode.swift */; };
+		63E966EF1FE6AFDA00BA87BB /* Encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C51FE6AFDA00BA87BB /* Encode.swift */; };
+		63E966F01FE6AFDA00BA87BB /* Encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C51FE6AFDA00BA87BB /* Encode.swift */; };
+		63E966F11FE6AFDA00BA87BB /* Encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966C51FE6AFDA00BA87BB /* Encode.swift */; };
+		63E966F31FE6B00C00BA87BB /* SkipMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966F21FE6B00C00BA87BB /* SkipMeta.swift */; };
+		63E966F41FE6B00C00BA87BB /* SkipMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966F21FE6B00C00BA87BB /* SkipMeta.swift */; };
+		63E966F51FE6B00C00BA87BB /* SkipMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966F21FE6B00C00BA87BB /* SkipMeta.swift */; };
+		63E966F61FE6B00C00BA87BB /* SkipMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966F21FE6B00C00BA87BB /* SkipMeta.swift */; };
+		63E966F81FE6B05900BA87BB /* MetaSerialization.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 63E966F71FE6B05900BA87BB /* MetaSerialization.framework.dSYM */; };
+		63E966FA1FE6B06000BA87BB /* NoSerialization.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 63E966F91FE6B06000BA87BB /* NoSerialization.framework.dSYM */; };
+		63E966FC1FE6B07900BA87BB /* NoSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E966FB1FE6B07800BA87BB /* NoSerialization.framework */; };
+		63E966FE1FE6B08100BA87BB /* NoSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E966FD1FE6B08100BA87BB /* NoSerialization.framework */; };
+		63E967001FE6B08800BA87BB /* NoSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E966FF1FE6B08800BA87BB /* NoSerialization.framework */; };
+		63E967021FE6B08D00BA87BB /* NoSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E967011FE6B08D00BA87BB /* NoSerialization.framework */; };
+		63E967051FE6B19D00BA87BB /* Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E967031FE6B19D00BA87BB /* Headers.swift */; };
+		63E967061FE6B19D00BA87BB /* Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E967031FE6B19D00BA87BB /* Headers.swift */; };
+		63E967071FE6B19D00BA87BB /* Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E967031FE6B19D00BA87BB /* Headers.swift */; };
+		63E967081FE6B19D00BA87BB /* Headers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E967031FE6B19D00BA87BB /* Headers.swift */; };
+		63E967091FE6B19D00BA87BB /* PredefinedExtensionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E967041FE6B19D00BA87BB /* PredefinedExtensionTypes.swift */; };
+		63E9670A1FE6B19D00BA87BB /* PredefinedExtensionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E967041FE6B19D00BA87BB /* PredefinedExtensionTypes.swift */; };
+		63E9670B1FE6B19D00BA87BB /* PredefinedExtensionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E967041FE6B19D00BA87BB /* PredefinedExtensionTypes.swift */; };
+		63E9670C1FE6B19D00BA87BB /* PredefinedExtensionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E967041FE6B19D00BA87BB /* PredefinedExtensionTypes.swift */; };
+		63E9670E1FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9670D1FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift */; };
+		63E9670F1FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9670D1FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift */; };
+		63E967101FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9670D1FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift */; };
+		63E967111FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9670D1FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift */; };
+		63E9674C1FE6DE3500BA87BB /* MsgpackSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637982F41FC1D639008BD5D5 /* MsgpackSerialization.framework */; };
+		63E967531FE6DF5C00BA87BB /* MetaSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637984C41FC1EBA0008BD5D5 /* MetaSerialization.framework */; };
+		63E967551FE6DF9200BA87BB /* BasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E967541FE6DF9200BA87BB /* BasicTests.swift */; };
+		63F0C1E41FDC4F61000F910B /* MapMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F0C1E31FDC4F61000F910B /* MapMeta.swift */; };
+		63F0C1E51FDC4F61000F910B /* MapMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F0C1E31FDC4F61000F910B /* MapMeta.swift */; };
+		63F0C1E61FDC4F61000F910B /* MapMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F0C1E31FDC4F61000F910B /* MapMeta.swift */; };
+		63F0C1E71FDC4F61000F910B /* MapMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F0C1E31FDC4F61000F910B /* MapMeta.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63E9674D1FE6DE3500BA87BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 637982C31FC1D476008BD5D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 637982F31FC1D639008BD5D5;
+			remoteInfo = "MsgpackSerialization iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		637984CC1FC1EBD2008BD5D5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				63E966F81FE6B05900BA87BB /* MetaSerialization.framework.dSYM in CopyFiles */,
+				63E966FA1FE6B06000BA87BB /* NoSerialization.framework.dSYM in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6315DB5C1FC3F775009F99F1 /* RawMsgpack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawMsgpack.swift; sourceTree = "<group>"; };
+		6315DB611FC40707009F99F1 /* GeneralUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralUtilities.swift; sourceTree = "<group>"; };
+		63368C3B1FC9ACFA0069D052 /* OptionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSet.swift; sourceTree = "<group>"; };
+		637982DC1FC1D617008BD5D5 /* MsgpackSerialization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MsgpackSerialization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		637982F41FC1D639008BD5D5 /* MsgpackSerialization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MsgpackSerialization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MsgpackSerialization.h; sourceTree = "<group>"; };
+		637982F71FC1D639008BD5D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		637983011FC1D64A008BD5D5 /* MsgpackSerialization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MsgpackSerialization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6379830E1FC1D658008BD5D5 /* MsgpackSerialization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MsgpackSerialization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6379832B1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MsgpackTranslator + wrappingMeta.swift"; sourceTree = "<group>"; };
+		637983341FC1E9BE008BD5D5 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		637983371FC1E9BE008BD5D5 /* MsgpackExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MsgpackExtension.swift; sourceTree = "<group>"; };
+		637983381FC1E9BE008BD5D5 /* MsgpackExtensionValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MsgpackExtensionValue.swift; sourceTree = "<group>"; };
+		637983441FC1E9BF008BD5D5 /* MsgpackTranslator + Encoding Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MsgpackTranslator + Encoding Stage.swift"; sourceTree = "<group>"; };
+		637983491FC1E9BF008BD5D5 /* MsgpackTranslator + Decoding Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MsgpackTranslator + Decoding Stage.swift"; sourceTree = "<group>"; };
+		637983531FC1E9C0008BD5D5 /* FloatFormatMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatFormatMeta.swift; sourceTree = "<group>"; };
+		637983541FC1E9C0008BD5D5 /* IntFormatMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntFormatMeta.swift; sourceTree = "<group>"; };
+		637983561FC1E9C0008BD5D5 /* MsgpackBinaryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MsgpackBinaryData.swift; sourceTree = "<group>"; };
+		637983571FC1E9C0008BD5D5 /* MsgpackString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MsgpackString.swift; sourceTree = "<group>"; };
+		6379835A1FC1E9C0008BD5D5 /* MsgpackTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MsgpackTranslator.swift; sourceTree = "<group>"; };
+		637983741FC1E9C2008BD5D5 /* DecodingUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodingUtilities.swift; sourceTree = "<group>"; };
+		637983751FC1E9C2008BD5D5 /* EncodingUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodingUtilities.swift; sourceTree = "<group>"; };
+		637983761FC1E9C2008BD5D5 /* MsgpackExtensionValue+Coding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MsgpackExtensionValue+Coding.swift"; sourceTree = "<group>"; };
+		637984C41FC1EBA0008BD5D5 /* MetaSerialization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetaSerialization.framework; path = Carthage/Build/iOS/MetaSerialization.framework; sourceTree = "<group>"; };
+		637984C61FC1EBA7008BD5D5 /* MetaSerialization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetaSerialization.framework; path = Carthage/Build/watchOS/MetaSerialization.framework; sourceTree = "<group>"; };
+		637984C81FC1EBAB008BD5D5 /* MetaSerialization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetaSerialization.framework; path = Carthage/Build/tvOS/MetaSerialization.framework; sourceTree = "<group>"; };
+		637984CA1FC1EBB6008BD5D5 /* MetaSerialization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetaSerialization.framework; path = Carthage/Build/Mac/MetaSerialization.framework; sourceTree = "<group>"; };
+		637984D71FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MsgpackTranslator + unwrap.swift"; sourceTree = "<group>"; };
+		639372881FEBD30800840D11 /* CustomTestClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTestClasses.swift; sourceTree = "<group>"; };
+		639372971FEC4CBE00840D11 /* ExtensionTestClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTestClasses.swift; sourceTree = "<group>"; };
+		63BB6CFD1FED1C65001DD28A /* MsgpackCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgpackCoder.swift; sourceTree = "<group>"; };
+		63DA929D1FE5364400069F31 /* RawMsgpack + Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RawMsgpack + Decoding.swift"; sourceTree = "<group>"; };
+		63E965ED1FE6AF1000BA87BB /* MsgpackSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MsgpackSerialization.swift; sourceTree = "<group>"; };
+		63E965EE1FE6AF1000BA87BB /* Msgpack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Msgpack.swift; sourceTree = "<group>"; };
+		63E966841FE6AF9800BA87BB /* Decode arrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decode arrays.swift"; sourceTree = "<group>"; };
+		63E966851FE6AF9800BA87BB /* Decode exts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decode exts.swift"; sourceTree = "<group>"; };
+		63E966861FE6AF9800BA87BB /* Decode maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decode maps.swift"; sourceTree = "<group>"; };
+		63E966871FE6AF9900BA87BB /* Decode int8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decode int8.swift"; sourceTree = "<group>"; };
+		63E966881FE6AF9900BA87BB /* Decode int32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decode int32.swift"; sourceTree = "<group>"; };
+		63E966891FE6AF9900BA87BB /* Decode floats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decode floats.swift"; sourceTree = "<group>"; };
+		63E9668A1FE6AF9900BA87BB /* Decode int16.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decode int16.swift"; sourceTree = "<group>"; };
+		63E9668B1FE6AF9900BA87BB /* Decode int64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decode int64.swift"; sourceTree = "<group>"; };
+		63E9668C1FE6AF9900BA87BB /* Decode strs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decode strs.swift"; sourceTree = "<group>"; };
+		63E9668D1FE6AF9900BA87BB /* Decode bins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decode bins.swift"; sourceTree = "<group>"; };
+		63E9668E1FE6AF9900BA87BB /* Decode timestamps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decode timestamps.swift"; sourceTree = "<group>"; };
+		63E966BB1FE6AFD900BA87BB /* Encode Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encode Date.swift"; sourceTree = "<group>"; };
+		63E966BC1FE6AFDA00BA87BB /* Encode BinaryInteger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encode BinaryInteger.swift"; sourceTree = "<group>"; };
+		63E966BD1FE6AFDA00BA87BB /* Encode MsgpackExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encode MsgpackExtension.swift"; sourceTree = "<group>"; };
+		63E966BE1FE6AFDA00BA87BB /* Encode Nil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encode Nil.swift"; sourceTree = "<group>"; };
+		63E966BF1FE6AFDA00BA87BB /* Encode Bool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encode Bool.swift"; sourceTree = "<group>"; };
+		63E966C01FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encode ArrayUnkeyedContainerMeta.swift"; sourceTree = "<group>"; };
+		63E966C11FE6AFDA00BA87BB /* Encode String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encode String.swift"; sourceTree = "<group>"; };
+		63E966C21FE6AFDA00BA87BB /* Encode Float and Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encode Float and Double.swift"; sourceTree = "<group>"; };
+		63E966C31FE6AFDA00BA87BB /* Encode Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encode Data.swift"; sourceTree = "<group>"; };
+		63E966C41FE6AFDA00BA87BB /* Encode MapMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encode MapMeta.swift"; sourceTree = "<group>"; };
+		63E966C51FE6AFDA00BA87BB /* Encode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encode.swift; sourceTree = "<group>"; };
+		63E966F21FE6B00C00BA87BB /* SkipMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkipMeta.swift; sourceTree = "<group>"; };
+		63E966F71FE6B05900BA87BB /* MetaSerialization.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = MetaSerialization.framework.dSYM; path = Carthage/Build/Mac/MetaSerialization.framework.dSYM; sourceTree = "<group>"; };
+		63E966F91FE6B06000BA87BB /* NoSerialization.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = NoSerialization.framework.dSYM; path = Carthage/Build/Mac/NoSerialization.framework.dSYM; sourceTree = "<group>"; };
+		63E966FB1FE6B07800BA87BB /* NoSerialization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NoSerialization.framework; path = Carthage/Build/Mac/NoSerialization.framework; sourceTree = "<group>"; };
+		63E966FD1FE6B08100BA87BB /* NoSerialization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NoSerialization.framework; path = Carthage/Build/iOS/NoSerialization.framework; sourceTree = "<group>"; };
+		63E966FF1FE6B08800BA87BB /* NoSerialization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NoSerialization.framework; path = Carthage/Build/watchOS/NoSerialization.framework; sourceTree = "<group>"; };
+		63E967011FE6B08D00BA87BB /* NoSerialization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NoSerialization.framework; path = Carthage/Build/tvOS/NoSerialization.framework; sourceTree = "<group>"; };
+		63E967031FE6B19D00BA87BB /* Headers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Headers.swift; sourceTree = "<group>"; };
+		63E967041FE6B19D00BA87BB /* PredefinedExtensionTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredefinedExtensionTypes.swift; sourceTree = "<group>"; };
+		63E9670D1FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encode Dictionary java compatibily.swift"; sourceTree = "<group>"; };
+		63E967471FE6DE3500BA87BB /* MsgpackSerializationTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MsgpackSerializationTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63E9674B1FE6DE3500BA87BB /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		63E967541FE6DF9200BA87BB /* BasicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTests.swift; sourceTree = "<group>"; };
+		63F0C1E31FDC4F61000F910B /* MapMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMeta.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		637982D81FC1D617008BD5D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637984C71FC1EBA8008BD5D5 /* MetaSerialization.framework in Frameworks */,
+				63E967001FE6B08800BA87BB /* NoSerialization.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		637982F01FC1D639008BD5D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637984C51FC1EBA0008BD5D5 /* MetaSerialization.framework in Frameworks */,
+				63E966FE1FE6B08100BA87BB /* NoSerialization.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		637982FD1FC1D64A008BD5D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637984C91FC1EBAB008BD5D5 /* MetaSerialization.framework in Frameworks */,
+				63E967021FE6B08D00BA87BB /* NoSerialization.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6379830A1FC1D658008BD5D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637984CB1FC1EBB6008BD5D5 /* MetaSerialization.framework in Frameworks */,
+				63E966FC1FE6B07900BA87BB /* NoSerialization.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63E967441FE6DE3500BA87BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E9674C1FE6DE3500BA87BB /* MsgpackSerialization.framework in Frameworks */,
+				63E967531FE6DF5C00BA87BB /* MetaSerialization.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		635637811FED07B800EA1F6C /* Translator */ = {
+			isa = PBXGroup;
+			children = (
+				6379835A1FC1E9C0008BD5D5 /* MsgpackTranslator.swift */,
+				6379832B1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift */,
+				637984D71FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift */,
+				637983491FC1E9BF008BD5D5 /* MsgpackTranslator + Decoding Stage.swift */,
+				637983441FC1E9BF008BD5D5 /* MsgpackTranslator + Encoding Stage.swift */,
+			);
+			path = Translator;
+			sourceTree = "<group>";
+		};
+		635637821FED07EF00EA1F6C /* Frontend */ = {
+			isa = PBXGroup;
+			children = (
+				63368C3B1FC9ACFA0069D052 /* OptionSet.swift */,
+				637983341FC1E9BE008BD5D5 /* Errors.swift */,
+				63E965EE1FE6AF1000BA87BB /* Msgpack.swift */,
+				63E965ED1FE6AF1000BA87BB /* MsgpackSerialization.swift */,
+			);
+			path = Frontend;
+			sourceTree = "<group>";
+		};
+		637982C21FC1D476008BD5D5 = {
+			isa = PBXGroup;
+			children = (
+				63E966F91FE6B06000BA87BB /* NoSerialization.framework.dSYM */,
+				63E966F71FE6B05900BA87BB /* MetaSerialization.framework.dSYM */,
+				637983161FC1D684008BD5D5 /* Sources */,
+				6379831B1FC1E8F6008BD5D5 /* Tests */,
+				637982CF1FC1D5F7008BD5D5 /* Products */,
+				637984C31FC1EBA0008BD5D5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		637982CF1FC1D5F7008BD5D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				637982DC1FC1D617008BD5D5 /* MsgpackSerialization.framework */,
+				637982F41FC1D639008BD5D5 /* MsgpackSerialization.framework */,
+				637983011FC1D64A008BD5D5 /* MsgpackSerialization.framework */,
+				6379830E1FC1D658008BD5D5 /* MsgpackSerialization.framework */,
+				63E967471FE6DE3500BA87BB /* MsgpackSerializationTests iOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		637983161FC1D684008BD5D5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				637983351FC1E9BE008BD5D5 /* Extension */,
+				635637821FED07EF00EA1F6C /* Frontend */,
+				63BB6D021FED1C6D001DD28A /* MsgpackCoder */,
+				635637811FED07B800EA1F6C /* Translator */,
+				637983721FC1E9C2008BD5D5 /* Encoding and Decoding */,
+				637983511FC1E9C0008BD5D5 /* Metas */,
+				637982F71FC1D639008BD5D5 /* Info.plist */,
+				637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		6379831B1FC1E8F6008BD5D5 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				63E967541FE6DF9200BA87BB /* BasicTests.swift */,
+				639372971FEC4CBE00840D11 /* ExtensionTestClasses.swift */,
+				639372881FEBD30800840D11 /* CustomTestClasses.swift */,
+				63E9674B1FE6DE3500BA87BB /* Info-iOS.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		637983351FC1E9BE008BD5D5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				637983371FC1E9BE008BD5D5 /* MsgpackExtension.swift */,
+				637983381FC1E9BE008BD5D5 /* MsgpackExtensionValue.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		637983511FC1E9C0008BD5D5 /* Metas */ = {
+			isa = PBXGroup;
+			children = (
+				6393728A1FEBD9B600840D11 /* General Metas */,
+				637983521FC1E9C0008BD5D5 /* Decoding Metas */,
+				637983551FC1E9C0008BD5D5 /* Encoding Metas */,
+			);
+			path = Metas;
+			sourceTree = "<group>";
+		};
+		637983521FC1E9C0008BD5D5 /* Decoding Metas */ = {
+			isa = PBXGroup;
+			children = (
+				637983541FC1E9C0008BD5D5 /* IntFormatMeta.swift */,
+				637983531FC1E9C0008BD5D5 /* FloatFormatMeta.swift */,
+			);
+			path = "Decoding Metas";
+			sourceTree = "<group>";
+		};
+		637983551FC1E9C0008BD5D5 /* Encoding Metas */ = {
+			isa = PBXGroup;
+			children = (
+				63E966F21FE6B00C00BA87BB /* SkipMeta.swift */,
+				637983571FC1E9C0008BD5D5 /* MsgpackString.swift */,
+				637983561FC1E9C0008BD5D5 /* MsgpackBinaryData.swift */,
+			);
+			path = "Encoding Metas";
+			sourceTree = "<group>";
+		};
+		637983721FC1E9C2008BD5D5 /* Encoding and Decoding */ = {
+			isa = PBXGroup;
+			children = (
+				63E967031FE6B19D00BA87BB /* Headers.swift */,
+				63E967041FE6B19D00BA87BB /* PredefinedExtensionTypes.swift */,
+				63DA929C1FE52F1F00069F31 /* Decoding */,
+				63DA929B1FE52F1900069F31 /* Encoding */,
+				63E967121FE6B1CC00BA87BB /* Gaining compatibility with msgpack-java */,
+				637983731FC1E9C2008BD5D5 /* coding utilities */,
+			);
+			path = "Encoding and Decoding";
+			sourceTree = "<group>";
+		};
+		637983731FC1E9C2008BD5D5 /* coding utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6315DB611FC40707009F99F1 /* GeneralUtilities.swift */,
+				637983741FC1E9C2008BD5D5 /* DecodingUtilities.swift */,
+				637983751FC1E9C2008BD5D5 /* EncodingUtilities.swift */,
+				637983761FC1E9C2008BD5D5 /* MsgpackExtensionValue+Coding.swift */,
+			);
+			path = "coding utilities";
+			sourceTree = "<group>";
+		};
+		637984C31FC1EBA0008BD5D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63E966FB1FE6B07800BA87BB /* NoSerialization.framework */,
+				63E966FD1FE6B08100BA87BB /* NoSerialization.framework */,
+				63E966FF1FE6B08800BA87BB /* NoSerialization.framework */,
+				63E967011FE6B08D00BA87BB /* NoSerialization.framework */,
+				637984CA1FC1EBB6008BD5D5 /* MetaSerialization.framework */,
+				637984C81FC1EBAB008BD5D5 /* MetaSerialization.framework */,
+				637984C61FC1EBA7008BD5D5 /* MetaSerialization.framework */,
+				637984C41FC1EBA0008BD5D5 /* MetaSerialization.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6393728A1FEBD9B600840D11 /* General Metas */ = {
+			isa = PBXGroup;
+			children = (
+				63F0C1E31FDC4F61000F910B /* MapMeta.swift */,
+			);
+			path = "General Metas";
+			sourceTree = "<group>";
+		};
+		63BB6D021FED1C6D001DD28A /* MsgpackCoder */ = {
+			isa = PBXGroup;
+			children = (
+				63BB6CFD1FED1C65001DD28A /* MsgpackCoder.swift */,
+			);
+			path = MsgpackCoder;
+			sourceTree = "<group>";
+		};
+		63DA929B1FE52F1900069F31 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				63E966C51FE6AFDA00BA87BB /* Encode.swift */,
+				63E966BE1FE6AFDA00BA87BB /* Encode Nil.swift */,
+				63E966BF1FE6AFDA00BA87BB /* Encode Bool.swift */,
+				63E966BC1FE6AFDA00BA87BB /* Encode BinaryInteger.swift */,
+				63E966C21FE6AFDA00BA87BB /* Encode Float and Double.swift */,
+				63E966C11FE6AFDA00BA87BB /* Encode String.swift */,
+				63E966C31FE6AFDA00BA87BB /* Encode Data.swift */,
+				63E966BD1FE6AFDA00BA87BB /* Encode MsgpackExtension.swift */,
+				63E966BB1FE6AFD900BA87BB /* Encode Date.swift */,
+				63E966C01FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift */,
+				63E966C41FE6AFDA00BA87BB /* Encode MapMeta.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		63DA929C1FE52F1F00069F31 /* Decoding */ = {
+			isa = PBXGroup;
+			children = (
+				6315DB5C1FC3F775009F99F1 /* RawMsgpack.swift */,
+				63DA929D1FE5364400069F31 /* RawMsgpack + Decoding.swift */,
+				63E966871FE6AF9900BA87BB /* Decode int8.swift */,
+				63E9668A1FE6AF9900BA87BB /* Decode int16.swift */,
+				63E966881FE6AF9900BA87BB /* Decode int32.swift */,
+				63E9668B1FE6AF9900BA87BB /* Decode int64.swift */,
+				63E966891FE6AF9900BA87BB /* Decode floats.swift */,
+				63E9668C1FE6AF9900BA87BB /* Decode strs.swift */,
+				63E9668D1FE6AF9900BA87BB /* Decode bins.swift */,
+				63E966851FE6AF9800BA87BB /* Decode exts.swift */,
+				63E9668E1FE6AF9900BA87BB /* Decode timestamps.swift */,
+				63E966841FE6AF9800BA87BB /* Decode arrays.swift */,
+				63E966861FE6AF9800BA87BB /* Decode maps.swift */,
+			);
+			path = Decoding;
+			sourceTree = "<group>";
+		};
+		63E967121FE6B1CC00BA87BB /* Gaining compatibility with msgpack-java */ = {
+			isa = PBXGroup;
+			children = (
+				63E9670D1FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift */,
+			);
+			name = "Gaining compatibility with msgpack-java";
+			path = "Gaining Compatibility ";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		637982D91FC1D617008BD5D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637983171FC1D734008BD5D5 /* MsgpackSerialization.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		637982F11FC1D639008BD5D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637982F81FC1D639008BD5D5 /* MsgpackSerialization.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		637982FE1FC1D64A008BD5D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637983181FC1D735008BD5D5 /* MsgpackSerialization.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6379830B1FC1D658008BD5D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6393729E1FEC532C00840D11 /* MsgpackSerialization.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		637982DB1FC1D617008BD5D5 /* MsgpackSerialization watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 637982E11FC1D617008BD5D5 /* Build configuration list for PBXNativeTarget "MsgpackSerialization watchOS" */;
+			buildPhases = (
+				637982D71FC1D617008BD5D5 /* Sources */,
+				637982D81FC1D617008BD5D5 /* Frameworks */,
+				637982D91FC1D617008BD5D5 /* Headers */,
+				637982DA1FC1D617008BD5D5 /* Resources */,
+				637984D21FC1EC76008BD5D5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MsgpackSerialization watchOS";
+			productName = "MsgpackSerialization watchOS";
+			productReference = 637982DC1FC1D617008BD5D5 /* MsgpackSerialization.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		637982F31FC1D639008BD5D5 /* MsgpackSerialization iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 637982F91FC1D639008BD5D5 /* Build configuration list for PBXNativeTarget "MsgpackSerialization iOS" */;
+			buildPhases = (
+				637982EF1FC1D639008BD5D5 /* Sources */,
+				637982F01FC1D639008BD5D5 /* Frameworks */,
+				637982F11FC1D639008BD5D5 /* Headers */,
+				637982F21FC1D639008BD5D5 /* Resources */,
+				637984D11FC1EC2E008BD5D5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MsgpackSerialization iOS";
+			productName = "MsgpackSerialization iOS";
+			productReference = 637982F41FC1D639008BD5D5 /* MsgpackSerialization.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		637983001FC1D64A008BD5D5 /* MsgpackSerialization tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 637983061FC1D64A008BD5D5 /* Build configuration list for PBXNativeTarget "MsgpackSerialization tvOS" */;
+			buildPhases = (
+				637982FC1FC1D64A008BD5D5 /* Sources */,
+				637982FD1FC1D64A008BD5D5 /* Frameworks */,
+				637982FE1FC1D64A008BD5D5 /* Headers */,
+				637982FF1FC1D64A008BD5D5 /* Resources */,
+				637984D31FC1EC7B008BD5D5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MsgpackSerialization tvOS";
+			productName = "MsgpackSerialization tvOS";
+			productReference = 637983011FC1D64A008BD5D5 /* MsgpackSerialization.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6379830D1FC1D658008BD5D5 /* MsgpackSerialization macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 637983131FC1D658008BD5D5 /* Build configuration list for PBXNativeTarget "MsgpackSerialization macOS" */;
+			buildPhases = (
+				637983091FC1D658008BD5D5 /* Sources */,
+				6379830A1FC1D658008BD5D5 /* Frameworks */,
+				6379830B1FC1D658008BD5D5 /* Headers */,
+				6379830C1FC1D658008BD5D5 /* Resources */,
+				637984CC1FC1EBD2008BD5D5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MsgpackSerialization macOS";
+			productName = "MsgpackSerialization macOS";
+			productReference = 6379830E1FC1D658008BD5D5 /* MsgpackSerialization.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		63E967461FE6DE3500BA87BB /* MsgpackSerializationTests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63E9674F1FE6DE3500BA87BB /* Build configuration list for PBXNativeTarget "MsgpackSerializationTests iOS" */;
+			buildPhases = (
+				63E967431FE6DE3500BA87BB /* Sources */,
+				63E967441FE6DE3500BA87BB /* Frameworks */,
+				63E967451FE6DE3500BA87BB /* Resources */,
+				63E967521FE6DEF200BA87BB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63E9674E1FE6DE3500BA87BB /* PBXTargetDependency */,
+			);
+			name = "MsgpackSerializationTests iOS";
+			productName = "MsgpackSerializationTests iOS";
+			productReference = 63E967471FE6DE3500BA87BB /* MsgpackSerializationTests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		637982C31FC1D476008BD5D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				TargetAttributes = {
+					637982DB1FC1D617008BD5D5 = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					637982F31FC1D639008BD5D5 = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					637983001FC1D64A008BD5D5 = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					6379830D1FC1D658008BD5D5 = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					63E967461FE6DE3500BA87BB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 637982C61FC1D476008BD5D5 /* Build configuration list for PBXProject "SwiftMsgpackSerialization" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 637982C21FC1D476008BD5D5;
+			productRefGroup = 637982CF1FC1D5F7008BD5D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				637982F31FC1D639008BD5D5 /* MsgpackSerialization iOS */,
+				637982DB1FC1D617008BD5D5 /* MsgpackSerialization watchOS */,
+				637983001FC1D64A008BD5D5 /* MsgpackSerialization tvOS */,
+				6379830D1FC1D658008BD5D5 /* MsgpackSerialization macOS */,
+				63E967461FE6DE3500BA87BB /* MsgpackSerializationTests iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		637982DA1FC1D617008BD5D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		637982F21FC1D639008BD5D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		637982FF1FC1D64A008BD5D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6379830C1FC1D658008BD5D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63E967451FE6DE3500BA87BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		637984D11FC1EC2E008BD5D5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/MetaSerialization.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NoSerialization.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MetaSerialization.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/NoSerialization.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		637984D21FC1EC76008BD5D5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/watchOS/MetaSerialization.framework",
+				"$(SRCROOT)/Carthage/Build/watchOS/NoSerialization.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MetaSerialization.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/NoSerialization.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		637984D31FC1EC7B008BD5D5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/tvOS/MetaSerialization.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/NoSerialization.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MetaSerialization.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/NoSerialization.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		63E967521FE6DEF200BA87BB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/MetaSerialization.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MetaSerialization.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		637982D71FC1D617008BD5D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E966981FE6AF9900BA87BB /* Decode maps.swift in Sources */,
+				637984731FC1E9C2008BD5D5 /* EncodingUtilities.swift in Sources */,
+				637983A71FC1E9C2008BD5D5 /* MsgpackExtensionValue.swift in Sources */,
+				637984071FC1E9C2008BD5D5 /* MsgpackBinaryData.swift in Sources */,
+				637984D91FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift in Sources */,
+				637984031FC1E9C2008BD5D5 /* IntFormatMeta.swift in Sources */,
+				6315DB5E1FC3F775009F99F1 /* RawMsgpack.swift in Sources */,
+				63E966A41FE6AF9900BA87BB /* Decode floats.swift in Sources */,
+				63E9670F1FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift in Sources */,
+				63E965F01FE6AF1000BA87BB /* MsgpackSerialization.swift in Sources */,
+				63BB6CFF1FED1C65001DD28A /* MsgpackCoder.swift in Sources */,
+				63E966E71FE6AFDA00BA87BB /* Encode Data.swift in Sources */,
+				63E965F41FE6AF1000BA87BB /* Msgpack.swift in Sources */,
+				63E966F41FE6B00C00BA87BB /* SkipMeta.swift in Sources */,
+				6379832D1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift in Sources */,
+				63E966C71FE6AFDA00BA87BB /* Encode Date.swift in Sources */,
+				637983E31FC1E9C2008BD5D5 /* MsgpackTranslator + Decoding Stage.swift in Sources */,
+				63E966DB1FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift in Sources */,
+				63F0C1E51FDC4F61000F910B /* MapMeta.swift in Sources */,
+				63E966D31FE6AFDA00BA87BB /* Encode Nil.swift in Sources */,
+				637983A31FC1E9C2008BD5D5 /* MsgpackExtension.swift in Sources */,
+				6379846F1FC1E9C2008BD5D5 /* DecodingUtilities.swift in Sources */,
+				63E967061FE6B19D00BA87BB /* Headers.swift in Sources */,
+				63E966CF1FE6AFDA00BA87BB /* Encode MsgpackExtension.swift in Sources */,
+				637983FF1FC1E9C2008BD5D5 /* FloatFormatMeta.swift in Sources */,
+				63E966EF1FE6AFDA00BA87BB /* Encode.swift in Sources */,
+				63DA929F1FE5364400069F31 /* RawMsgpack + Decoding.swift in Sources */,
+				63E966CB1FE6AFDA00BA87BB /* Encode BinaryInteger.swift in Sources */,
+				63E966B81FE6AF9900BA87BB /* Decode timestamps.swift in Sources */,
+				63E966D71FE6AFDA00BA87BB /* Encode Bool.swift in Sources */,
+				63E966E31FE6AFDA00BA87BB /* Encode Float and Double.swift in Sources */,
+				63368C3D1FC9ACFA0069D052 /* OptionSet.swift in Sources */,
+				6315DB631FC40707009F99F1 /* GeneralUtilities.swift in Sources */,
+				63E966AC1FE6AF9900BA87BB /* Decode int64.swift in Sources */,
+				63E966941FE6AF9900BA87BB /* Decode exts.swift in Sources */,
+				63E9670A1FE6B19D00BA87BB /* PredefinedExtensionTypes.swift in Sources */,
+				63E966B41FE6AF9900BA87BB /* Decode bins.swift in Sources */,
+				6379840B1FC1E9C2008BD5D5 /* MsgpackString.swift in Sources */,
+				63E966DF1FE6AFDA00BA87BB /* Encode String.swift in Sources */,
+				637984171FC1E9C2008BD5D5 /* MsgpackTranslator.swift in Sources */,
+				6379839B1FC1E9C2008BD5D5 /* Errors.swift in Sources */,
+				63E966A81FE6AF9900BA87BB /* Decode int16.swift in Sources */,
+				63E966B01FE6AF9900BA87BB /* Decode strs.swift in Sources */,
+				637983D31FC1E9C2008BD5D5 /* MsgpackTranslator + Encoding Stage.swift in Sources */,
+				63E966901FE6AF9900BA87BB /* Decode arrays.swift in Sources */,
+				63E9669C1FE6AF9900BA87BB /* Decode int8.swift in Sources */,
+				63E966A01FE6AF9900BA87BB /* Decode int32.swift in Sources */,
+				63E966EB1FE6AFDA00BA87BB /* Encode MapMeta.swift in Sources */,
+				637984771FC1E9C2008BD5D5 /* MsgpackExtensionValue+Coding.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		637982EF1FC1D639008BD5D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E966A31FE6AF9900BA87BB /* Decode floats.swift in Sources */,
+				63E9669F1FE6AF9900BA87BB /* Decode int32.swift in Sources */,
+				637984721FC1E9C2008BD5D5 /* EncodingUtilities.swift in Sources */,
+				637983A61FC1E9C2008BD5D5 /* MsgpackExtensionValue.swift in Sources */,
+				637984061FC1E9C2008BD5D5 /* MsgpackBinaryData.swift in Sources */,
+				637984D81FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift in Sources */,
+				63E966931FE6AF9900BA87BB /* Decode exts.swift in Sources */,
+				637984021FC1E9C2008BD5D5 /* IntFormatMeta.swift in Sources */,
+				63E9670E1FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift in Sources */,
+				6315DB5D1FC3F775009F99F1 /* RawMsgpack.swift in Sources */,
+				63BB6CFE1FED1C65001DD28A /* MsgpackCoder.swift in Sources */,
+				63E966E61FE6AFDA00BA87BB /* Encode Data.swift in Sources */,
+				6379832C1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift in Sources */,
+				63E966F31FE6B00C00BA87BB /* SkipMeta.swift in Sources */,
+				637983E21FC1E9C2008BD5D5 /* MsgpackTranslator + Decoding Stage.swift in Sources */,
+				63E966C61FE6AFDA00BA87BB /* Encode Date.swift in Sources */,
+				63F0C1E41FDC4F61000F910B /* MapMeta.swift in Sources */,
+				63E966DA1FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift in Sources */,
+				637983A21FC1E9C2008BD5D5 /* MsgpackExtension.swift in Sources */,
+				63E966D21FE6AFDA00BA87BB /* Encode Nil.swift in Sources */,
+				6379846E1FC1E9C2008BD5D5 /* DecodingUtilities.swift in Sources */,
+				637983FE1FC1E9C2008BD5D5 /* FloatFormatMeta.swift in Sources */,
+				63E967051FE6B19D00BA87BB /* Headers.swift in Sources */,
+				63E966CE1FE6AFDA00BA87BB /* Encode MsgpackExtension.swift in Sources */,
+				63DA929E1FE5364400069F31 /* RawMsgpack + Decoding.swift in Sources */,
+				63E966EE1FE6AFDA00BA87BB /* Encode.swift in Sources */,
+				63368C3C1FC9ACFA0069D052 /* OptionSet.swift in Sources */,
+				63E966CA1FE6AFDA00BA87BB /* Encode BinaryInteger.swift in Sources */,
+				6315DB621FC40707009F99F1 /* GeneralUtilities.swift in Sources */,
+				63E966D61FE6AFDA00BA87BB /* Encode Bool.swift in Sources */,
+				63E966E21FE6AFDA00BA87BB /* Encode Float and Double.swift in Sources */,
+				6379840A1FC1E9C2008BD5D5 /* MsgpackString.swift in Sources */,
+				637984161FC1E9C2008BD5D5 /* MsgpackTranslator.swift in Sources */,
+				63E965EF1FE6AF1000BA87BB /* MsgpackSerialization.swift in Sources */,
+				63E966AF1FE6AF9900BA87BB /* Decode strs.swift in Sources */,
+				63E967091FE6B19D00BA87BB /* PredefinedExtensionTypes.swift in Sources */,
+				6379839A1FC1E9C2008BD5D5 /* Errors.swift in Sources */,
+				63E966B71FE6AF9900BA87BB /* Decode timestamps.swift in Sources */,
+				63E966DE1FE6AFDA00BA87BB /* Encode String.swift in Sources */,
+				63E966971FE6AF9900BA87BB /* Decode maps.swift in Sources */,
+				637983D21FC1E9C2008BD5D5 /* MsgpackTranslator + Encoding Stage.swift in Sources */,
+				63E966AB1FE6AF9900BA87BB /* Decode int64.swift in Sources */,
+				63E965F31FE6AF1000BA87BB /* Msgpack.swift in Sources */,
+				63E9669B1FE6AF9900BA87BB /* Decode int8.swift in Sources */,
+				63E966B31FE6AF9900BA87BB /* Decode bins.swift in Sources */,
+				63E966A71FE6AF9900BA87BB /* Decode int16.swift in Sources */,
+				637984761FC1E9C2008BD5D5 /* MsgpackExtensionValue+Coding.swift in Sources */,
+				63E966EA1FE6AFDA00BA87BB /* Encode MapMeta.swift in Sources */,
+				63E9668F1FE6AF9900BA87BB /* Decode arrays.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		637982FC1FC1D64A008BD5D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E966991FE6AF9900BA87BB /* Decode maps.swift in Sources */,
+				637984741FC1E9C2008BD5D5 /* EncodingUtilities.swift in Sources */,
+				637983A81FC1E9C2008BD5D5 /* MsgpackExtensionValue.swift in Sources */,
+				637984081FC1E9C2008BD5D5 /* MsgpackBinaryData.swift in Sources */,
+				637984DA1FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift in Sources */,
+				637984041FC1E9C2008BD5D5 /* IntFormatMeta.swift in Sources */,
+				6315DB5F1FC3F775009F99F1 /* RawMsgpack.swift in Sources */,
+				63E966A51FE6AF9900BA87BB /* Decode floats.swift in Sources */,
+				63E967101FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift in Sources */,
+				63E965F11FE6AF1000BA87BB /* MsgpackSerialization.swift in Sources */,
+				63BB6D001FED1C65001DD28A /* MsgpackCoder.swift in Sources */,
+				63E966E81FE6AFDA00BA87BB /* Encode Data.swift in Sources */,
+				63E965F51FE6AF1000BA87BB /* Msgpack.swift in Sources */,
+				63E966F51FE6B00C00BA87BB /* SkipMeta.swift in Sources */,
+				6379832E1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift in Sources */,
+				63E966C81FE6AFDA00BA87BB /* Encode Date.swift in Sources */,
+				637983E41FC1E9C2008BD5D5 /* MsgpackTranslator + Decoding Stage.swift in Sources */,
+				63E966DC1FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift in Sources */,
+				63F0C1E61FDC4F61000F910B /* MapMeta.swift in Sources */,
+				63E966D41FE6AFDA00BA87BB /* Encode Nil.swift in Sources */,
+				637983A41FC1E9C2008BD5D5 /* MsgpackExtension.swift in Sources */,
+				637984701FC1E9C2008BD5D5 /* DecodingUtilities.swift in Sources */,
+				63E967071FE6B19D00BA87BB /* Headers.swift in Sources */,
+				63E966D01FE6AFDA00BA87BB /* Encode MsgpackExtension.swift in Sources */,
+				637984001FC1E9C2008BD5D5 /* FloatFormatMeta.swift in Sources */,
+				63E966F01FE6AFDA00BA87BB /* Encode.swift in Sources */,
+				63DA92A01FE5364400069F31 /* RawMsgpack + Decoding.swift in Sources */,
+				63E966CC1FE6AFDA00BA87BB /* Encode BinaryInteger.swift in Sources */,
+				63E966B91FE6AF9900BA87BB /* Decode timestamps.swift in Sources */,
+				63E966D81FE6AFDA00BA87BB /* Encode Bool.swift in Sources */,
+				63E966E41FE6AFDA00BA87BB /* Encode Float and Double.swift in Sources */,
+				63368C3E1FC9ACFA0069D052 /* OptionSet.swift in Sources */,
+				6315DB641FC40707009F99F1 /* GeneralUtilities.swift in Sources */,
+				63E966AD1FE6AF9900BA87BB /* Decode int64.swift in Sources */,
+				63E966951FE6AF9900BA87BB /* Decode exts.swift in Sources */,
+				63E9670B1FE6B19D00BA87BB /* PredefinedExtensionTypes.swift in Sources */,
+				63E966B51FE6AF9900BA87BB /* Decode bins.swift in Sources */,
+				6379840C1FC1E9C2008BD5D5 /* MsgpackString.swift in Sources */,
+				63E966E01FE6AFDA00BA87BB /* Encode String.swift in Sources */,
+				637984181FC1E9C2008BD5D5 /* MsgpackTranslator.swift in Sources */,
+				6379839C1FC1E9C2008BD5D5 /* Errors.swift in Sources */,
+				63E966A91FE6AF9900BA87BB /* Decode int16.swift in Sources */,
+				63E966B11FE6AF9900BA87BB /* Decode strs.swift in Sources */,
+				637983D41FC1E9C2008BD5D5 /* MsgpackTranslator + Encoding Stage.swift in Sources */,
+				63E966911FE6AF9900BA87BB /* Decode arrays.swift in Sources */,
+				63E9669D1FE6AF9900BA87BB /* Decode int8.swift in Sources */,
+				63E966A11FE6AF9900BA87BB /* Decode int32.swift in Sources */,
+				63E966EC1FE6AFDA00BA87BB /* Encode MapMeta.swift in Sources */,
+				637984781FC1E9C2008BD5D5 /* MsgpackExtensionValue+Coding.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		637983091FC1D658008BD5D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E9669A1FE6AF9900BA87BB /* Decode maps.swift in Sources */,
+				637984751FC1E9C2008BD5D5 /* EncodingUtilities.swift in Sources */,
+				637983A91FC1E9C2008BD5D5 /* MsgpackExtensionValue.swift in Sources */,
+				637984091FC1E9C2008BD5D5 /* MsgpackBinaryData.swift in Sources */,
+				637984DB1FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift in Sources */,
+				637984051FC1E9C2008BD5D5 /* IntFormatMeta.swift in Sources */,
+				6315DB601FC3F775009F99F1 /* RawMsgpack.swift in Sources */,
+				63E966A61FE6AF9900BA87BB /* Decode floats.swift in Sources */,
+				63E967111FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift in Sources */,
+				63E965F21FE6AF1000BA87BB /* MsgpackSerialization.swift in Sources */,
+				63BB6D011FED1C65001DD28A /* MsgpackCoder.swift in Sources */,
+				63E966E91FE6AFDA00BA87BB /* Encode Data.swift in Sources */,
+				63E965F61FE6AF1000BA87BB /* Msgpack.swift in Sources */,
+				63E966F61FE6B00C00BA87BB /* SkipMeta.swift in Sources */,
+				6379832F1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift in Sources */,
+				63E966C91FE6AFDA00BA87BB /* Encode Date.swift in Sources */,
+				637983E51FC1E9C2008BD5D5 /* MsgpackTranslator + Decoding Stage.swift in Sources */,
+				63E966DD1FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift in Sources */,
+				63F0C1E71FDC4F61000F910B /* MapMeta.swift in Sources */,
+				63E966D51FE6AFDA00BA87BB /* Encode Nil.swift in Sources */,
+				637983A51FC1E9C2008BD5D5 /* MsgpackExtension.swift in Sources */,
+				637984711FC1E9C2008BD5D5 /* DecodingUtilities.swift in Sources */,
+				63E967081FE6B19D00BA87BB /* Headers.swift in Sources */,
+				63E966D11FE6AFDA00BA87BB /* Encode MsgpackExtension.swift in Sources */,
+				637984011FC1E9C2008BD5D5 /* FloatFormatMeta.swift in Sources */,
+				63E966F11FE6AFDA00BA87BB /* Encode.swift in Sources */,
+				63DA92A11FE5364400069F31 /* RawMsgpack + Decoding.swift in Sources */,
+				63E966CD1FE6AFDA00BA87BB /* Encode BinaryInteger.swift in Sources */,
+				63E966BA1FE6AF9900BA87BB /* Decode timestamps.swift in Sources */,
+				63E966D91FE6AFDA00BA87BB /* Encode Bool.swift in Sources */,
+				63E966E51FE6AFDA00BA87BB /* Encode Float and Double.swift in Sources */,
+				63368C3F1FC9ACFA0069D052 /* OptionSet.swift in Sources */,
+				6315DB651FC40707009F99F1 /* GeneralUtilities.swift in Sources */,
+				63E966AE1FE6AF9900BA87BB /* Decode int64.swift in Sources */,
+				63E966961FE6AF9900BA87BB /* Decode exts.swift in Sources */,
+				63E9670C1FE6B19D00BA87BB /* PredefinedExtensionTypes.swift in Sources */,
+				63E966B61FE6AF9900BA87BB /* Decode bins.swift in Sources */,
+				6379840D1FC1E9C2008BD5D5 /* MsgpackString.swift in Sources */,
+				63E966E11FE6AFDA00BA87BB /* Encode String.swift in Sources */,
+				637984191FC1E9C2008BD5D5 /* MsgpackTranslator.swift in Sources */,
+				6379839D1FC1E9C2008BD5D5 /* Errors.swift in Sources */,
+				63E966AA1FE6AF9900BA87BB /* Decode int16.swift in Sources */,
+				63E966B21FE6AF9900BA87BB /* Decode strs.swift in Sources */,
+				637983D51FC1E9C2008BD5D5 /* MsgpackTranslator + Encoding Stage.swift in Sources */,
+				63E966921FE6AF9900BA87BB /* Decode arrays.swift in Sources */,
+				63E9669E1FE6AF9900BA87BB /* Decode int8.swift in Sources */,
+				63E966A21FE6AF9900BA87BB /* Decode int32.swift in Sources */,
+				63E966ED1FE6AFDA00BA87BB /* Encode MapMeta.swift in Sources */,
+				637984791FC1E9C2008BD5D5 /* MsgpackExtensionValue+Coding.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63E967431FE6DE3500BA87BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639372981FEC4CBE00840D11 /* ExtensionTestClasses.swift in Sources */,
+				63E967551FE6DF9200BA87BB /* BasicTests.swift in Sources */,
+				639372891FEBD30800840D11 /* CustomTestClasses.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63E9674E1FE6DE3500BA87BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 637982F31FC1D639008BD5D5 /* MsgpackSerialization iOS */;
+			targetProxy = 63E9674D1FE6DE3500BA87BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		637982C71FC1D476008BD5D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		637982C81FC1D476008BD5D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+			};
+			name = Release;
+		};
+		637982E21FC1D617008BD5D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "cherrywoods.MsgpackSerialization-watchOS";
+				PRODUCT_NAME = MsgpackSerialization;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		637982E31FC1D617008BD5D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "cherrywoods.MsgpackSerialization-watchOS";
+				PRODUCT_NAME = MsgpackSerialization;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		637982FA1FC1D639008BD5D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "cherrywoods.MsgpackSerialization-iOS";
+				PRODUCT_NAME = MsgpackSerialization;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		637982FB1FC1D639008BD5D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "cherrywoods.MsgpackSerialization-iOS";
+				PRODUCT_NAME = MsgpackSerialization;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		637983071FC1D64A008BD5D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "cherrywoods.MsgpackSerialization-tvOS";
+				PRODUCT_NAME = MsgpackSerialization;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		637983081FC1D64A008BD5D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "cherrywoods.MsgpackSerialization-tvOS";
+				PRODUCT_NAME = MsgpackSerialization;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		637983141FC1D658008BD5D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "cherrywoods.MsgpackSerialization-macOS";
+				PRODUCT_NAME = MsgpackSerialization;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		637983151FC1D658008BD5D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "cherrywoods.MsgpackSerialization-macOS";
+				PRODUCT_NAME = MsgpackSerialization;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		63E967501FE6DE3500BA87BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Tests/Info-iOS.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "cherrywoods.MsgpackSerializationTests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63E967511FE6DE3500BA87BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Tests/Info-iOS.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "cherrywoods.MsgpackSerializationTests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		637982C61FC1D476008BD5D5 /* Build configuration list for PBXProject "SwiftMsgpackSerialization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				637982C71FC1D476008BD5D5 /* Debug */,
+				637982C81FC1D476008BD5D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		637982E11FC1D617008BD5D5 /* Build configuration list for PBXNativeTarget "MsgpackSerialization watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				637982E21FC1D617008BD5D5 /* Debug */,
+				637982E31FC1D617008BD5D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		637982F91FC1D639008BD5D5 /* Build configuration list for PBXNativeTarget "MsgpackSerialization iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				637982FA1FC1D639008BD5D5 /* Debug */,
+				637982FB1FC1D639008BD5D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		637983061FC1D64A008BD5D5 /* Build configuration list for PBXNativeTarget "MsgpackSerialization tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				637983071FC1D64A008BD5D5 /* Debug */,
+				637983081FC1D64A008BD5D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		637983131FC1D658008BD5D5 /* Build configuration list for PBXNativeTarget "MsgpackSerialization macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				637983141FC1D658008BD5D5 /* Debug */,
+				637983151FC1D658008BD5D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63E9674F1FE6DE3500BA87BB /* Build configuration list for PBXNativeTarget "MsgpackSerializationTests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63E967501FE6DE3500BA87BB /* Debug */,
+				63E967511FE6DE3500BA87BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 637982C31FC1D476008BD5D5 /* Project object */;
+}
