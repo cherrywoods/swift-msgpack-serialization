@@ -18,8 +18,6 @@ extension RawMsgpack {
         try isValid(self, index: 3)
         
         // read bitPattern from the four value bytes
-        // the bitPatterns need to stay in the order it is,
-        // do not apply bigEndian or littleEndian
         let bitPattern = combineUInt32(from: self[0..<4])
         
         // FloatFormatMeta handles the conversion to the desired BinaryFloatingPoint type from the user

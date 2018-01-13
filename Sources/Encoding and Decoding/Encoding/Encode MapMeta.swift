@@ -27,7 +27,7 @@ extension MapMeta {
         case 0..<(1<<4): // 1<<4 is (2^4) (16)
             // fixmap
             let header = MsgpackHeader.fixmap
-                .merge(additionalInformation: UInt8(elements).bigEndian)!
+                .merge(additionalInformation: UInt8(elements))!
             
             return combine(header: header,
                            length: [],
@@ -35,7 +35,7 @@ extension MapMeta {
             
         case 0..<(1<<16): // 1<<16 is (2^16)
             // map 16
-            let lengthBytes = breakUpUInt16ToBytes( UInt16(elements).bigEndian )
+            let lengthBytes = breakUpUInt16ToBytes( UInt16(elements) )
             return combine(header: MsgpackHeader.map16.rawValue,
                            length: lengthBytes,
                            furtherData: encodedElements)
@@ -48,7 +48,7 @@ extension MapMeta {
             if let uint32Length = UInt32(exactly: elements) {
                 
                 //map 32
-                let lengthBytes = breakUpUInt32ToBytes( uint32Length.bigEndian )
+                let lengthBytes = breakUpUInt32ToBytes( uint32Length )
                 return combine(header: MsgpackHeader.map32.rawValue,
                                length: lengthBytes,
                                furtherData: encodedElements)

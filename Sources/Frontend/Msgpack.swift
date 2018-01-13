@@ -7,7 +7,19 @@
 
 import Foundation
 import MetaSerialization
-
+/**
+ A value representing encoded msgpack.
+ 
+ Calling encode(_) may throw the following errors:
+ - EncodingError
+ - MsgpackError
+ - MetaEncodingError and StackError from MetaSerialization. One of these errors indicates a bug eigther in this framework, MetaSerialization or the custom encoding code.
+ 
+ Calling decode(type:) may throw the following errors:
+ - DecodingError
+ - MsgpackError
+ - MetaEncodingError and StackError from MetaSerialization. One of these errors indicates a bug eigther in this framework, MetaSerialization or the custom decoding code.
+ */
 public protocol Msgpack: Representation {  }
 
 extension Data: Msgpack {

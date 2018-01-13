@@ -51,6 +51,12 @@ internal class MapMeta: KeyedContainerMeta, UnkeyedContainerMeta {
     /// a container for the special needs of this class with constant time string-key lookup
     private class Storage {
         
+        /// a placeholder to use in keyValuePairs
+        struct Placeholder: Meta {
+            mutating func set(value: Any) throws {  }
+            func get() -> Any? { return nil }
+        }
+        
         /// the values of this map meta as array of key-value pairs
         private(set) var keyValuePairs: [(Meta, Meta)] = []
         
@@ -69,6 +75,13 @@ internal class MapMeta: KeyedContainerMeta, UnkeyedContainerMeta {
             
             // append key-value-pair
             keyValuePairs.append( (key, value) )
+            
+        }
+        
+        func replaceLast(key: Meta, value: Meta) {
+            
+            self.keyValuePairs.removeLast()
+            self.append(key: key, value: value)
             
         }
         
@@ -194,6 +207,33 @@ internal class MapMeta: KeyedContainerMeta, UnkeyedContainerMeta {
         return storage.keyValuePairs
     }
     
+    // this function exists as support for GeneralEncodingContainer
+    func addSingle(meta: Meta) {
+        
+        // this function should always be called in groups of two
+        
+        // to determine whether the next element that should be inserted is a key
+        // check whether storage is empty
+        // or if the last key-value-pairs value is not a Storage.Placeholder
+        // if so append key and a Placeholder
+        
+        // if the last value is a Placeholder, insert a value
+        
+        if self.storage.keyValuePairs.isEmpty ? true : !(self.storage.keyValuePairs.last!.1 is Storage.Placeholder) {
+            
+            // add key and placeholder
+            self.storage.append(key: meta, value: Storage.Placeholder())
+            
+        } else {
+            
+            // insert value for placeholder
+            let (key, _) = storage.keyValuePairs.last!
+            self.storage.replaceLast(key: key, value: meta)
+            
+        }
+        
+    }
+    
     /*
      The following two behaviors are just available in certain cases:
      - KeyedContainer: all keys are strings
@@ -275,17 +315,20 @@ internal class MapMeta: KeyedContainerMeta, UnkeyedContainerMeta {
         
     }
     
-    // Note that MapMeta is not made for beeing filled during encoding
+    // note that MapMeta is not build to be available as a UnkeyedMeta at encoding time
     
+    /**
+     This function will produce a crash and nothing more.
+     */
     func insert(element: Meta, at index: Int) {
         
-        preconditionFailure("MapMeta is not usable as UnkeyedContainer on encoding")
+        preconditionFailure("insert is not usable on MapMeta")
         
     }
     
     func append(element: Meta) {
         
-        preconditionFailure("MapMeta is not usable as UnkeyedContainer on encoding")
+        preconditionFailure("insert is not usable on MapMeta")
         
     }
     

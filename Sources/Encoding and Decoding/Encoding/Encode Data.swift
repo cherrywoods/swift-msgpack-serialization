@@ -17,12 +17,12 @@ extension Data {
             // bin8
             // self.count is representable within one byte
             return combine(header: MsgpackHeader.bin8.rawValue,
-                           length: [ UInt8(self.count).bigEndian ],
+                           length: [ UInt8(self.count) ],
                            furtherData: self )
             
         case 0..<(1<<16): // 1<<16 is (2^16)
             // bin16
-            let lengthBytes = breakUpUInt16ToBytes( UInt16(self.count).bigEndian )
+            let lengthBytes = breakUpUInt16ToBytes( UInt16(self.count) )
             return combine(header: MsgpackHeader.bin16.rawValue,
                            length: lengthBytes,
                            furtherData: self )
@@ -35,7 +35,7 @@ extension Data {
             if let uint32Length = UInt32(exactly: self.count ) {
                 
                 // bin32
-                let lengthBytes = breakUpUInt32ToBytes( uint32Length.bigEndian )
+                let lengthBytes = breakUpUInt32ToBytes( uint32Length )
                 return combine(header: MsgpackHeader.bin32.rawValue,
                                length: lengthBytes,
                                furtherData: self )

@@ -15,7 +15,7 @@ extension Date {
         // encode as timestamp
         
         let timeInterval = self.timeIntervalSince1970
-        let timestampExtensionCodeByte = UInt8(bitPattern: PredefinedExtensionType.timeStamp.rawValue ).bigEndian
+        let timestampExtensionCodeByte = UInt8(bitPattern: PredefinedExtensionType.timeStamp.rawValue )
         
         if let uint32Interval = UInt32(exactly: timeInterval) {
             
@@ -30,8 +30,8 @@ extension Date {
             // time interval is in seconds
             // cutting away the part smaller than 1, seconds stay
             // the initalizers for floating point values always round (no init(clamping: ))
-            var seconds = UInt64( timeInterval.rounded(.down) ).bigEndian
-            var nanoSeconds = UInt32( timeInterval - TimeInterval(seconds) ).bigEndian
+            var seconds = UInt64( timeInterval.rounded(.down) )
+            var nanoSeconds = UInt32( timeInterval - TimeInterval(seconds) )
             
             // msgpack sets the condition, that "nanoseconds must not be larger than 999999999".
             while nanoSeconds > 999999999 {

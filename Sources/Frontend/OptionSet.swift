@@ -44,15 +44,26 @@ public struct Configuration {
     public var convertSwiftDateToMsgpackTimestamp: Bool
     
     /**
-     Indicates whether arbitrary Dictionarys should be encoded equally as java.util.Map is encoded by msgpack-java, or whether they should be encoded in the way Dictionary encoded itself.
-     The results of both options will differ on Dictionarsy with complex swift entities as keys.
+     Indicates whether arbitrary Dictionarys should be encoded as map-values in msgpack, or whether they should be encoded in the way Dictionary encoded itself.
+     The results of both options will differ on Dictionarys with complex swift instances as keys.
      
      Default is true.
      */
     public var encodeDictionarysJavaCompatibel: Bool
     
     /**
+     Indicates whether keys of arbitrary Dictionarys should be encoded as Strings (where possible).
+     For example 0.6788 will be encoded as "0.6788", 1010 will be encoded as "1010" and true will be encoded as "true".
+     If a key does not implement LosslessStringConvertible, encoding will fail.
+     However this only works for a fixed set of types (Bool, Float, Double and all Ints and UInts) if you want to encode or  decode another type to or from a string, implement encode(to: Encoder) and init(from: Decoder) in such a manner.
+     
+     Default is false.
+     */
+    public var encodeDictionaryKeysAsStrings: Bool
+    
+    /**
      Indicates whether Data instances should be encoded to the binary type of msgpack, or if they should be encoded in the way they encode themselves (as array).
+     This option also affects byte arrays ([UInt8]).
      
      Default is true.
      */
@@ -63,6 +74,7 @@ public struct Configuration {
                  allowLoosyStringConversion: Bool = false,
                  convertSwiftDateToMsgpackTimestamp: Bool = true,
                  encodeDictionarysJavaCompatibel: Bool = true,
+                 encodeDictionaryKeysAsStrings: Bool = false,
                  encodeDataAsBinary: Bool = true ) {
         
         self.allowLoosyNumberConversion = allowLoosyNumberConversion
@@ -70,6 +82,7 @@ public struct Configuration {
         self.allowLoosyStringConversion = allowLoosyStringConversion
         self.convertSwiftDateToMsgpackTimestamp = convertSwiftDateToMsgpackTimestamp
         self.encodeDictionarysJavaCompatibel = encodeDictionarysJavaCompatibel
+        self.encodeDictionaryKeysAsStrings = encodeDictionaryKeysAsStrings
         self.encodeDataAsBinary = encodeDataAsBinary
         
     }

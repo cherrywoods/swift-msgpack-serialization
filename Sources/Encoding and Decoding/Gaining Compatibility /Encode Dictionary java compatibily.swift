@@ -13,29 +13,61 @@ internal struct JavaCompatibel {
     
     static func encodeDictionary(_ dictionary: Dictionary<AnyHashable, Any>, with options: Configuration) throws -> MapMeta {
         
-        let mapMeta = MapMeta()
+        let encoder = MsgpackEncoder(with: options)
         
-        let serialization = ToMetaSerialization(translator: MsgpackTranslator(with: options))
-        var counter = 0
-        
-        for (key, value) in dictionary {
+        if options.encodeDictionaryKeysAsStrings {
             
-            let keyC = EncodableContainer(value: key as! Encodable)
-            let valueC = EncodableContainer(value: value as! Encodable)
+            return try encoder.wrap(StringKeysDictionaryContainer(dictionary: dictionary) ) as! MapMeta
             
-            // encode key and value to Meta
-            let keyMeta = try serialization.encode(keyC)
-            let valueMeta = try serialization.encode(valueC)
+        } else {
             
-            // insert metas into mapMeta
-            mapMeta.add(key: keyMeta, value: valueMeta)
-            
-            counter += 1
+            return try encoder.wrap(DictionaryContainer(dictionary: dictionary)) as! MapMeta
             
         }
         
-        return mapMeta
+    }
+    
+    private struct DictionaryContainer: Encodable {
         
+        var dictionary: Dictionary<AnyHashable, Any>
+        
+        func encode(to encoder: Encoder) throws {
+            
+            let container = (encoder as! MsgpackEncoder).generalContainer()
+            
+            for (key, value) in dictionary {
+                try (key as! Encodable)._encode(to: container)
+                try (value as! Encodable)._encode(to: container)
+            }
+            
+        }
+        
+    }
+    
+    private struct StringKeysDictionaryContainer: Encodable {
+        
+        var dictionary: Dictionary<AnyHashable, Any>
+        
+        func encode(to encoder: Encoder) throws {
+            
+            let container = (encoder as! MsgpackEncoder).generalContainer()
+            
+            for (key, value) in dictionary {
+                // convert key to string
+                try (key as! LosslessStringConvertible).description._encode(to: container)
+                try (value as! Encodable)._encode(to: container)
+            }
+            
+        }
+        
+    }
+    
+}
+
+fileprivate extension Encodable {
+    
+    fileprivate func _encode(to container: GeneralEncodingContainer) throws {
+        try container.encode(single: self)
     }
     
 }

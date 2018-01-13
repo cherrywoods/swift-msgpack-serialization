@@ -17,7 +17,7 @@ extension RawMsgpack {
         // make sure, that self has eigth bytes
         try isValid(self, index: 7)
         
-        let uint64 = UInt64(bigEndian: combineUInt64(from: self[0..<8]))
+        let uint64 = UInt64(combineUInt64(from: self[0..<8]))
         return IntFormatMeta(value: Int64(bitPattern: uint64))
         
     }
@@ -28,7 +28,7 @@ extension RawMsgpack {
         try isValid(self, index: 7)
         
         // note that combineUInt32 interprets data as big endian integer
-        let uint64 = UInt64(bigEndian: combineUInt64(from: self[0..<8]))
+        let uint64 = UInt64(combineUInt64(from: self[0..<8]))
         return IntFormatMeta(value: uint64)
         
     }

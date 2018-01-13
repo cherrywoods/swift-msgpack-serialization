@@ -25,7 +25,7 @@ extension ArrayUnkeyedContainerMeta {
         case 0..<(1<<4): // 1<<4 is (2^4) (16)
             // fixarray
             let header = MsgpackHeader.fixarray
-                .merge(additionalInformation: UInt8(self.count).bigEndian)!
+                .merge(additionalInformation: UInt8(self.count))!
             
             return combine(header: header,
                            length: [],
@@ -33,7 +33,7 @@ extension ArrayUnkeyedContainerMeta {
             
         case 0..<(1<<16): // 1<<16 is (2^16)
             // array 16
-            let lengthBytes = breakUpUInt16ToBytes( UInt16(self.count).bigEndian )
+            let lengthBytes = breakUpUInt16ToBytes( UInt16(self.count) )
             return combine(header: MsgpackHeader.array16.rawValue,
                            length: lengthBytes,
                            furtherData: encodedElements)
@@ -46,7 +46,7 @@ extension ArrayUnkeyedContainerMeta {
             if let uint32Length = UInt32(exactly: self.count ) {
                 
                 //array 32
-                let lengthBytes = breakUpUInt32ToBytes( uint32Length.bigEndian )
+                let lengthBytes = breakUpUInt32ToBytes( uint32Length )
                 return combine(header: MsgpackHeader.array32.rawValue,
                                length: lengthBytes,
                                furtherData: encodedElements)

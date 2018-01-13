@@ -22,19 +22,19 @@ extension String {
             
         case 0..<31:
             // fixstr
-            let header = MsgpackHeader.fixstr.merge(additionalInformation: UInt8(primaryData.count).bigEndian)
+            let header = MsgpackHeader.fixstr.merge(additionalInformation: UInt8(primaryData.count))
             return combine(header: header!,
                            furtherData: primaryData)
             
         case 0..<(1<<8): // 1<<8 is (2^8) (256)
             // str8
             return combine(header: MsgpackHeader.str8.rawValue,
-                           length: [ UInt8( primaryData.count ).bigEndian ],
+                           length: [ UInt8( primaryData.count ) ],
                            furtherData: primaryData)
             
         case 0..<(1<<16): // 1<<16 is (2^16)
             // str16
-            let lengthBytes = breakUpUInt16ToBytes( UInt16( primaryData.count ).bigEndian )
+            let lengthBytes = breakUpUInt16ToBytes( UInt16( primaryData.count ) )
             return combine(header: MsgpackHeader.str16.rawValue,
                            length: lengthBytes,
                            furtherData: primaryData)
@@ -48,7 +48,7 @@ extension String {
             if let uint32Length = UInt32(exactly: primaryData.count ) {
                 
                 // bin32
-                let lengthBytes = breakUpUInt32ToBytes( uint32Length.bigEndian )
+                let lengthBytes = breakUpUInt32ToBytes( uint32Length )
                 return combine(header: MsgpackHeader.bin32.rawValue,
                                length: lengthBytes,
                                furtherData: Data( primaryData ) )

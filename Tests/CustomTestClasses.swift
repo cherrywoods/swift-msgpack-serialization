@@ -49,6 +49,6 @@ internal class Tree: Codable, Equatable {
 
 internal enum KindOfTree: String, Codable {
     
-    case oak, spruce, lime, fir, other
+    case oak = "OAK", spruce = "SPRUCE", lime = "LIME", fir = "FIR", other = "OTHER"
     
 }

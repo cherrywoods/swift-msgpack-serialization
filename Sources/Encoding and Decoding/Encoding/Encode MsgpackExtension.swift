@@ -16,40 +16,40 @@ extension MsgpackExtensionValue {
         case 1:
             // fixext1
             return combineExtension(header: MsgpackHeader.fixext1.rawValue,
-                                    code: self.typeCode.bigEndian,
+                                    code: self.typeCode,
                                     furtherData: self.data)
         case 2:
             // fixext2
             return combineExtension(header: MsgpackHeader.fixext2.rawValue,
-                                    code: self.typeCode.bigEndian,
+                                    code: self.typeCode,
                                     furtherData: self.data)
         case 4:
             // fixext4
             return combineExtension(header: MsgpackHeader.fixext4.rawValue,
-                                    code: self.typeCode.bigEndian,
+                                    code: self.typeCode,
                                     furtherData: self.data)
         case 8:
             // fixext2
             return combineExtension(header: MsgpackHeader.fixext8.rawValue,
-                                    code: self.typeCode.bigEndian,
+                                    code: self.typeCode,
                                     furtherData: self.data)
         case 16:
             // fixext2
             return combineExtension(header: MsgpackHeader.fixext16.rawValue,
-                                    code: self.typeCode.bigEndian,
+                                    code: self.typeCode,
                                     furtherData: self.data)
         case 0..<(1<<8):
             // ext8
             return combineExtension(header: MsgpackHeader.ext8.rawValue,
-                                    length: [UInt8(self.data.count).bigEndian],
-                                    code: self.typeCode.bigEndian,
+                                    length: [UInt8(self.data.count)],
+                                    code: self.typeCode,
                                     furtherData: self.data)
         case 0..<(1<<16):
             // ext16
-            let lengthBytes = breakUpUInt16ToBytes(UInt16(self.data.count).bigEndian)
+            let lengthBytes = breakUpUInt16ToBytes(UInt16(self.data.count))
             return combineExtension(header: MsgpackHeader.ext16.rawValue,
                                     length: lengthBytes,
-                                    code: self.typeCode.bigEndian,
+                                    code: self.typeCode,
                                     furtherData: self.data)
         default:
             
@@ -59,10 +59,10 @@ extension MsgpackExtensionValue {
             if let uint32Length = UInt32(exactly: self.data.count ) {
                 
                 // ext32
-                let lengthBytes = breakUpUInt32ToBytes(uint32Length.bigEndian)
+                let lengthBytes = breakUpUInt32ToBytes(uint32Length)
                 return combineExtension(header: MsgpackHeader.ext32.rawValue,
                                         length: lengthBytes,
-                                        code: self.typeCode.bigEndian,
+                                        code: self.typeCode,
                                         furtherData: self.data)
                 
             } else {

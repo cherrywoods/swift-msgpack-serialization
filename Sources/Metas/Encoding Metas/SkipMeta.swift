@@ -15,7 +15,6 @@ import MetaSerialization
  */
 internal struct SkipMeta: Meta {
     
-    // since this dictionary was already encoded once, one may assert that keys and values are Encodables
     var value: Dictionary<AnyHashable, Any>?
     
     func get() -> Any? {

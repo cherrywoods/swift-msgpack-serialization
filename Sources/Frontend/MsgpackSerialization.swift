@@ -10,6 +10,16 @@ import MetaSerialization
 
 /**
  This class serializes to msgpack over `encode(_)` and deserializes from msgpack over `decode(toType:, from:)`.
+ 
+ Calling encode(_) may throw the following errors:
+ - EncodingError
+ - MsgpackError
+ - MetaEncodingError and StackError from MetaSerialization. One of these errors indicates a bug eigther in this framework, MetaSerialization or the custom encoding code.
+ 
+ Calling decode(toType:, from:) may throw the following errors:
+ - DecodingError
+ - MsgpackError
+ - MetaEncodingError and StackError from MetaSerialization. One of these errors indicates a bug eigther in this framework, MetaSerialization or the custom decoding code.
  */
 public class MsgPacker: Serialization {
     

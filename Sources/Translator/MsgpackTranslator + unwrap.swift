@@ -51,13 +51,18 @@ extension MsgpackTranslator {
         // also here, unwrap will check for T
         } else if let floatMeta = meta as? FloatFormatMeta<Float> {
             return try unwrap(floatFormatMeta: floatMeta)
-        }else if let floatMeta = meta as? FloatFormatMeta<Double> {
+        } else if let floatMeta = meta as? FloatFormatMeta<Double> {
             return try unwrap(floatFormatMeta: floatMeta)
             
         // String
         } else if meta is SimpleGenericMeta<String> {
             
-            return meta.get() as? T
+            /**
+             Adding decoding from strings to Bool, Float, Double, Ints and UInts
+             Because msgpack-java encodes all keys as strings by default
+             */
+            let string = meta.get() as! String
+            return string as? T ?? unwrap(string: string)
             
         // Data
         } else if meta is SimpleGenericMeta<Data> {
@@ -132,10 +137,44 @@ extension MsgpackTranslator {
         
         let allowLoosyConversion = self.optionSet.allowLoosyFloatingPointNumberConversion
         
-        if T.self == Float.self {
+        if        T.self == Float.self {
             return try floatMeta.castTo(allowLoosyConversion: allowLoosyConversion) as Float? as! T?
-        } else if   T.self == Double.self {
+        } else if T.self == Double.self {
             return try floatMeta.castTo(allowLoosyConversion: allowLoosyConversion) as Double? as! T?
+        } else {
+            return nil
+        }
+        
+    }
+    
+    fileprivate func unwrap<T>(string: String) -> T? {
+        
+        if        T.self == Bool.self {
+            return Bool(string) as! T?
+        } else if T.self == Float.self {
+            return Float(string) as! T?
+        } else if T.self == Double.self {
+            return Double(string) as! T?
+        } else if T.self == Int.self {
+            return Int(string) as! T?
+        } else if T.self == UInt.self {
+            return UInt(string) as! T?
+        } else if T.self == Int8.self {
+            return Int8(string) as! T?
+        } else if T.self == UInt8.self {
+            return UInt8(string) as! T?
+        }  else if T.self == Int16.self {
+            return Int16(string) as! T?
+        } else if T.self == UInt16.self {
+            return UInt16(string) as! T?
+        } else if T.self == Int32.self {
+            return Int32(string) as! T?
+        } else if T.self == UInt32.self {
+            return UInt32(string) as! T?
+        } else if T.self == Int64.self {
+            return Int64(string) as! T?
+        } else if T.self == UInt64.self {
+            return UInt64(string) as! T?
         } else {
             return nil
         }

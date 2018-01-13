@@ -46,14 +46,14 @@ extension MsgpackTranslator {
             // (below 2^32 characters).
             return MsgpackString()
             
-        } else if value is Data {
+        } else if value is Data && self.optionSet.encodeDataAsBinary {
             
             // MsgpackBinaryData makes sure,
             // that the passed Data is short enough to be converted to msgpack
             // (below 2^32 bytes).
             return MsgpackBinaryData()
             
-        } else if value is [UInt8] {
+        } else if value is [UInt8] && self.optionSet.encodeDataAsBinary {
             
             // same as with Data
             return MsgpackBinaryByteArray()
@@ -74,7 +74,12 @@ extension MsgpackTranslator {
             // with this meta, we skip the first encoding process and
             // therefor also the encoding code from Dictionary
             return SkipMeta()
-        
+            
+        } else if value is EncodableContainer {
+            
+            // this is necessary because of the type errasure in encoding container
+            return wrappingMeta(for: (value as! EncodableContainer).value)
+            
         } else {
             
             return nil
@@ -84,6 +89,10 @@ extension MsgpackTranslator {
     }
     
     func keyedContainerMeta() -> KeyedContainerMeta {
+        return MapMeta()
+    }
+    
+    func generalContainerMeta() -> MapMeta {
         return MapMeta()
     }
     

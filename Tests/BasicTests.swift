@@ -61,11 +61,23 @@ class BasicTest: XCTestCase {
         // these dictionarys are serialized to unkeyedContainers by Dictionary
         let dictionary2 = [ 2.5 : "a value", 44.7 : "a second value" ]
         
+        let b1 = Banana(length: 3.0)
+        let b2 = Banana(length: 3.0)
+        let b3 = Banana(length: 3.0)
+        
+        b1.age(); b1.age(); b1.age();
+        b2.age()
+        
+        let dictionary3 = BananaAndStringDictionaryContainer.value([ b1 : "a verry old banana",
+                                                                     b2 : "a old banana",
+                                                                     b3 : "a banana" ])
+        
         roundWaySerializeAndTest(array)
         roundWaySerializeAndTest(set)
         
         roundWaySerializeAndTest(dictionary)
         roundWaySerializeAndTest(dictionary2)
+        roundWaySerializeAndTest(dictionary3)
         
     }
     

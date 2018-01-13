@@ -17,7 +17,7 @@ extension RawMsgpack {
         // make sure, that msgpack has four bytes
         try isValid(self, index: 3)
         
-        let uint32 = UInt32(bigEndian: combineUInt32(from: self[0..<4]))
+        let uint32 = UInt32(combineUInt32(from: self[0..<4]))
         return IntFormatMeta(value: Int32(bitPattern: uint32))
         
     }
@@ -27,7 +27,7 @@ extension RawMsgpack {
         // make sure, that msgpack has four bytes
         try isValid(self, index: 3)
         
-        let uint32 = UInt32(bigEndian: combineUInt32(from: self[0..<4]))
+        let uint32 = UInt32(combineUInt32(from: self[0..<4]))
         return IntFormatMeta(value: uint32)
         
     }

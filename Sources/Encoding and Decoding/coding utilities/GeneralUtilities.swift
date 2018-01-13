@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MetaSerialization
 
 /**
  Contains mask values used to access certain bits of a byte.
@@ -22,12 +23,8 @@ struct Mask {
 }
 
 /// just a simple wrapper for any encodable with a fix type
-struct EncodableContainer: Encodable {
+struct EncodableContainer: DirectlyEncodable {
     
     let value: Encodable
-    
-    func encode(to encoder: Encoder) throws {
-        try value.encode(to: encoder)
-    }
     
 }
