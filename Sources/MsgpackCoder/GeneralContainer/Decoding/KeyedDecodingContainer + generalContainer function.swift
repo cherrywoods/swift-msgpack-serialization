@@ -10,7 +10,7 @@ import MetaSerialization
 
 public extension MetaKeyedDecodingContainer {
     
-    public func nestedGeneralContainer<NestedKey>(forKey key: K) throws -> GeneralDecodingContainer {
+    public func nestedGeneralContainer(forKey key: K) throws -> GeneralDecodingContainer {
         
         // need to extend coding path in decoder, because decoding might result in an error thrown
         // and furthermore the new container gets the codingPath from decoder
