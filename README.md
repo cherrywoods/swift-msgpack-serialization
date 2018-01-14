@@ -1,15 +1,14 @@
 # swift-msgpack-serialization
-Another swift serialization library
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+Another swift serialization library for msgpack.
 
-This framework is designed to be compatibel to the msgpack-java library.
+This framework is designed to be (optionaly) compatibel to the msgpack-java library.
 
-The main feature now is that it converts all kinds of dictionarys to the msgpack map type, as java does with java.util.Maps, so that these two types are compatibel.
+Please make sure, that the swift model classes and java model classes you use are compatibel to each other, e.g. enums are named equaly (including case), or use
 
-Please note, that you still needs to make sure, that the swift model classes and java model classes you use are compatibel to each other, e.g. enums are named equaly (also case, etc.)
+This framework also supplies the possibiliy to encode keys of other types than String (generalContainer function of MsgpackEncoder).
+## Instalation
+Currently, only carthage is supported.
 
 ## Compatibilty restrictions
-This framwork can not encode nested dictionarys with keys of diffrent type than String or Int in a java-compatibel way.
-If you have such nested dictionarys in your own classes, make sure you don't call .encode(to:)! Cast the encoder passed to you to MsgpackEncoder instead and call encodeIntermediate(_) on this encoder instead or the encode method on a keyed, unkeyed or singlevalue container. If you do this your ('first level') dictionarys will be encoded properly (if they don't have any nested dictionarys).
-The same does not apply on decoding. Decoding nested maps to dictionarys works fine,
-
-The same applies to Data and byte arrays. 
+Make sure you never call .encode(to:) directly! Instead use the encode method on a keyed, unkeyed or singleValue container or cast the encoder passed to you to MsgpackEncoder and call encodeIntermediate(_) on this encoder. If you do not use this, this framework won't be able to do it's work properly.
