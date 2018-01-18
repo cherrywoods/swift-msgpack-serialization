@@ -1,6 +1,7 @@
 # swift-msgpack-serialization
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-Another swift serialization library for msgpack.
+
+Another swift serialization library for msgpack with support for the Codable environement.
 
 This framework is designed to be (optionaly) compatibel to the msgpack-java library.
 
