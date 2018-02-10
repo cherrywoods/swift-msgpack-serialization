@@ -280,7 +280,7 @@ internal class MapMeta: KeyedContainerMeta, UnkeyedContainerMeta {
     
     // MARK: UnkeyedContainerMeta functionality
     
-    var count: Int {
+    var count: Int? {
         
         // if seen as a unkeyed container, keys and values are separate
         return storage.keyValuePairs.count * 2
@@ -328,7 +328,7 @@ internal class MapMeta: KeyedContainerMeta, UnkeyedContainerMeta {
     
     func append(element: Meta) {
         
-        preconditionFailure("insert is not usable on MapMeta")
+        preconditionFailure("append is not usable on MapMeta")
         
     }
     

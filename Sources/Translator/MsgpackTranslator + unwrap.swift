@@ -7,11 +7,10 @@
 
 import Foundation
 import MetaSerialization
-import NoSerialization
 
 extension MsgpackTranslator {
     
-    func unwrap<T>(meta: Meta) throws -> T? {
+    func unwrap<T>(meta: Meta, toType type: T.Type) throws -> T? {
         
         // Nil
         // NilMeta will not reach here
@@ -51,8 +50,8 @@ extension MsgpackTranslator {
         // also here, unwrap will check for T
         } else if let floatMeta = meta as? FloatFormatMeta<Float> {
             return try unwrap(floatFormatMeta: floatMeta)
-        } else if let floatMeta = meta as? FloatFormatMeta<Double> {
-            return try unwrap(floatFormatMeta: floatMeta)
+        } else if let doubleMeta = meta as? FloatFormatMeta<Double> {
+            return try unwrap(floatFormatMeta: doubleMeta)
             
         // String
         } else if meta is SimpleGenericMeta<String> {

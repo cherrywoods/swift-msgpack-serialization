@@ -1,2 +1,2 @@
 github "a2/MessagePack.swift" "3.0.0"
-github "cherrywoods/swift-meta-serialization" "f4f849ba865e88c73bdc00e5af7150791de36772"
+github "cherrywoods/swift-meta-serialization" "v1.0"

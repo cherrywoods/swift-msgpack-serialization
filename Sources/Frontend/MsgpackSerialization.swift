@@ -41,6 +41,7 @@ public class MsgPacker: Serialization {
     
     // MARK: - configuration
     
+    /// Use this set a configuration before encodig or decoding. Changing this configuration within the encoding/decoding code of custom classes or structs will have no effect. Use the properties of MsgpackEncoder and MsgpackDecoder for thise purpose instead.
     public var configuration: Configuration
     
     public init(with configuration: Configuration = Configuration()) {

@@ -101,7 +101,7 @@ public class GeneralDecodingContainer {
         // the coding path needs to be extended, because unwrap(meta) may throw an error
         try reference.coder.stack.append(codingKey: GeneralCodingKey())
         
-        let value: Element = try (self.reference.coder as! MetaDecoder).unwrap(subMeta)
+        let value: Element = try (self.reference.coder as! MetaDecoder).unwrap(subMeta, toType: type)
         
         try reference.coder.stack.removeLastCodingKey()
         

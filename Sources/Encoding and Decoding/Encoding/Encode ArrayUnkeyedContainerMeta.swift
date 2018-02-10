@@ -21,11 +21,13 @@ extension ArrayUnkeyedContainerMeta {
             encodedElements.append( try encode(with: options, meta: meta) )
         }
         
-        switch self.count {
+        // count can be expected to be non nil
+        // because ArrayUnkeyedContainer always nows it's number of elements
+        switch self.count! {
         case 0..<(1<<4): // 1<<4 is (2^4) (16)
             // fixarray
             let header = MsgpackHeader.fixarray
-                .merge(additionalInformation: UInt8(self.count))!
+                .merge(additionalInformation: UInt8(self.count!))!
             
             return combine(header: header,
                            length: [],
@@ -33,7 +35,7 @@ extension ArrayUnkeyedContainerMeta {
             
         case 0..<(1<<16): // 1<<16 is (2^16)
             // array 16
-            let lengthBytes = breakUpUInt16ToBytes( UInt16(self.count) )
+            let lengthBytes = breakUpUInt16ToBytes( UInt16(self.count!) )
             return combine(header: MsgpackHeader.array16.rawValue,
                            length: lengthBytes,
                            furtherData: encodedElements)
@@ -43,7 +45,7 @@ extension ArrayUnkeyedContainerMeta {
             // on 32-bit platforms, Int is just 32 bits large
             // and therfor 1<<32 would not fit in one Int
             // and could trigger a strange runtime error on those platforms
-            if let uint32Length = UInt32(exactly: self.count ) {
+            if let uint32Length = UInt32(exactly: self.count! ) {
                 
                 //array 32
                 let lengthBytes = breakUpUInt32ToBytes( uint32Length )

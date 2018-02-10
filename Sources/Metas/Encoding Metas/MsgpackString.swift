@@ -17,7 +17,7 @@ internal struct MsgpackString: GenericMeta {
     
     typealias SwiftValueType = String
     
-    var value: String?
+    var value: String!
     
     mutating func set(value: Any) throws {
         

@@ -3,8 +3,9 @@
 Another swift serialization library for msgpack.
 
 This framework is designed to be (optionaly) compatibel to the msgpack-java library.
+See [Compatibility.md](https://github.com/cherrywoods/swift-msgpack-serialization/blob/master/Compatibility.md) for more detailed information about this.
 
-Please make sure, that the swift model classes and java model classes you use are compatibel to each other, e.g. enums are named equaly (including case), or use
+Please make sure, that the swift model classes and java model classes you use are compatibel to each other, e.g. enums are named equaly (including case).
 
 This framework also supplies the possibiliy to encode keys of other types than String (generalContainer function of MsgpackEncoder).
 ## Instalation

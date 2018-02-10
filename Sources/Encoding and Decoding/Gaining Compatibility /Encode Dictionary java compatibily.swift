@@ -7,7 +7,6 @@
 
 import Foundation
 import MetaSerialization
-import NoSerialization
 
 internal struct JavaCompatibel {
     

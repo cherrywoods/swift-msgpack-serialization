@@ -17,7 +17,7 @@ internal struct MsgpackBinaryData: GenericMeta {
     
     typealias SwiftValueType = Data
     
-    var value: Data?
+    var value: Data!
     
     mutating func set(value: Any) throws {
         
@@ -48,7 +48,7 @@ internal struct MsgpackBinaryByteArray: GenericMeta {
     
     typealias SwiftValueType = [UInt8]
     
-    var value: [UInt8]?
+    var value: [UInt8]!
     
     mutating func set(value: Any) throws {
         

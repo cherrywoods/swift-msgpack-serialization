@@ -14,6 +14,7 @@ import MetaSerialization
 /// the encoder implementation used by MsgpackSerialization
 public class MsgpackEncoder: MetaEncoder {
     
+    /// use this to set a configuration during encoding
     public var configuration: Configuration {
         get {
             return (translator as! MsgpackTranslator).optionSet
@@ -27,6 +28,7 @@ public class MsgpackEncoder: MetaEncoder {
         super.init(translator: MsgpackTranslator(with: options))
     }
     
+    /// Request a general encoding container to encode arbitrary keyed collections.
     public func generalContainer() -> GeneralEncodingContainer {
         
         // if there's no container at the current codingPath, let translator create a new one and append it
@@ -52,6 +54,7 @@ public class MsgpackEncoder: MetaEncoder {
 /// the encoder implementation used by MsgpackSerialization
 public class MsgpackDecoder: MetaDecoder {
     
+    /// use this to set a configuration during decoding
     public var configuration: Configuration {
         get {
             return (translator as! MsgpackTranslator).optionSet
@@ -64,6 +67,19 @@ public class MsgpackDecoder: MetaDecoder {
     
     internal convenience init<Raw>(with options: Configuration = Configuration(), raw: Raw) throws {
         try self.init(translator: MsgpackTranslator(with: options), raw: raw)
+    }
+    
+    /// Request a general decoding container to decode arbitrary keyed collections.
+    public func generalContainer() throws -> GeneralDecodingContainer {
+        
+        guard self.stack.last is MapMeta else {
+            let context = DecodingError.Context(codingPath: self.codingPath, debugDescription: "Encoded type does not match with expected type.")
+            throw DecodingError.typeMismatch(GeneralDecodingContainer.self, context)
+        }
+        
+        let referencing = StackReference(coder: self, at: stack.lastIndex) as Reference
+        return GeneralDecodingContainer(referencing: referencing)
+        
     }
     
 }
