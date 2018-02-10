@@ -61,7 +61,7 @@ extension MsgpackTranslator {
              Because msgpack-java encodes all keys as strings by default
              */
             let string = meta.get() as! String
-            return string as? T ?? unwrap(string: string)
+            return string as? T ?? unwrap(string: string, toType: type)
             
         // Data
         } else if meta is SimpleGenericMeta<Data> {
@@ -146,33 +146,33 @@ extension MsgpackTranslator {
         
     }
     
-    fileprivate func unwrap<T>(string: String) -> T? {
+    fileprivate func unwrap<T>(string: String, toType type: T.Type) -> T? {
         
-        if        T.self == Bool.self {
+        if        type == Bool.self {
             return Bool(string) as! T?
-        } else if T.self == Float.self {
+        } else if type == Float.self {
             return Float(string) as! T?
-        } else if T.self == Double.self {
+        } else if type == Double.self {
             return Double(string) as! T?
-        } else if T.self == Int.self {
+        } else if type == Int.self {
             return Int(string) as! T?
-        } else if T.self == UInt.self {
+        } else if type == UInt.self {
             return UInt(string) as! T?
-        } else if T.self == Int8.self {
+        } else if type == Int8.self {
             return Int8(string) as! T?
-        } else if T.self == UInt8.self {
+        } else if type == UInt8.self {
             return UInt8(string) as! T?
-        }  else if T.self == Int16.self {
+        }  else if type == Int16.self {
             return Int16(string) as! T?
-        } else if T.self == UInt16.self {
+        } else if type == UInt16.self {
             return UInt16(string) as! T?
-        } else if T.self == Int32.self {
+        } else if type == Int32.self {
             return Int32(string) as! T?
-        } else if T.self == UInt32.self {
+        } else if type == UInt32.self {
             return UInt32(string) as! T?
-        } else if T.self == Int64.self {
+        } else if type == Int64.self {
             return Int64(string) as! T?
-        } else if T.self == UInt64.self {
+        } else if type == UInt64.self {
             return UInt64(string) as! T?
         } else {
             return nil
