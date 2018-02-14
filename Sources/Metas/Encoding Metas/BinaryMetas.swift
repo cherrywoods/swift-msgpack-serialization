@@ -1,5 +1,5 @@
 //
-//  MsgpackBinaryData.swift
+//  BinaryMetas.swift
 //  swift-msgpack-serialization
 //
 //  Created by cherrywoods on 31.10.17.
@@ -13,7 +13,7 @@ import MetaSerialization
  Makes sure, that the data given to set is shorter that 2^32 bytes.
  Only used during encoding.
  */
-internal struct MsgpackBinaryData: GenericMeta {
+internal struct DataMeta: GenericMeta {
     
     typealias SwiftValueType = Data
     
@@ -44,7 +44,7 @@ internal struct MsgpackBinaryData: GenericMeta {
  Makes sure, that the data given to set is shorter that 2^32 bytes.
  Only used during encoding.
  */
-internal struct MsgpackBinaryByteArray: GenericMeta {
+internal struct ByteArrayMeta: GenericMeta {
     
     typealias SwiftValueType = [UInt8]
     

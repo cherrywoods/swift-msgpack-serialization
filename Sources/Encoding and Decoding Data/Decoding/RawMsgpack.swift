@@ -12,7 +12,7 @@ import Foundation
 /*
  Provides utilities to work with Data that should be parsed as msgpack.
  */
-class RawMsgpack {
+internal class RawMsgpack {
     
     // MARK: structure
     
@@ -21,9 +21,6 @@ class RawMsgpack {
      Any valid msgpack data is structured this way:
      
      header byte - length section (optional) - value data (optional)
-     
-     header needs to be contained.
-     length section and value data do not need to be contained.
      
      */
     
@@ -46,7 +43,7 @@ class RawMsgpack {
      */
     init(from data: Data) throws {
         
-        // a little included validity check: data may not be empty
+        // data may not be empty
         guard let headerByte = data.first else {
             throw MsgpackError.invalidMsgpack
         }
@@ -119,7 +116,10 @@ class RawMsgpack {
      relative to data.startIndex
      */
     private let firstValueIndex: Data.Index?
-    public let valueDataLength: Int?
+    /**
+     The lenght of the value section
+     */
+    let valueDataLength: Int?
     
     /// call this function to ensure, that the subscripts will not produce a crash.
     func isAccessable(index: Data.Index) -> Bool {

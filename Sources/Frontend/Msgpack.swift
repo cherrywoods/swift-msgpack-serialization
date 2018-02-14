@@ -7,10 +7,11 @@
 
 import Foundation
 import MetaSerialization
+
 /**
  A value representing encoded msgpack.
  
- Calling encode(_) may throw the following errors:
+ Calling init(encoding: ) may throw the following errors:
  - EncodingError
  - MsgpackError
  - MetaEncodingError and StackError from MetaSerialization. One of these errors indicates a bug eigther in this framework, MetaSerialization or the custom encoding code.
@@ -22,17 +23,19 @@ import MetaSerialization
  */
 public protocol Msgpack: Representation {  }
 
-extension Data: Msgpack {
-    
-    public static func provideNewEncoder() -> MetaEncoder {
-        
-        return MsgpackEncoder()
-        
-    }
+// MARK: default implementations
+
+extension Msgpack {
     
     public func provideNewDecoder() throws -> MetaDecoder {
         
         return try MsgpackDecoder(raw: self)
+        
+    }
+    
+    public static func provideNewEncoder() -> MetaEncoder {
+        
+        return MsgpackEncoder()
         
     }
     

@@ -8,7 +8,7 @@
 import Foundation
 import MetaSerialization
 
-extension Float {
+internal extension Float {
     
     func encodeToMsgpack() -> Data {
         
@@ -24,7 +24,7 @@ extension Float {
     
 }
 
-extension Double {
+internal extension Double {
     
     func encodeToMsgpack() -> Data {
         

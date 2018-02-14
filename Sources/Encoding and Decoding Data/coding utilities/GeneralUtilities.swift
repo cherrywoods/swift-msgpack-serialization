@@ -14,7 +14,7 @@ import MetaSerialization
  Use your byte & mask to access bits.
  Inverting a mask gives you a mask for all the other bits previously uncovered (inverted firstBit is lowerSevenBits)
  */
-struct Mask {
+internal struct Mask {
     
     static let firstBit: UInt8          = 0b10000000
     static let firstThreeBits: UInt8    = 0b11100000
@@ -22,9 +22,3 @@ struct Mask {
     
 }
 
-/// just a simple wrapper for any encodable with a fix type
-struct EncodableContainer: DirectlyEncodable {
-    
-    let value: Encodable
-    
-}

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum MsgpackHeader: UInt8 {
+internal enum MsgpackHeader: UInt8 {
     
     // MARK: - nil
     case nilHeader              = 0b11000000
@@ -224,26 +224,6 @@ enum MsgpackHeader: UInt8 {
     }
     
     // MARK: supporting fuctions
-    
-    /// checks whether the given byte value matches this headers raw value
-    func matches(byte: UInt8) -> Bool {
-        
-        switch self {
-        case .positiveFixnum:
-            // just first bit is header
-            return self.rawValue == byte & Mask.firstBit
-        case .negativeFixnum, .fixstr:
-            // first three bits are header
-            return self.rawValue == byte & Mask.firstThreeBits
-        case .fixarray, .fixmap:
-            // first four bits are header
-            return self.rawValue == byte & Mask.firstFourBits
-        default:
-            // in any other case, the header is the whole byte
-            return self.rawValue == byte
-        }
-        
-    }
     
     /**
      extracts additional information (typically a length) from a header byte, if this header supports it, otherwise nil.

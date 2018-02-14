@@ -8,7 +8,7 @@
 import Foundation
 import MetaSerialization
 
-extension MapMeta {
+internal extension MapMeta {
     
     func encodeToMsgpack(with options: Configuration) throws -> Data {
         
@@ -18,8 +18,8 @@ extension MapMeta {
         var encodedElements: Data = Data()
         for (keyMeta, valueMeta) in map {
             // first add the encoded key and then the encoded value to data
-            encodedElements.append( try encode(with: options, meta: keyMeta) )
-            encodedElements.append( try encode(with: options, meta: valueMeta) )
+            encodedElements.append( try encodeToData(with: options, meta: keyMeta) )
+            encodedElements.append( try encodeToData(with: options, meta: valueMeta) )
         }
         
         let elements = map.count

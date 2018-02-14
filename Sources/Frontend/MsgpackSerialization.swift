@@ -11,6 +11,10 @@ import MetaSerialization
 /**
  This class serializes to msgpack over `encode(_)` and deserializes from msgpack over `decode(toType:, from:)`.
  
+ You can choose to which type MsgPacker should serialize, using the type parameter.
+ 
+ You currently have the choice between Data and MessagePackValue from https://github.com/a2/MessagePack.swift
+ 
  Calling encode(_) may throw the following errors:
  - EncodingError
  - MsgpackError
@@ -21,11 +25,11 @@ import MetaSerialization
  - MsgpackError
  - MetaEncodingError and StackError from MetaSerialization. One of these errors indicates a bug eigther in this framework, MetaSerialization or the custom decoding code.
  */
-public class MsgPacker: Serialization {
+public class MsgPacker<R>: Serialization where R: Msgpack {
     
     // MARK: - serialization
     
-    public typealias Raw = Data
+    public typealias Raw = R
     
     public func provideNewEncoder() -> MetaEncoder {
         
@@ -33,7 +37,7 @@ public class MsgPacker: Serialization {
         
     }
     
-    public func provideNewDecoder(raw: Data) throws -> MetaDecoder {
+    public func provideNewDecoder(raw: R) throws -> MetaDecoder {
         
         return try MsgpackDecoder(with: configuration, raw: raw)
         

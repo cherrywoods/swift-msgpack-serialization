@@ -1,5 +1,5 @@
 //
-//  Encode.swift
+//  Encode Data.swift
 //  SwiftMsgpackSerialization
 //
 //  Created by cherrywoods on 16.12.17.
@@ -8,7 +8,7 @@
 import Foundation
 import MetaSerialization
 
-func encode(with options: Configuration, meta: Meta) throws -> Data {
+internal func encodeToData(with options: Configuration, meta: Meta) throws -> Data {
     
     if meta is NilMeta { // MARK: nil
         
@@ -45,17 +45,20 @@ func encode(with options: Configuration, meta: Meta) throws -> Data {
     } else if meta is SimpleGenericMeta<Double> {
         return (meta as! SimpleGenericMeta<Double>).value!.encodeToMsgpack()
         
-    } else if meta is MsgpackString { // MARK: string
-        return try (meta as! MsgpackString).value!.encodeToMsgpack(with: options)
+    } else if meta is StringMeta { // MARK: string
+        return try (meta as! StringMeta).value!.encodeToMsgpack(with: options)
         
-    } else if meta is MsgpackBinaryData { // MARK: binary
-        return (meta as! MsgpackBinaryData).value!.encodeToMsgpack()
+    } else if meta is DataMeta { // MARK: binary
+        return (meta as! DataMeta).value!.encodeToMsgpack()
         
-    } else if meta is MsgpackBinaryByteArray { // MARK: binary
-        return (meta as! MsgpackBinaryByteArray).value!.encodeToMsgpack()
+    } else if meta is ByteArrayMeta { // MARK: binary
+        return (meta as! ByteArrayMeta).value!.encodeToMsgpack()
         
-    } else if meta is SimpleGenericMeta<Date> { // MARK: timestamp
-        return (meta as! SimpleGenericMeta<Date>).value!.encodeToMsgpack()
+    } else if meta is SimpleGenericMeta<Date> { // MARK: data
+        
+        // encode as MsgpackExtensionValue
+        let extensionValue = (meta as! SimpleGenericMeta<Date>).value.toMsgpackExtensionValue()
+        return extensionValue.encodeToMsgpack()
         
     } else if meta is SimpleGenericMeta<MsgpackExtensionValue> { // MARK: ext
         return (meta as! SimpleGenericMeta<MsgpackExtensionValue>).value!.encodeToMsgpack()
@@ -68,17 +71,16 @@ func encode(with options: Configuration, meta: Meta) throws -> Data {
         
     } else if meta is SkipMeta {
         
-        // encode
+        // encode dictionarys
         let dictionary = (meta as! SkipMeta).value as! Dictionary<AnyHashable, Encodable>
-        let finalMeta = try JavaCompatibel.encodeDictionary(dictionary, with: options)
+        let finalMeta = try JavaCompatibel.wrapDictionary(dictionary, with: options)
         
         return try finalMeta.encodeToMsgpack(with: options)
         
     } else {
         
         // this indicates an error in this framework, or in meta-serialization
-        assertionFailure("Unsupported meta")
-        return Data()
+        preconditionFailure("Unsupported meta")
         
     }
     

@@ -23,16 +23,18 @@ extension RawMsgpack {
         let type = MsgpackExtensionValue.type(fromTypeCode: data.removeFirst())
         let furtherData = data // first byte is removed before
         
+        let extensionValue = try MsgpackExtensionValue(type: type, data: furtherData)
+        
         // if type is -1 (timestamp), decode to Date
         if type == PredefinedExtensionType.timeStamp.rawValue {
             
-            return try decodeTimestamp(with: options)
+            let date = try Date.fromTimestampExtension(extensionValue, with: options)
+            return SimpleGenericMeta(value: date)
             
         } else {
             
             // otherwise, decode as normal extension
-            let extensionValue = try MsgpackExtensionValue(type: type, data: furtherData)
-            return SimpleGenericMeta<MsgpackExtensionValue>(value: extensionValue)
+            return SimpleGenericMeta(value: extensionValue)
             
         }
         

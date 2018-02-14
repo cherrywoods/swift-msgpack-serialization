@@ -7,17 +7,11 @@
 
 import Foundation
 import MetaSerialization
+import MessagePack
 
 extension MsgpackTranslator {
     
     func encode<Raw>(_ meta: Meta) throws -> Raw {
-        
-        precondition(Raw.self == Data.self, "Unsupported Raw type \(Raw.self)")
-        return try encode(meta) as! Raw
-        
-    }
-    
-    func encode(_ meta: Meta) throws -> Data {
         
         // meta types:
         //  nil (NilMeta)
@@ -32,7 +26,18 @@ extension MsgpackTranslator {
         //  extension (SimpleGenericMeta)
         //  timestamp (SimpleGenericMeta) (optional)
         
-        return try MsgpackSerialization.encode(with: self.optionSet, meta: meta)
+        switch Raw.self {
+        case is Data.Type:
+            
+            return try encodeToData(with: self.optionSet, meta: meta) as! Raw
+            
+        case is MessagePackValue.Type:
+            
+            return try encodeToMessagePackValue(with: self.optionSet, meta: meta) as! Raw
+            
+        default:
+            preconditionFailure("Unsupported Raw type \(Raw.self)")
+        }
         
     }
     

@@ -9,7 +9,7 @@ import Foundation
 
 /**
  A configuration for this framework.
- With this options you give some more additionaly information to this framework, how to handle certain values and cases.
+ With this options you give some more additionaly information to this framework, e.g. how to handle certain values and cases.
  All options have a default value.
  */
 public struct Configuration {

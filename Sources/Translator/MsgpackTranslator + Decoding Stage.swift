@@ -7,16 +7,11 @@
 
 import Foundation
 import MetaSerialization
+import MessagePack
 
 extension MsgpackTranslator {
     
     func decode<Raw>(_ raw: Raw) throws -> Meta {
-        
-        precondition(Raw.self == Data.self, "Unsupported Raw type")
-        
-        let data = raw as! Data
-        
-        // empty data is decoded to nil
         
         // meta types:
         //  nil -> NilMeta
@@ -31,14 +26,26 @@ extension MsgpackTranslator {
         //  extension -> SimpleGenericMeta
         //  timestamp -> SimpleGenericMeta
         
-        guard !data.isEmpty else {
-            // if empty data is passed, we decode to nil
-            return NilMeta.nil
+        switch raw {
+        case is Data:
             
+            let data = raw as! Data
+            
+            // empty data throws .invalidMsgpack
+            guard !data.isEmpty else {
+                throw MsgpackError.invalidMsgpack
+            }
+            
+            let raw = try RawMsgpack(from: data)
+            return try raw.decode(with: self.optionSet)
+            
+        case is MessagePackValue:
+            
+            return try decodeFromMessagePackValue(raw as! MessagePackValue,
+                                                  with: self.optionSet)
+        default:
+            preconditionFailure("Unsupported Raw type \(type(of: raw))")
         }
-        
-        let raw = try RawMsgpack(from: data)
-        return try raw.decode(with: self.optionSet)
         
     }
     

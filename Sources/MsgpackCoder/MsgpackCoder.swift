@@ -8,8 +8,9 @@
 import Foundation
 import MetaSerialization
 
-// this classes just exist,
-// so one can set the configuration of an translator at encoding or decoding time
+// make Configuration settable in encode(to: )
+// and init(from: )
+// plus provide generalContainer
 
 /// the encoder implementation used by MsgpackSerialization
 public class MsgpackEncoder: MetaEncoder {

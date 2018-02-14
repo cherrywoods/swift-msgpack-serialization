@@ -8,7 +8,7 @@
 import Foundation
 import MetaSerialization
 
-extension ArrayUnkeyedContainerMeta {
+internal extension ArrayUnkeyedContainerMeta {
     
     func encodeToMsgpack(with options: Configuration) throws -> Data {
         
@@ -18,7 +18,7 @@ extension ArrayUnkeyedContainerMeta {
         var encodedElements: Data = Data()
         for meta in array {
             // encode element and simply append to data
-            encodedElements.append( try encode(with: options, meta: meta) )
+            encodedElements.append( try encodeToData(with: options, meta: meta) )
         }
         
         // count can be expected to be non nil

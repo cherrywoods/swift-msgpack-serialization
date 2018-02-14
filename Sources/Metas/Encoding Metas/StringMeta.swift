@@ -1,5 +1,5 @@
 //
-//  StrFormatFamilyMeta.swift
+//  StringMeta.swift
 //  swift-msgpack-serialization
 //
 //  Created by cherrywoods on 29.10.17.
@@ -13,7 +13,7 @@ import MetaSerialization
  Ensures, that the lengths of the strings do not exceede 2^32-1 characters.
  Only used during encoding.
  */
-internal struct MsgpackString: GenericMeta {
+internal struct StringMeta: GenericMeta {
     
     typealias SwiftValueType = String
     

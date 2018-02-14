@@ -10,7 +10,7 @@ import Foundation
 // MARK: - errors
 
 /// throws MsgpackError.invalidMsgpack if value if not accessable on the given RawMsgpack
-func isValid(_ msgpack: RawMsgpack, index: Data.Index) throws {
+internal func isValid(_ msgpack: RawMsgpack, index: Data.Index) throws {
     guard msgpack.isAccessable(index: index) else {
         throw MsgpackError.invalidMsgpack
     }
@@ -18,11 +18,11 @@ func isValid(_ msgpack: RawMsgpack, index: Data.Index) throws {
 
 // MARK: - combining UInts
 
-func combineUInt16(from data: Data) -> UInt16 {
+internal func combineUInt16(from data: Data) -> UInt16 {
     return combineUInt16(from: data, startIndex: data.startIndex)
 }
 
-func combineUInt16(from data: Data, startIndex index: Data.Index) -> UInt16 {
+internal func combineUInt16(from data: Data, startIndex index: Data.Index) -> UInt16 {
     
     let byte1 = data[index + 0]
     let byte2 = data[index + 1]
@@ -34,11 +34,11 @@ func combineUInt16(from data: Data, startIndex index: Data.Index) -> UInt16 {
     
 }
 
-func combineUInt32(from data: Data) -> UInt32 {
+internal func combineUInt32(from data: Data) -> UInt32 {
     return combineUInt32(from: data, startIndex: data.startIndex)
 }
 
-func combineUInt32(from data: Data, startIndex index: Data.Index) -> UInt32 {
+internal func combineUInt32(from data: Data, startIndex index: Data.Index) -> UInt32 {
     
     let byte1 = data[index + 0]
     let byte2 = data[index + 1]
@@ -54,11 +54,11 @@ func combineUInt32(from data: Data, startIndex index: Data.Index) -> UInt32 {
     
 }
 
-func combineUInt64(from data: Data) -> UInt64 {
+internal func combineUInt64(from data: Data) -> UInt64 {
     return combineUInt64(from: data, startIndex: data.startIndex)
 }
 
-func combineUInt64(from data: Data, startIndex index: Data.Index = 0) -> UInt64 {
+internal func combineUInt64(from data: Data, startIndex index: Data.Index = 0) -> UInt64 {
     
     let byte1 = data[index + 0]
     let byte2 = data[index + 1]

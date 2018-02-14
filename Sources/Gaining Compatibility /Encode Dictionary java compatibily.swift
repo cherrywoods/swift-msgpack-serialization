@@ -10,7 +10,7 @@ import MetaSerialization
 
 internal struct JavaCompatibel {
     
-    static func encodeDictionary(_ dictionary: Dictionary<AnyHashable, Any>, with options: Configuration) throws -> MapMeta {
+    static func wrapDictionary(_ dictionary: Dictionary<AnyHashable, Any>, with options: Configuration) throws -> MapMeta {
         
         let encoder = MsgpackEncoder(with: options)
         

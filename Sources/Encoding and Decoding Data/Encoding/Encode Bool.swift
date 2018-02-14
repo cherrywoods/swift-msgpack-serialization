@@ -8,7 +8,7 @@
 import Foundation
 import MetaSerialization
 
-extension Bool {
+internal extension Bool {
     
     func encodeToMsgpack() -> Data {
         

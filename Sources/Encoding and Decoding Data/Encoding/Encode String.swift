@@ -8,7 +8,7 @@
 import Foundation
 import MetaSerialization
 
-extension String {
+internal extension String {
     
     func encodeToMsgpack(with optionSet: Configuration) throws -> Data {
         

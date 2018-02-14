@@ -50,6 +50,14 @@
 		63368C3D1FC9ACFA0069D052 /* OptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63368C3B1FC9ACFA0069D052 /* OptionSet.swift */; };
 		63368C3E1FC9ACFA0069D052 /* OptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63368C3B1FC9ACFA0069D052 /* OptionSet.swift */; };
 		63368C3F1FC9ACFA0069D052 /* OptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63368C3B1FC9ACFA0069D052 /* OptionSet.swift */; };
+		6338A93A20345CF80018AA6C /* Timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6338A93920345CF80018AA6C /* Timestamp.swift */; };
+		6338A93B20345CF80018AA6C /* Timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6338A93920345CF80018AA6C /* Timestamp.swift */; };
+		6338A93C20345CF80018AA6C /* Timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6338A93920345CF80018AA6C /* Timestamp.swift */; };
+		6338A93D20345CF80018AA6C /* Timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6338A93920345CF80018AA6C /* Timestamp.swift */; };
+		6338A93F203460F90018AA6C /* Decode MessagePackValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6338A93E203460F90018AA6C /* Decode MessagePackValue.swift */; };
+		6338A940203460F90018AA6C /* Decode MessagePackValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6338A93E203460F90018AA6C /* Decode MessagePackValue.swift */; };
+		6338A941203460F90018AA6C /* Decode MessagePackValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6338A93E203460F90018AA6C /* Decode MessagePackValue.swift */; };
+		6338A942203460F90018AA6C /* Decode MessagePackValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6338A93E203460F90018AA6C /* Decode MessagePackValue.swift */; };
 		637982F81FC1D639008BD5D5 /* MsgpackSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		637983171FC1D734008BD5D5 /* MsgpackSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		637983181FC1D735008BD5D5 /* MsgpackSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -85,14 +93,14 @@
 		637984031FC1E9C2008BD5D5 /* IntFormatMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983541FC1E9C0008BD5D5 /* IntFormatMeta.swift */; };
 		637984041FC1E9C2008BD5D5 /* IntFormatMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983541FC1E9C0008BD5D5 /* IntFormatMeta.swift */; };
 		637984051FC1E9C2008BD5D5 /* IntFormatMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983541FC1E9C0008BD5D5 /* IntFormatMeta.swift */; };
-		637984061FC1E9C2008BD5D5 /* MsgpackBinaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983561FC1E9C0008BD5D5 /* MsgpackBinaryData.swift */; };
-		637984071FC1E9C2008BD5D5 /* MsgpackBinaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983561FC1E9C0008BD5D5 /* MsgpackBinaryData.swift */; };
-		637984081FC1E9C2008BD5D5 /* MsgpackBinaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983561FC1E9C0008BD5D5 /* MsgpackBinaryData.swift */; };
-		637984091FC1E9C2008BD5D5 /* MsgpackBinaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983561FC1E9C0008BD5D5 /* MsgpackBinaryData.swift */; };
-		6379840A1FC1E9C2008BD5D5 /* MsgpackString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983571FC1E9C0008BD5D5 /* MsgpackString.swift */; };
-		6379840B1FC1E9C2008BD5D5 /* MsgpackString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983571FC1E9C0008BD5D5 /* MsgpackString.swift */; };
-		6379840C1FC1E9C2008BD5D5 /* MsgpackString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983571FC1E9C0008BD5D5 /* MsgpackString.swift */; };
-		6379840D1FC1E9C2008BD5D5 /* MsgpackString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983571FC1E9C0008BD5D5 /* MsgpackString.swift */; };
+		637984061FC1E9C2008BD5D5 /* BinaryMetas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983561FC1E9C0008BD5D5 /* BinaryMetas.swift */; };
+		637984071FC1E9C2008BD5D5 /* BinaryMetas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983561FC1E9C0008BD5D5 /* BinaryMetas.swift */; };
+		637984081FC1E9C2008BD5D5 /* BinaryMetas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983561FC1E9C0008BD5D5 /* BinaryMetas.swift */; };
+		637984091FC1E9C2008BD5D5 /* BinaryMetas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983561FC1E9C0008BD5D5 /* BinaryMetas.swift */; };
+		6379840A1FC1E9C2008BD5D5 /* StringMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983571FC1E9C0008BD5D5 /* StringMeta.swift */; };
+		6379840B1FC1E9C2008BD5D5 /* StringMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983571FC1E9C0008BD5D5 /* StringMeta.swift */; };
+		6379840C1FC1E9C2008BD5D5 /* StringMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983571FC1E9C0008BD5D5 /* StringMeta.swift */; };
+		6379840D1FC1E9C2008BD5D5 /* StringMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637983571FC1E9C0008BD5D5 /* StringMeta.swift */; };
 		637984161FC1E9C2008BD5D5 /* MsgpackTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6379835A1FC1E9C0008BD5D5 /* MsgpackTranslator.swift */; };
 		637984171FC1E9C2008BD5D5 /* MsgpackTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6379835A1FC1E9C0008BD5D5 /* MsgpackTranslator.swift */; };
 		637984181FC1E9C2008BD5D5 /* MsgpackTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6379835A1FC1E9C0008BD5D5 /* MsgpackTranslator.swift */; };
@@ -125,6 +133,19 @@
 		637D303A200A4D09007C8BE8 /* UnkeyedDecodingContainer + generalContainer function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637D3038200A4D09007C8BE8 /* UnkeyedDecodingContainer + generalContainer function.swift */; };
 		637D303B200A4D09007C8BE8 /* UnkeyedDecodingContainer + generalContainer function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637D3038200A4D09007C8BE8 /* UnkeyedDecodingContainer + generalContainer function.swift */; };
 		637D303C200A4D09007C8BE8 /* UnkeyedDecodingContainer + generalContainer function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637D3038200A4D09007C8BE8 /* UnkeyedDecodingContainer + generalContainer function.swift */; };
+		6381998F20342D9400020BB2 /* Msgpacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6381998E20342D9400020BB2 /* Msgpacks.swift */; };
+		6381999020342D9400020BB2 /* Msgpacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6381998E20342D9400020BB2 /* Msgpacks.swift */; };
+		6381999120342D9400020BB2 /* Msgpacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6381998E20342D9400020BB2 /* Msgpacks.swift */; };
+		6381999220342D9400020BB2 /* Msgpacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6381998E20342D9400020BB2 /* Msgpacks.swift */; };
+		638199992034480300020BB2 /* MessagePack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6334083A202F6364004C3F99 /* MessagePack.framework */; };
+		6381999B2034481000020BB2 /* MessagePack.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6381999A2034481000020BB2 /* MessagePack.framework.dSYM */; };
+		6381999C2034482B00020BB2 /* MessagePack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63340849202F6654004C3F99 /* MessagePack.framework */; };
+		6381999E2034485400020BB2 /* MessagePack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6381999D2034485400020BB2 /* MessagePack.framework */; };
+		638199A02034487900020BB2 /* MessagePack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6381999F2034487900020BB2 /* MessagePack.framework */; };
+		638199A92034532A00020BB2 /* Encode MessagePackValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638199A82034532A00020BB2 /* Encode MessagePackValue.swift */; };
+		638199AA2034532A00020BB2 /* Encode MessagePackValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638199A82034532A00020BB2 /* Encode MessagePackValue.swift */; };
+		638199AB2034532A00020BB2 /* Encode MessagePackValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638199A82034532A00020BB2 /* Encode MessagePackValue.swift */; };
+		638199AC2034532A00020BB2 /* Encode MessagePackValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638199A82034532A00020BB2 /* Encode MessagePackValue.swift */; };
 		639372891FEBD30800840D11 /* CustomTestClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639372881FEBD30800840D11 /* CustomTestClasses.swift */; };
 		639372981FEC4CBE00840D11 /* ExtensionTestClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639372971FEC4CBE00840D11 /* ExtensionTestClasses.swift */; };
 		6393729E1FEC532C00840D11 /* MsgpackSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -184,14 +205,6 @@
 		63E966B41FE6AF9900BA87BB /* Decode bins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668D1FE6AF9900BA87BB /* Decode bins.swift */; };
 		63E966B51FE6AF9900BA87BB /* Decode bins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668D1FE6AF9900BA87BB /* Decode bins.swift */; };
 		63E966B61FE6AF9900BA87BB /* Decode bins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668D1FE6AF9900BA87BB /* Decode bins.swift */; };
-		63E966B71FE6AF9900BA87BB /* Decode timestamps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668E1FE6AF9900BA87BB /* Decode timestamps.swift */; };
-		63E966B81FE6AF9900BA87BB /* Decode timestamps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668E1FE6AF9900BA87BB /* Decode timestamps.swift */; };
-		63E966B91FE6AF9900BA87BB /* Decode timestamps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668E1FE6AF9900BA87BB /* Decode timestamps.swift */; };
-		63E966BA1FE6AF9900BA87BB /* Decode timestamps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9668E1FE6AF9900BA87BB /* Decode timestamps.swift */; };
-		63E966C61FE6AFDA00BA87BB /* Encode Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BB1FE6AFD900BA87BB /* Encode Date.swift */; };
-		63E966C71FE6AFDA00BA87BB /* Encode Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BB1FE6AFD900BA87BB /* Encode Date.swift */; };
-		63E966C81FE6AFDA00BA87BB /* Encode Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BB1FE6AFD900BA87BB /* Encode Date.swift */; };
-		63E966C91FE6AFDA00BA87BB /* Encode Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BB1FE6AFD900BA87BB /* Encode Date.swift */; };
 		63E966CA1FE6AFDA00BA87BB /* Encode BinaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BC1FE6AFDA00BA87BB /* Encode BinaryInteger.swift */; };
 		63E966CB1FE6AFDA00BA87BB /* Encode BinaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BC1FE6AFDA00BA87BB /* Encode BinaryInteger.swift */; };
 		63E966CC1FE6AFDA00BA87BB /* Encode BinaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E966BC1FE6AFDA00BA87BB /* Encode BinaryInteger.swift */; };
@@ -285,6 +298,7 @@
 			dstSubfolderSpec = 16;
 			files = (
 				63340840202F6397004C3F99 /* MetaSerialization.framework.dSYM in CopyFiles */,
+				6381999B2034481000020BB2 /* MessagePack.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +321,8 @@
 		63340847202F640B004C3F99 /* MetaSerialization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetaSerialization.framework; path = Carthage/Build/iOS/MetaSerialization.framework; sourceTree = "<group>"; };
 		63340849202F6654004C3F99 /* MessagePack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessagePack.framework; path = Carthage/Build/iOS/MessagePack.framework; sourceTree = "<group>"; };
 		63368C3B1FC9ACFA0069D052 /* OptionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSet.swift; sourceTree = "<group>"; };
+		6338A93920345CF80018AA6C /* Timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timestamp.swift; sourceTree = "<group>"; };
+		6338A93E203460F90018AA6C /* Decode MessagePackValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decode MessagePackValue.swift"; sourceTree = "<group>"; };
 		637982DC1FC1D617008BD5D5 /* MsgpackSerialization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MsgpackSerialization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		637982F41FC1D639008BD5D5 /* MsgpackSerialization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MsgpackSerialization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MsgpackSerialization.h; sourceTree = "<group>"; };
@@ -321,8 +337,8 @@
 		637983491FC1E9BF008BD5D5 /* MsgpackTranslator + Decoding Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MsgpackTranslator + Decoding Stage.swift"; sourceTree = "<group>"; };
 		637983531FC1E9C0008BD5D5 /* FloatFormatMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatFormatMeta.swift; sourceTree = "<group>"; };
 		637983541FC1E9C0008BD5D5 /* IntFormatMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntFormatMeta.swift; sourceTree = "<group>"; };
-		637983561FC1E9C0008BD5D5 /* MsgpackBinaryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MsgpackBinaryData.swift; sourceTree = "<group>"; };
-		637983571FC1E9C0008BD5D5 /* MsgpackString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MsgpackString.swift; sourceTree = "<group>"; };
+		637983561FC1E9C0008BD5D5 /* BinaryMetas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryMetas.swift; sourceTree = "<group>"; };
+		637983571FC1E9C0008BD5D5 /* StringMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringMeta.swift; sourceTree = "<group>"; };
 		6379835A1FC1E9C0008BD5D5 /* MsgpackTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MsgpackTranslator.swift; sourceTree = "<group>"; };
 		637983741FC1E9C2008BD5D5 /* DecodingUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodingUtilities.swift; sourceTree = "<group>"; };
 		637983751FC1E9C2008BD5D5 /* EncodingUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodingUtilities.swift; sourceTree = "<group>"; };
@@ -335,6 +351,11 @@
 		637D302E200A291C007C8BE8 /* GeneralDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralDecodingContainer.swift; sourceTree = "<group>"; };
 		637D3033200A4B48007C8BE8 /* KeyedDecodingContainer + generalContainer function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer + generalContainer function.swift"; sourceTree = "<group>"; };
 		637D3038200A4D09007C8BE8 /* UnkeyedDecodingContainer + generalContainer function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnkeyedDecodingContainer + generalContainer function.swift"; sourceTree = "<group>"; };
+		6381998E20342D9400020BB2 /* Msgpacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Msgpacks.swift; sourceTree = "<group>"; };
+		6381999A2034481000020BB2 /* MessagePack.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = MessagePack.framework.dSYM; path = Carthage/Build/Mac/MessagePack.framework.dSYM; sourceTree = "<group>"; };
+		6381999D2034485400020BB2 /* MessagePack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessagePack.framework; path = Carthage/Build/watchOS/MessagePack.framework; sourceTree = "<group>"; };
+		6381999F2034487900020BB2 /* MessagePack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessagePack.framework; path = Carthage/Build/tvOS/MessagePack.framework; sourceTree = "<group>"; };
+		638199A82034532A00020BB2 /* Encode MessagePackValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encode MessagePackValue.swift"; sourceTree = "<group>"; };
 		639372881FEBD30800840D11 /* CustomTestClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTestClasses.swift; sourceTree = "<group>"; };
 		639372971FEC4CBE00840D11 /* ExtensionTestClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTestClasses.swift; sourceTree = "<group>"; };
 		63BB6CFD1FED1C65001DD28A /* MsgpackCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgpackCoder.swift; sourceTree = "<group>"; };
@@ -351,8 +372,6 @@
 		63E9668B1FE6AF9900BA87BB /* Decode int64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decode int64.swift"; sourceTree = "<group>"; };
 		63E9668C1FE6AF9900BA87BB /* Decode strs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decode strs.swift"; sourceTree = "<group>"; };
 		63E9668D1FE6AF9900BA87BB /* Decode bins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decode bins.swift"; sourceTree = "<group>"; };
-		63E9668E1FE6AF9900BA87BB /* Decode timestamps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decode timestamps.swift"; sourceTree = "<group>"; };
-		63E966BB1FE6AFD900BA87BB /* Encode Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encode Date.swift"; sourceTree = "<group>"; };
 		63E966BC1FE6AFDA00BA87BB /* Encode BinaryInteger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encode BinaryInteger.swift"; sourceTree = "<group>"; };
 		63E966BD1FE6AFDA00BA87BB /* Encode MsgpackExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encode MsgpackExtension.swift"; sourceTree = "<group>"; };
 		63E966BE1FE6AFDA00BA87BB /* Encode Nil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encode Nil.swift"; sourceTree = "<group>"; };
@@ -383,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63340844202F63CA004C3F99 /* MetaSerialization.framework in Frameworks */,
+				6381999E2034485400020BB2 /* MessagePack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63340843202F63B6004C3F99 /* MetaSerialization.framework in Frameworks */,
+				6381999C2034482B00020BB2 /* MessagePack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63340845202F63D2004C3F99 /* MetaSerialization.framework in Frameworks */,
+				638199A02034487900020BB2 /* MessagePack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6334083E202F6390004C3F99 /* MetaSerialization.framework in Frameworks */,
+				638199992034480300020BB2 /* MessagePack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +456,22 @@
 			path = GeneralContainer;
 			sourceTree = "<group>";
 		};
+		6338A93820345CD10018AA6C /* Predefined Extension */ = {
+			isa = PBXGroup;
+			children = (
+				63E967041FE6B19D00BA87BB /* PredefinedExtensionTypes.swift */,
+			);
+			path = "Predefined Extension";
+			sourceTree = "<group>";
+		};
+		6338A943203466620018AA6C /* Encoding and Decoding Predefined Extension Types */ = {
+			isa = PBXGroup;
+			children = (
+				6338A93920345CF80018AA6C /* Timestamp.swift */,
+			);
+			path = "Encoding and Decoding Predefined Extension Types";
+			sourceTree = "<group>";
+		};
 		635637811FED07B800EA1F6C /* Translator */ = {
 			isa = PBXGroup;
 			children = (
@@ -450,8 +489,9 @@
 			children = (
 				63368C3B1FC9ACFA0069D052 /* OptionSet.swift */,
 				637983341FC1E9BE008BD5D5 /* Errors.swift */,
-				63E965EE1FE6AF1000BA87BB /* Msgpack.swift */,
 				63E965ED1FE6AF1000BA87BB /* MsgpackSerialization.swift */,
+				63E965EE1FE6AF1000BA87BB /* Msgpack.swift */,
+				6381998E20342D9400020BB2 /* Msgpacks.swift */,
 			);
 			path = Frontend;
 			sourceTree = "<group>";
@@ -459,9 +499,10 @@
 		637982C21FC1D476008BD5D5 = {
 			isa = PBXGroup;
 			children = (
-				63340849202F6654004C3F99 /* MessagePack.framework */,
 				63340847202F640B004C3F99 /* MetaSerialization.framework */,
+				63340849202F6654004C3F99 /* MessagePack.framework */,
 				6334083F202F6396004C3F99 /* MetaSerialization.framework.dSYM */,
+				6381999A2034481000020BB2 /* MessagePack.framework.dSYM */,
 				637983161FC1D684008BD5D5 /* Sources */,
 				6379831B1FC1E8F6008BD5D5 /* Tests */,
 				637982CF1FC1D5F7008BD5D5 /* Products */,
@@ -484,12 +525,15 @@
 		637983161FC1D684008BD5D5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				637983351FC1E9BE008BD5D5 /* Extension */,
 				635637821FED07EF00EA1F6C /* Frontend */,
+				637983351FC1E9BE008BD5D5 /* Extension */,
 				63BB6D021FED1C6D001DD28A /* MsgpackCoder */,
 				635637811FED07B800EA1F6C /* Translator */,
-				637983721FC1E9C2008BD5D5 /* Encoding and Decoding */,
+				6338A943203466620018AA6C /* Encoding and Decoding Predefined Extension Types */,
+				637983721FC1E9C2008BD5D5 /* Encoding and Decoding Data */,
+				638199A6203452CF00020BB2 /* Encoding and Decoding MessagePackValues */,
 				637983511FC1E9C0008BD5D5 /* Metas */,
+				63E967121FE6B1CC00BA87BB /* Gaining compatibility with msgpack-java */,
 				637982F71FC1D639008BD5D5 /* Info.plist */,
 				637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */,
 			);
@@ -515,6 +559,7 @@
 			children = (
 				637983371FC1E9BE008BD5D5 /* MsgpackExtension.swift */,
 				637983381FC1E9BE008BD5D5 /* MsgpackExtensionValue.swift */,
+				6338A93820345CD10018AA6C /* Predefined Extension */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -542,23 +587,21 @@
 			isa = PBXGroup;
 			children = (
 				63E966F21FE6B00C00BA87BB /* SkipMeta.swift */,
-				637983571FC1E9C0008BD5D5 /* MsgpackString.swift */,
-				637983561FC1E9C0008BD5D5 /* MsgpackBinaryData.swift */,
+				637983571FC1E9C0008BD5D5 /* StringMeta.swift */,
+				637983561FC1E9C0008BD5D5 /* BinaryMetas.swift */,
 			);
 			path = "Encoding Metas";
 			sourceTree = "<group>";
 		};
-		637983721FC1E9C2008BD5D5 /* Encoding and Decoding */ = {
+		637983721FC1E9C2008BD5D5 /* Encoding and Decoding Data */ = {
 			isa = PBXGroup;
 			children = (
 				63E967031FE6B19D00BA87BB /* Headers.swift */,
-				63E967041FE6B19D00BA87BB /* PredefinedExtensionTypes.swift */,
 				63DA929C1FE52F1F00069F31 /* Decoding */,
 				63DA929B1FE52F1900069F31 /* Encoding */,
-				63E967121FE6B1CC00BA87BB /* Gaining compatibility with msgpack-java */,
 				637983731FC1E9C2008BD5D5 /* coding utilities */,
 			);
-			path = "Encoding and Decoding";
+			path = "Encoding and Decoding Data";
 			sourceTree = "<group>";
 		};
 		637983731FC1E9C2008BD5D5 /* coding utilities */ = {
@@ -575,6 +618,8 @@
 		637984C31FC1EBA0008BD5D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6381999D2034485400020BB2 /* MessagePack.framework */,
+				6381999F2034487900020BB2 /* MessagePack.framework */,
 				63340841202F63AD004C3F99 /* MetaSerialization.framework.dSYM */,
 				6334083A202F6364004C3F99 /* MessagePack.framework */,
 				63E966FB1FE6B07800BA87BB /* NoSerialization.framework */,
@@ -609,6 +654,15 @@
 			path = Decoding;
 			sourceTree = "<group>";
 		};
+		638199A6203452CF00020BB2 /* Encoding and Decoding MessagePackValues */ = {
+			isa = PBXGroup;
+			children = (
+				6338A93E203460F90018AA6C /* Decode MessagePackValue.swift */,
+				638199A82034532A00020BB2 /* Encode MessagePackValue.swift */,
+			);
+			path = "Encoding and Decoding MessagePackValues";
+			sourceTree = "<group>";
+		};
 		6393728A1FEBD9B600840D11 /* General Metas */ = {
 			isa = PBXGroup;
 			children = (
@@ -637,7 +691,6 @@
 				63E966C11FE6AFDA00BA87BB /* Encode String.swift */,
 				63E966C31FE6AFDA00BA87BB /* Encode Data.swift */,
 				63E966BD1FE6AFDA00BA87BB /* Encode MsgpackExtension.swift */,
-				63E966BB1FE6AFD900BA87BB /* Encode Date.swift */,
 				63E966C01FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift */,
 				63E966C41FE6AFDA00BA87BB /* Encode MapMeta.swift */,
 			);
@@ -657,7 +710,6 @@
 				63E9668C1FE6AF9900BA87BB /* Decode strs.swift */,
 				63E9668D1FE6AF9900BA87BB /* Decode bins.swift */,
 				63E966851FE6AF9800BA87BB /* Decode exts.swift */,
-				63E9668E1FE6AF9900BA87BB /* Decode timestamps.swift */,
 				63E966841FE6AF9800BA87BB /* Decode arrays.swift */,
 				63E966861FE6AF9800BA87BB /* Decode maps.swift */,
 			);
@@ -908,9 +960,11 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/MetaSerialization.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MessagePack.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MetaSerialization.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MessagePack.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -923,9 +977,11 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/watchOS/MetaSerialization.framework",
+				"$(SRCROOT)/Carthage/Build/watchOS/MessagePack.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MetaSerialization.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MessagePack.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -938,9 +994,11 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/tvOS/MetaSerialization.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/MessagePack.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MetaSerialization.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MessagePack.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -956,10 +1014,11 @@
 				63E966981FE6AF9900BA87BB /* Decode maps.swift in Sources */,
 				637984731FC1E9C2008BD5D5 /* EncodingUtilities.swift in Sources */,
 				637983A71FC1E9C2008BD5D5 /* MsgpackExtensionValue.swift in Sources */,
-				637984071FC1E9C2008BD5D5 /* MsgpackBinaryData.swift in Sources */,
+				637984071FC1E9C2008BD5D5 /* BinaryMetas.swift in Sources */,
 				637984D91FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift in Sources */,
 				637984031FC1E9C2008BD5D5 /* IntFormatMeta.swift in Sources */,
 				6315DB5E1FC3F775009F99F1 /* RawMsgpack.swift in Sources */,
+				638199AA2034532A00020BB2 /* Encode MessagePackValue.swift in Sources */,
 				63E966A41FE6AF9900BA87BB /* Decode floats.swift in Sources */,
 				63E9670F1FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift in Sources */,
 				63E965F01FE6AF1000BA87BB /* MsgpackSerialization.swift in Sources */,
@@ -969,12 +1028,12 @@
 				63E965F41FE6AF1000BA87BB /* Msgpack.swift in Sources */,
 				63E966F41FE6B00C00BA87BB /* SkipMeta.swift in Sources */,
 				6379832D1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift in Sources */,
-				63E966C71FE6AFDA00BA87BB /* Encode Date.swift in Sources */,
 				637D3035200A4B48007C8BE8 /* KeyedDecodingContainer + generalContainer function.swift in Sources */,
 				63161B5C20094D9500CEAB28 /* MetaUnkeyedEncodingContainer + nestedGeneralContainer function.swift in Sources */,
 				637983E31FC1E9C2008BD5D5 /* MsgpackTranslator + Decoding Stage.swift in Sources */,
 				63161B52200949A700CEAB28 /* Reference.swift in Sources */,
 				63E966DB1FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift in Sources */,
+				6381999020342D9400020BB2 /* Msgpacks.swift in Sources */,
 				63F0C1E51FDC4F61000F910B /* MapMeta.swift in Sources */,
 				63E966D31FE6AFDA00BA87BB /* Encode Nil.swift in Sources */,
 				637983A31FC1E9C2008BD5D5 /* MsgpackExtension.swift in Sources */,
@@ -983,9 +1042,9 @@
 				63E966CF1FE6AFDA00BA87BB /* Encode MsgpackExtension.swift in Sources */,
 				637983FF1FC1E9C2008BD5D5 /* FloatFormatMeta.swift in Sources */,
 				63E966EF1FE6AFDA00BA87BB /* Encode.swift in Sources */,
+				6338A93B20345CF80018AA6C /* Timestamp.swift in Sources */,
 				63DA929F1FE5364400069F31 /* RawMsgpack + Decoding.swift in Sources */,
 				63E966CB1FE6AFDA00BA87BB /* Encode BinaryInteger.swift in Sources */,
-				63E966B81FE6AF9900BA87BB /* Decode timestamps.swift in Sources */,
 				63E966D71FE6AFDA00BA87BB /* Encode Bool.swift in Sources */,
 				637D3030200A291C007C8BE8 /* GeneralDecodingContainer.swift in Sources */,
 				63E966E31FE6AFDA00BA87BB /* Encode Float and Double.swift in Sources */,
@@ -996,7 +1055,7 @@
 				63E966941FE6AF9900BA87BB /* Decode exts.swift in Sources */,
 				63E9670A1FE6B19D00BA87BB /* PredefinedExtensionTypes.swift in Sources */,
 				63E966B41FE6AF9900BA87BB /* Decode bins.swift in Sources */,
-				6379840B1FC1E9C2008BD5D5 /* MsgpackString.swift in Sources */,
+				6379840B1FC1E9C2008BD5D5 /* StringMeta.swift in Sources */,
 				63E966DF1FE6AFDA00BA87BB /* Encode String.swift in Sources */,
 				637984171FC1E9C2008BD5D5 /* MsgpackTranslator.swift in Sources */,
 				6379839B1FC1E9C2008BD5D5 /* Errors.swift in Sources */,
@@ -1006,6 +1065,7 @@
 				637983D31FC1E9C2008BD5D5 /* MsgpackTranslator + Encoding Stage.swift in Sources */,
 				63E966901FE6AF9900BA87BB /* Decode arrays.swift in Sources */,
 				63E9669C1FE6AF9900BA87BB /* Decode int8.swift in Sources */,
+				6338A940203460F90018AA6C /* Decode MessagePackValue.swift in Sources */,
 				63161B482009454100CEAB28 /* GeneralEncodingContainer.swift in Sources */,
 				63E966A01FE6AF9900BA87BB /* Decode int32.swift in Sources */,
 				63E966EB1FE6AFDA00BA87BB /* Encode MapMeta.swift in Sources */,
@@ -1021,9 +1081,10 @@
 				63E9669F1FE6AF9900BA87BB /* Decode int32.swift in Sources */,
 				637984721FC1E9C2008BD5D5 /* EncodingUtilities.swift in Sources */,
 				637983A61FC1E9C2008BD5D5 /* MsgpackExtensionValue.swift in Sources */,
-				637984061FC1E9C2008BD5D5 /* MsgpackBinaryData.swift in Sources */,
+				637984061FC1E9C2008BD5D5 /* BinaryMetas.swift in Sources */,
 				637984D81FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift in Sources */,
 				63E966931FE6AF9900BA87BB /* Decode exts.swift in Sources */,
+				638199A92034532A00020BB2 /* Encode MessagePackValue.swift in Sources */,
 				637984021FC1E9C2008BD5D5 /* IntFormatMeta.swift in Sources */,
 				63E9670E1FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift in Sources */,
 				6315DB5D1FC3F775009F99F1 /* RawMsgpack.swift in Sources */,
@@ -1033,12 +1094,12 @@
 				6379832C1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift in Sources */,
 				63E966F31FE6B00C00BA87BB /* SkipMeta.swift in Sources */,
 				637983E21FC1E9C2008BD5D5 /* MsgpackTranslator + Decoding Stage.swift in Sources */,
-				63E966C61FE6AFDA00BA87BB /* Encode Date.swift in Sources */,
 				637D3034200A4B48007C8BE8 /* KeyedDecodingContainer + generalContainer function.swift in Sources */,
 				63161B5B20094D9500CEAB28 /* MetaUnkeyedEncodingContainer + nestedGeneralContainer function.swift in Sources */,
 				63F0C1E41FDC4F61000F910B /* MapMeta.swift in Sources */,
 				63161B51200949A700CEAB28 /* Reference.swift in Sources */,
 				63E966DA1FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift in Sources */,
+				6381998F20342D9400020BB2 /* Msgpacks.swift in Sources */,
 				637983A21FC1E9C2008BD5D5 /* MsgpackExtension.swift in Sources */,
 				63E966D21FE6AFDA00BA87BB /* Encode Nil.swift in Sources */,
 				6379846E1FC1E9C2008BD5D5 /* DecodingUtilities.swift in Sources */,
@@ -1047,20 +1108,20 @@
 				63E966CE1FE6AFDA00BA87BB /* Encode MsgpackExtension.swift in Sources */,
 				63DA929E1FE5364400069F31 /* RawMsgpack + Decoding.swift in Sources */,
 				63E966EE1FE6AFDA00BA87BB /* Encode.swift in Sources */,
+				6338A93A20345CF80018AA6C /* Timestamp.swift in Sources */,
 				63368C3C1FC9ACFA0069D052 /* OptionSet.swift in Sources */,
 				63E966CA1FE6AFDA00BA87BB /* Encode BinaryInteger.swift in Sources */,
 				6315DB621FC40707009F99F1 /* GeneralUtilities.swift in Sources */,
 				63E966D61FE6AFDA00BA87BB /* Encode Bool.swift in Sources */,
 				637D302F200A291C007C8BE8 /* GeneralDecodingContainer.swift in Sources */,
 				63E966E21FE6AFDA00BA87BB /* Encode Float and Double.swift in Sources */,
-				6379840A1FC1E9C2008BD5D5 /* MsgpackString.swift in Sources */,
+				6379840A1FC1E9C2008BD5D5 /* StringMeta.swift in Sources */,
 				637984161FC1E9C2008BD5D5 /* MsgpackTranslator.swift in Sources */,
 				63161B4B2009454100CEAB28 /* GeneralCodingKey.swift in Sources */,
 				63E965EF1FE6AF1000BA87BB /* MsgpackSerialization.swift in Sources */,
 				63E966AF1FE6AF9900BA87BB /* Decode strs.swift in Sources */,
 				63E967091FE6B19D00BA87BB /* PredefinedExtensionTypes.swift in Sources */,
 				6379839A1FC1E9C2008BD5D5 /* Errors.swift in Sources */,
-				63E966B71FE6AF9900BA87BB /* Decode timestamps.swift in Sources */,
 				63E966DE1FE6AFDA00BA87BB /* Encode String.swift in Sources */,
 				63E966971FE6AF9900BA87BB /* Decode maps.swift in Sources */,
 				637983D21FC1E9C2008BD5D5 /* MsgpackTranslator + Encoding Stage.swift in Sources */,
@@ -1070,6 +1131,7 @@
 				63E9669B1FE6AF9900BA87BB /* Decode int8.swift in Sources */,
 				63E966B31FE6AF9900BA87BB /* Decode bins.swift in Sources */,
 				63E966A71FE6AF9900BA87BB /* Decode int16.swift in Sources */,
+				6338A93F203460F90018AA6C /* Decode MessagePackValue.swift in Sources */,
 				63161B472009454100CEAB28 /* GeneralEncodingContainer.swift in Sources */,
 				637984761FC1E9C2008BD5D5 /* MsgpackExtensionValue+Coding.swift in Sources */,
 				63E966EA1FE6AFDA00BA87BB /* Encode MapMeta.swift in Sources */,
@@ -1084,10 +1146,11 @@
 				63E966991FE6AF9900BA87BB /* Decode maps.swift in Sources */,
 				637984741FC1E9C2008BD5D5 /* EncodingUtilities.swift in Sources */,
 				637983A81FC1E9C2008BD5D5 /* MsgpackExtensionValue.swift in Sources */,
-				637984081FC1E9C2008BD5D5 /* MsgpackBinaryData.swift in Sources */,
+				637984081FC1E9C2008BD5D5 /* BinaryMetas.swift in Sources */,
 				637984DA1FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift in Sources */,
 				637984041FC1E9C2008BD5D5 /* IntFormatMeta.swift in Sources */,
 				6315DB5F1FC3F775009F99F1 /* RawMsgpack.swift in Sources */,
+				638199AB2034532A00020BB2 /* Encode MessagePackValue.swift in Sources */,
 				63E966A51FE6AF9900BA87BB /* Decode floats.swift in Sources */,
 				63E967101FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift in Sources */,
 				63E965F11FE6AF1000BA87BB /* MsgpackSerialization.swift in Sources */,
@@ -1097,12 +1160,12 @@
 				63E965F51FE6AF1000BA87BB /* Msgpack.swift in Sources */,
 				63E966F51FE6B00C00BA87BB /* SkipMeta.swift in Sources */,
 				6379832E1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift in Sources */,
-				63E966C81FE6AFDA00BA87BB /* Encode Date.swift in Sources */,
 				637D3036200A4B48007C8BE8 /* KeyedDecodingContainer + generalContainer function.swift in Sources */,
 				63161B5D20094D9500CEAB28 /* MetaUnkeyedEncodingContainer + nestedGeneralContainer function.swift in Sources */,
 				637983E41FC1E9C2008BD5D5 /* MsgpackTranslator + Decoding Stage.swift in Sources */,
 				63161B53200949A700CEAB28 /* Reference.swift in Sources */,
 				63E966DC1FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift in Sources */,
+				6381999120342D9400020BB2 /* Msgpacks.swift in Sources */,
 				63F0C1E61FDC4F61000F910B /* MapMeta.swift in Sources */,
 				63E966D41FE6AFDA00BA87BB /* Encode Nil.swift in Sources */,
 				637983A41FC1E9C2008BD5D5 /* MsgpackExtension.swift in Sources */,
@@ -1111,9 +1174,9 @@
 				63E966D01FE6AFDA00BA87BB /* Encode MsgpackExtension.swift in Sources */,
 				637984001FC1E9C2008BD5D5 /* FloatFormatMeta.swift in Sources */,
 				63E966F01FE6AFDA00BA87BB /* Encode.swift in Sources */,
+				6338A93C20345CF80018AA6C /* Timestamp.swift in Sources */,
 				63DA92A01FE5364400069F31 /* RawMsgpack + Decoding.swift in Sources */,
 				63E966CC1FE6AFDA00BA87BB /* Encode BinaryInteger.swift in Sources */,
-				63E966B91FE6AF9900BA87BB /* Decode timestamps.swift in Sources */,
 				63E966D81FE6AFDA00BA87BB /* Encode Bool.swift in Sources */,
 				637D3031200A291C007C8BE8 /* GeneralDecodingContainer.swift in Sources */,
 				63E966E41FE6AFDA00BA87BB /* Encode Float and Double.swift in Sources */,
@@ -1124,7 +1187,7 @@
 				63E966951FE6AF9900BA87BB /* Decode exts.swift in Sources */,
 				63E9670B1FE6B19D00BA87BB /* PredefinedExtensionTypes.swift in Sources */,
 				63E966B51FE6AF9900BA87BB /* Decode bins.swift in Sources */,
-				6379840C1FC1E9C2008BD5D5 /* MsgpackString.swift in Sources */,
+				6379840C1FC1E9C2008BD5D5 /* StringMeta.swift in Sources */,
 				63E966E01FE6AFDA00BA87BB /* Encode String.swift in Sources */,
 				637984181FC1E9C2008BD5D5 /* MsgpackTranslator.swift in Sources */,
 				6379839C1FC1E9C2008BD5D5 /* Errors.swift in Sources */,
@@ -1134,6 +1197,7 @@
 				637983D41FC1E9C2008BD5D5 /* MsgpackTranslator + Encoding Stage.swift in Sources */,
 				63E966911FE6AF9900BA87BB /* Decode arrays.swift in Sources */,
 				63E9669D1FE6AF9900BA87BB /* Decode int8.swift in Sources */,
+				6338A941203460F90018AA6C /* Decode MessagePackValue.swift in Sources */,
 				63161B492009454100CEAB28 /* GeneralEncodingContainer.swift in Sources */,
 				63E966A11FE6AF9900BA87BB /* Decode int32.swift in Sources */,
 				63E966EC1FE6AFDA00BA87BB /* Encode MapMeta.swift in Sources */,
@@ -1148,10 +1212,11 @@
 				63E9669A1FE6AF9900BA87BB /* Decode maps.swift in Sources */,
 				637984751FC1E9C2008BD5D5 /* EncodingUtilities.swift in Sources */,
 				637983A91FC1E9C2008BD5D5 /* MsgpackExtensionValue.swift in Sources */,
-				637984091FC1E9C2008BD5D5 /* MsgpackBinaryData.swift in Sources */,
+				637984091FC1E9C2008BD5D5 /* BinaryMetas.swift in Sources */,
 				637984DB1FC1EE41008BD5D5 /* MsgpackTranslator + unwrap.swift in Sources */,
 				637984051FC1E9C2008BD5D5 /* IntFormatMeta.swift in Sources */,
 				6315DB601FC3F775009F99F1 /* RawMsgpack.swift in Sources */,
+				638199AC2034532A00020BB2 /* Encode MessagePackValue.swift in Sources */,
 				63E966A61FE6AF9900BA87BB /* Decode floats.swift in Sources */,
 				63E967111FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift in Sources */,
 				63E965F21FE6AF1000BA87BB /* MsgpackSerialization.swift in Sources */,
@@ -1161,12 +1226,12 @@
 				63E965F61FE6AF1000BA87BB /* Msgpack.swift in Sources */,
 				63E966F61FE6B00C00BA87BB /* SkipMeta.swift in Sources */,
 				6379832F1FC1E995008BD5D5 /* MsgpackTranslator + wrappingMeta.swift in Sources */,
-				63E966C91FE6AFDA00BA87BB /* Encode Date.swift in Sources */,
 				637D3037200A4B48007C8BE8 /* KeyedDecodingContainer + generalContainer function.swift in Sources */,
 				63161B5E20094D9500CEAB28 /* MetaUnkeyedEncodingContainer + nestedGeneralContainer function.swift in Sources */,
 				637983E51FC1E9C2008BD5D5 /* MsgpackTranslator + Decoding Stage.swift in Sources */,
 				63161B54200949A700CEAB28 /* Reference.swift in Sources */,
 				63E966DD1FE6AFDA00BA87BB /* Encode ArrayUnkeyedContainerMeta.swift in Sources */,
+				6381999220342D9400020BB2 /* Msgpacks.swift in Sources */,
 				63F0C1E71FDC4F61000F910B /* MapMeta.swift in Sources */,
 				63E966D51FE6AFDA00BA87BB /* Encode Nil.swift in Sources */,
 				637983A51FC1E9C2008BD5D5 /* MsgpackExtension.swift in Sources */,
@@ -1175,9 +1240,9 @@
 				63E966D11FE6AFDA00BA87BB /* Encode MsgpackExtension.swift in Sources */,
 				637984011FC1E9C2008BD5D5 /* FloatFormatMeta.swift in Sources */,
 				63E966F11FE6AFDA00BA87BB /* Encode.swift in Sources */,
+				6338A93D20345CF80018AA6C /* Timestamp.swift in Sources */,
 				63DA92A11FE5364400069F31 /* RawMsgpack + Decoding.swift in Sources */,
 				63E966CD1FE6AFDA00BA87BB /* Encode BinaryInteger.swift in Sources */,
-				63E966BA1FE6AF9900BA87BB /* Decode timestamps.swift in Sources */,
 				63E966D91FE6AFDA00BA87BB /* Encode Bool.swift in Sources */,
 				637D3032200A291C007C8BE8 /* GeneralDecodingContainer.swift in Sources */,
 				63E966E51FE6AFDA00BA87BB /* Encode Float and Double.swift in Sources */,
@@ -1188,7 +1253,7 @@
 				63E966961FE6AF9900BA87BB /* Decode exts.swift in Sources */,
 				63E9670C1FE6B19D00BA87BB /* PredefinedExtensionTypes.swift in Sources */,
 				63E966B61FE6AF9900BA87BB /* Decode bins.swift in Sources */,
-				6379840D1FC1E9C2008BD5D5 /* MsgpackString.swift in Sources */,
+				6379840D1FC1E9C2008BD5D5 /* StringMeta.swift in Sources */,
 				63E966E11FE6AFDA00BA87BB /* Encode String.swift in Sources */,
 				637984191FC1E9C2008BD5D5 /* MsgpackTranslator.swift in Sources */,
 				6379839D1FC1E9C2008BD5D5 /* Errors.swift in Sources */,
@@ -1198,6 +1263,7 @@
 				637983D51FC1E9C2008BD5D5 /* MsgpackTranslator + Encoding Stage.swift in Sources */,
 				63E966921FE6AF9900BA87BB /* Decode arrays.swift in Sources */,
 				63E9669E1FE6AF9900BA87BB /* Decode int8.swift in Sources */,
+				6338A942203460F90018AA6C /* Decode MessagePackValue.swift in Sources */,
 				63161B4A2009454100CEAB28 /* GeneralEncodingContainer.swift in Sources */,
 				63E966A21FE6AF9900BA87BB /* Decode int32.swift in Sources */,
 				63E966ED1FE6AFDA00BA87BB /* Encode MapMeta.swift in Sources */,

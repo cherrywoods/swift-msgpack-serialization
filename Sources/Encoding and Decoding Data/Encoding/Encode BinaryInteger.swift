@@ -13,7 +13,7 @@ import MetaSerialization
  that finds the smallest possible representation
  in msgpack.
  */
-extension BinaryInteger {
+internal extension BinaryInteger {
     
     /**
      Encodes self.

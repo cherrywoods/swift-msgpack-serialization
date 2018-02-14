@@ -93,8 +93,8 @@ internal class MapMeta: KeyedContainerMeta, UnkeyedContainerMeta {
             if key is SimpleGenericMeta<String> {
                 return (key as! SimpleGenericMeta<String>).value
                 
-            } else if key is MsgpackString {
-                return (key as! MsgpackString).value
+            } else if key is StringMeta {
+                return (key as! StringMeta).value
                 
             } else if key is SimpleGenericMeta<Int> {
                 return (key as! SimpleGenericMeta<Int>).value?.description
@@ -144,7 +144,7 @@ internal class MapMeta: KeyedContainerMeta, UnkeyedContainerMeta {
                 
                 // fill the place of the key in keyValuePairs
                 // construct the key-value-pair to set or append for the key
-                let keyPlaceholderMeta = MsgpackString(value: stringKey) as Meta
+                let keyPlaceholderMeta = StringMeta(value: stringKey) as Meta
                 
                 // lookup key; insert, if key existing / append if not existing
                 if let index = stringKeyIndices[ stringKey ] {

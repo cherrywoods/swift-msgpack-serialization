@@ -8,7 +8,7 @@
 import Foundation
 import MetaSerialization
 
-extension NilMeta {
+internal extension NilMeta {
     
     func encodeToMsgpack() -> Data {
         

@@ -44,19 +44,19 @@ extension MsgpackTranslator {
             // StrFormatFamilyMeta makes sure,
             // that the given Strings are short enough to be converted to msgpack
             // (below 2^32 characters).
-            return MsgpackString()
+            return StringMeta()
             
         } else if value is Data && self.optionSet.encodeDataAsBinary {
             
             // MsgpackBinaryData makes sure,
             // that the passed Data is short enough to be converted to msgpack
             // (below 2^32 bytes).
-            return MsgpackBinaryData()
+            return DataMeta()
             
         } else if value is [UInt8] && self.optionSet.encodeDataAsBinary {
             
             // same as with Data
-            return MsgpackBinaryByteArray()
+            return ByteArrayMeta()
             
         } else if value is Date && self.optionSet.convertSwiftDateToMsgpackTimestamp {
             
@@ -74,11 +74,6 @@ extension MsgpackTranslator {
             // with this meta, we skip the first encoding process and
             // therefor also the encoding code from Dictionary
             return SkipMeta()
-            
-        } else if value is EncodableContainer {
-            
-            // this is necessary because of the type errasure in encoding container
-            return wrappingMeta(for: (value as! EncodableContainer).value)
             
         } else {
             

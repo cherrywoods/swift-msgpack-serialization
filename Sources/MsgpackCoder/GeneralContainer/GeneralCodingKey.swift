@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GeneralCodingKey: CodingKey {
+internal struct GeneralCodingKey: CodingKey {
     
     /// Will init with the string value "Some key-value pair"
     init() {

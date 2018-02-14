@@ -13,7 +13,7 @@ public enum MsgpackError: Error {
     /// indicates, that some kind of container contained more than 2^32-1 elements. (Might be used in context of String, Data, Array, Dictionary and MsgpackExtensionValue)
     case valueExceededSupportedLength
     
-    /// if you specifiy a .stringEncoding option that does not allow loosy conversion, this error will be thrown, if a strin can not be converted.
+    /// if you specifiy a .stringEncoding option that does not allow loosy conversion, this error will be thrown, if a string can not be converted.
     case stringCouldNotBeRepresentedUsingUTF8(string: String)
     
     /// Thrown if you specify .allowLoosyNumberConversion or .allowLoosyFloatingPointNumberConversion as false in the coding options. number will always be a Numeric.
