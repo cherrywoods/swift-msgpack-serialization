@@ -153,6 +153,8 @@
 		63BB6CFF1FED1C65001DD28A /* MsgpackCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB6CFD1FED1C65001DD28A /* MsgpackCoder.swift */; };
 		63BB6D001FED1C65001DD28A /* MsgpackCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB6CFD1FED1C65001DD28A /* MsgpackCoder.swift */; };
 		63BB6D011FED1C65001DD28A /* MsgpackCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB6CFD1FED1C65001DD28A /* MsgpackCoder.swift */; };
+		63CF43832039D9CD0070B115 /* MessagePack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63340849202F6654004C3F99 /* MessagePack.framework */; };
+		63CF43842039F37E0070B115 /* MsgpackSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637982DC1FC1D617008BD5D5 /* MsgpackSerialization.framework */; };
 		63DA929E1FE5364400069F31 /* RawMsgpack + Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA929D1FE5364400069F31 /* RawMsgpack + Decoding.swift */; };
 		63DA929F1FE5364400069F31 /* RawMsgpack + Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA929D1FE5364400069F31 /* RawMsgpack + Decoding.swift */; };
 		63DA92A01FE5364400069F31 /* RawMsgpack + Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DA929D1FE5364400069F31 /* RawMsgpack + Decoding.swift */; };
@@ -261,7 +263,6 @@
 		63E9670F1FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9670D1FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift */; };
 		63E967101FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9670D1FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift */; };
 		63E967111FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9670D1FE6B1C400BA87BB /* Encode Dictionary java compatibily.swift */; };
-		63E9674C1FE6DE3500BA87BB /* MsgpackSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637982F41FC1D639008BD5D5 /* MsgpackSerialization.framework */; };
 		63E967551FE6DF9200BA87BB /* BasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E967541FE6DF9200BA87BB /* BasicTests.swift */; };
 		63F0C1E41FDC4F61000F910B /* MapMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F0C1E31FDC4F61000F910B /* MapMeta.swift */; };
 		63F0C1E51FDC4F61000F910B /* MapMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F0C1E31FDC4F61000F910B /* MapMeta.swift */; };
@@ -437,8 +438,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CF43842039F37E0070B115 /* MsgpackSerialization.framework in Frameworks */,
 				6314BD41200654D7001AC48B /* MetaSerialization.framework in Frameworks */,
-				63E9674C1FE6DE3500BA87BB /* MsgpackSerialization.framework in Frameworks */,
+				63CF43832039D9CD0070B115 /* MessagePack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,15 +527,8 @@
 		637983161FC1D684008BD5D5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				635637821FED07EF00EA1F6C /* Frontend */,
-				637983351FC1E9BE008BD5D5 /* Extension */,
-				63BB6D021FED1C6D001DD28A /* MsgpackCoder */,
-				635637811FED07B800EA1F6C /* Translator */,
-				6338A943203466620018AA6C /* Encoding and Decoding Predefined Extension Types */,
-				637983721FC1E9C2008BD5D5 /* Encoding and Decoding Data */,
-				638199A6203452CF00020BB2 /* Encoding and Decoding MessagePackValues */,
-				637983511FC1E9C0008BD5D5 /* Metas */,
-				63E967121FE6B1CC00BA87BB /* Gaining compatibility with msgpack-java */,
+				63CF43812039D0050070B115 /* Features */,
+				63CF43822039D0160070B115 /* Implementation */,
 				637982F71FC1D639008BD5D5 /* Info.plist */,
 				637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */,
 			);
@@ -678,6 +673,29 @@
 				63161B4F2009495600CEAB28 /* GeneralContainer */,
 			);
 			path = MsgpackCoder;
+			sourceTree = "<group>";
+		};
+		63CF43812039D0050070B115 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				635637821FED07EF00EA1F6C /* Frontend */,
+				637983351FC1E9BE008BD5D5 /* Extension */,
+				63BB6D021FED1C6D001DD28A /* MsgpackCoder */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		63CF43822039D0160070B115 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				635637811FED07B800EA1F6C /* Translator */,
+				6338A943203466620018AA6C /* Encoding and Decoding Predefined Extension Types */,
+				637983721FC1E9C2008BD5D5 /* Encoding and Decoding Data */,
+				638199A6203452CF00020BB2 /* Encoding and Decoding MessagePackValues */,
+				637983511FC1E9C0008BD5D5 /* Metas */,
+				63E967121FE6B1CC00BA87BB /* Gaining compatibility with msgpack-java */,
+			);
+			path = Implementation;
 			sourceTree = "<group>";
 		};
 		63DA929B1FE52F1900069F31 /* Encoding */ = {

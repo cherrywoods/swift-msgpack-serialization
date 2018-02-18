@@ -12,17 +12,20 @@ extension MsgpackTranslator {
     
     func unwrap<T>(meta: Meta, toType type: T.Type) throws -> T? {
         
-        // Nil
+        // MARK: Nil
         // NilMeta will not reach here
         
-        // Bool
+        // MARK: Bool
         // using as? will produce nil,
         // if T is not the expected type (Bool here)
+        // MetaSerialization will detect non matching types
+        // e.g. it will detect requests for a String,
+        // while an Bool is encoded and throw an error then
         if meta is SimpleGenericMeta<Bool> {
             
             return meta.get() as? T
         
-        // Ints
+        // MARK: Ints
         // unwrap will check for the type of T
         // and return nil, if T is not an Int
         } else if let intMeta = meta as? IntFormatMeta<Int> {
@@ -46,24 +49,24 @@ extension MsgpackTranslator {
         } else if let intMeta = meta as? IntFormatMeta<UInt64> {
             return try unwrap(intFormatMeta: intMeta)
            
-        // Float and Double
+        // MARK: Float and Double
         // also here, unwrap will check for T
         } else if let floatMeta = meta as? FloatFormatMeta<Float> {
             return try unwrap(floatFormatMeta: floatMeta)
         } else if let doubleMeta = meta as? FloatFormatMeta<Double> {
             return try unwrap(floatFormatMeta: doubleMeta)
             
-        // String
+        // MARK: String
         } else if meta is SimpleGenericMeta<String> {
             
-            /**
+            /*
              Adding decoding from strings to Bool, Float, Double, Ints and UInts
              Because msgpack-java encodes all keys as strings by default
              */
             let string = meta.get() as! String
             return string as? T ?? unwrap(string: string, toType: type)
             
-        // Data
+        // MARK: Data
         } else if meta is SimpleGenericMeta<Data> {
             
             // T might be eigther Data or [UInt8]
@@ -79,12 +82,12 @@ extension MsgpackTranslator {
             
             return meta.get() as? T
             
-        // Extension
+        // MARK: Extension
         } else if meta is SimpleGenericMeta<MsgpackExtensionValue> {
             
             return meta.get() as? T
             
-        // Date decoded with TimeStamp
+        // Date decoded with Timestamp
         } else if meta is SimpleGenericMeta<Date> {
             
             // date might still decode itself
@@ -92,7 +95,7 @@ extension MsgpackTranslator {
             
             return meta.get() as? T
             
-        // something strange
+        // something else
         } else {
             
             return nil

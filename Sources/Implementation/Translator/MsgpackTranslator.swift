@@ -13,16 +13,6 @@ internal class MsgpackTranslator: Translator {
     // TODO: it seems to me as if there were some special mechanisms to handle
     // overlengther data in msgpack-java. They should be mirrored
     
-    /*
-     ideas:
-     Extend Data to take Binary Integer or UInt32 instead of Data.Index (Int) for some methods (e.g. subdata)
-     
-     Rewrite all methods taking Data.Index to take some Binary Integer, delegating the subdata, etc. methods to
-     another method, with architecture specific implmentations, throwing an error, if decoding is impossible.
-     */
-    
-    // MARK: - Encoding and Decoding Options
-    
     /**
      Provide additional information for the translation process.
      */

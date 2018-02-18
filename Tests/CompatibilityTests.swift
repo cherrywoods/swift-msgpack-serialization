@@ -19,7 +19,7 @@ import MessagePack
 
 class CompatibilityTest: XCTestCase {
     
-    private let serialization = MsgPacker()
+    private let dataPacker = Packer<Data>()
     
     func testCompatibility() {
         
@@ -109,7 +109,7 @@ class CompatibilityTest: XCTestCase {
     private func checkCompatility<T>(_ value: T, binaryMsgpack msgpack: Data, compareMsgpack: Bool = true) where T: Codable&Equatable {
         
         // serialize value
-        let serialized = try? serialization.encode(value)
+        let serialized = try? dataPacker.encode(value)
         XCTAssertNotNil(serialized, "serializing value: \(value) of type \(T.self) failed")
         
         // this code generates a byte array representation
@@ -124,7 +124,7 @@ class CompatibilityTest: XCTestCase {
         if compareMsgpack { checkMsgpackValueEquality(of: serialized!, and: msgpack) }
         
         // deserialize the given msgpack
-        let deserialized = try? serialization.decode(toType: T.self, from: msgpack)
+        let deserialized = try? dataPacker.decode(toType: T.self, from: msgpack)
         XCTAssertNotNil(deserialized, "deserializing \(msgpack) to type \(T.self) failed")
         
         // check whether the deserialized value is equal to the given value
@@ -135,7 +135,7 @@ class CompatibilityTest: XCTestCase {
     private func checkCompatility<T>(_ value: T?, binaryMsgpack msgpack: Data, compareMsgpack: Bool = true) where T: Codable&Equatable {
         
         // serialize value
-        let serialized = try? serialization.encode(value)
+        let serialized = try? dataPacker.encode(value)
         XCTAssertNotNil(serialized, "serializing value: \(String(describing: value)) of type \(T.self) failed")
         
         // this code generates a byte array representation
@@ -150,7 +150,7 @@ class CompatibilityTest: XCTestCase {
         if compareMsgpack { checkMsgpackValueEquality(of: serialized!, and: msgpack) }
         
         // deserialize the given msgpack
-        let deserialized = try? serialization.decode(toType: T?.self, from: msgpack)
+        let deserialized = try? dataPacker.decode(toType: T?.self, from: msgpack)
         XCTAssertNotNil(deserialized as Any, "deserializing \(msgpack) to type \(T?.self) failed")
         
         // check whether the deserialized value is equal to the given value
@@ -175,7 +175,7 @@ class CompatibilityTest: XCTestCase {
         // */
         
         // this equality is optional
-        XCTAssert(compareMsgpack(first!, second!), "the two msgpack values did not contain the same values or had diffrent structure.")
+        XCTAssert(compareMsgpack(first!, second!), "the two msgpack values did not contain the same values or had diffrent structures.")
     }
     
     private func printForJava<T>(data: Data, type: T.Type) {

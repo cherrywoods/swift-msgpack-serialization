@@ -6,11 +6,14 @@
 //
 
 import XCTest
+import MessagePack
 @testable import MsgpackSerialization
 
 class BasicTest: XCTestCase {
     
-    private let serialization = MsgPacker()
+    private let dataPacker = Packer<Data>()
+    private let messagePackValuePacker = Packer<MessagePackValue>()
+    
     
     /**
      Encodes and decodes some ints, strings, floats, doubles and data
@@ -97,12 +100,14 @@ class BasicTest: XCTestCase {
     
     private func roundWaySerializeAndTest<T>(_ value: T) where T: Codable&Equatable {
         
-        let serialized = try? serialization.encode(value)
+        // Test data serialization
+        
+        let serialized = try? dataPacker.encode(value)
         XCTAssertNotNil(serialized, "serializing value: \(value) of type \(T.self) failed")
         
         if serialized != nil {
             
-            let deserialized = try? serialization.decode(toType: T.self, from: serialized! )
+            let deserialized = try? dataPacker.decode(toType: T.self, from: serialized! )
             XCTAssertNotNil(deserialized, "deserializing to type \(T.self) failed")
             
             if deserialized != nil {
@@ -112,16 +117,35 @@ class BasicTest: XCTestCase {
             }
         }
         
+        // test MessagePackValue serialization
+        
+        let serialized2 = try? messagePackValuePacker.encode(value)
+        XCTAssertNotNil(serialized2, "serializing value: \(value) of type \(T.self) failed")
+        
+        if serialized2 != nil {
+            
+            let deserialized2 = try? messagePackValuePacker.decode(toType: T.self, from: serialized2! )
+            XCTAssertNotNil(deserialized2, "deserializing to type \(T.self) failed")
+            
+            if deserialized2 != nil {
+                
+                XCTAssertEqual(deserialized2!, value)
+                
+            }
+        }
+        
     }
     
     private func roundWaySerializeAndTest<T>(_ value: [T]) where T: Codable&Equatable {
         
-        let serialized = try? serialization.encode(value)
+        // Test data serialization
+        
+        let serialized = try? dataPacker.encode(value)
         XCTAssertNotNil(serialized, "serializing value: \(value) of type \([T].self) failed")
         
         if serialized != nil {
             
-            let deserialized = try? serialization.decode(toType: [T].self, from: serialized! )
+            let deserialized = try? dataPacker.decode(toType: [T].self, from: serialized! )
             XCTAssertNotNil(deserialized, "deserializing to type \([T].self) failed")
             
             if deserialized != nil {
@@ -131,21 +155,57 @@ class BasicTest: XCTestCase {
             }
         }
         
+        // test MessagePackValue serialization
+        
+        let serialized2 = try? messagePackValuePacker.encode(value)
+        XCTAssertNotNil(serialized2, "serializing value: \(value) of type \([T].self) failed")
+        
+        if serialized2 != nil {
+            
+            let deserialized2 = try? messagePackValuePacker.decode(toType: [T].self, from: serialized2! )
+            XCTAssertNotNil(deserialized2, "deserializing to type \([T].self) failed")
+            
+            if deserialized2 != nil {
+                
+                XCTAssertEqual(deserialized2!, value)
+                
+            }
+        }
+        
     }
     
     private func roundWaySerializeAndTest<K, V>(_ value: [K:V]) where K: Codable, V:Codable&Equatable {
         
-        let serialized = try? serialization.encode(value)
+        // Test data serialization
+        
+        let serialized = try? dataPacker.encode(value)
         XCTAssertNotNil(serialized, "serializing value: \(value) of type \([K:V].self) failed")
         
         if serialized != nil {
             
-            let deserialized = try? serialization.decode(toType: [K:V].self, from: serialized! )
+            let deserialized = try? dataPacker.decode(toType: [K:V].self, from: serialized! )
             XCTAssertNotNil(deserialized, "deserializing to type \([K:V].self) failed")
             
             if deserialized != nil {
                 
                 XCTAssertEqual(deserialized!, value)
+                
+            }
+        }
+        
+        // test MessagePackValue serialization
+        
+        let serialized2 = try? messagePackValuePacker.encode(value)
+        XCTAssertNotNil(serialized2, "serializing value: \(value) of type \([K:V].self) failed")
+        
+        if serialized2 != nil {
+            
+            let deserialized2 = try? messagePackValuePacker.decode(toType: [K:V].self, from: serialized2! )
+            XCTAssertNotNil(deserialized2, "deserializing to type \([K:V].self) failed")
+            
+            if deserialized2 != nil {
+                
+                XCTAssertEqual(deserialized2!, value)
                 
             }
         }

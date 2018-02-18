@@ -25,7 +25,7 @@ import MetaSerialization
  - MsgpackError
  - MetaEncodingError and StackError from MetaSerialization. One of these errors indicates a bug eigther in this framework, MetaSerialization or the custom decoding code.
  */
-public class MsgPacker<R>: Serialization where R: Msgpack {
+public class Packer<R>: Serialization where R: Msgpack {
     
     // MARK: - serialization
     
@@ -45,9 +45,10 @@ public class MsgPacker<R>: Serialization where R: Msgpack {
     
     // MARK: - configuration
     
-    /// Use this set a configuration before encodig or decoding. Changing this configuration within the encoding/decoding code of custom classes or structs will have no effect. Use the properties of MsgpackEncoder and MsgpackDecoder for thise purpose instead.
-    public var configuration: Configuration
+    /// Use this to set a configuration before encodig or decoding. Changing this configuration within the encoding/decoding code of custom classes or structs will have no effect. Use the properties of MsgpackEncoder and MsgpackDecoder for thise purpose instead.
+    private let configuration: Configuration
     
+    /// Construct a new Packer with the given initial configuration. This configuration will be used for each new encode and decode call.
     public init(with configuration: Configuration = Configuration()) {
         
         self.configuration = configuration
