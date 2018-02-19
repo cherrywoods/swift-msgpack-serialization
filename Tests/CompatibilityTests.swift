@@ -114,7 +114,7 @@ class CompatibilityTest: XCTestCase {
         
         // this code generates a byte array representation
         // that can be coppied to java and used for reverse checks
-        printForJava(data: serialized!, type: T.self)
+        TestUtilites.printForJava(data: serialized!, type: T.self)
         
         // note that it is not neccessary, that the generated msgpack data is identical to the given msgpack data,
         // it just needs to result in the same values.
@@ -166,28 +166,16 @@ class CompatibilityTest: XCTestCase {
         XCTAssertNotNil(first, "msgpack1 could not be unpacked")
         XCTAssertNotNil(second, "msgpack2 could not be unpacked")
         
-        // /*
+        /*
         print()
         print(first!)
         print( "<->" )
         print(second!)
         print()
-        // */
+        */
         
         // this equality is optional
         XCTAssert(compareMsgpack(first!, second!), "the two msgpack values did not contain the same values or had diffrent structures.")
-    }
-    
-    private func printForJava<T>(data: Data, type: T.Type) {
-        
-        print("Encoding type: \(T.self)")
-        var string = "{ "
-        for byte in data {
-            string += "\(Int8(bitPattern: byte)), "
-        }
-        string += "};"
-        print(string)
-        
     }
     
     private func compareMsgpack(_ lhs: MessagePackValue?, _ rhs: MessagePackValue?) -> Bool {
@@ -219,7 +207,7 @@ class CompatibilityTest: XCTestCase {
             return lhv == rhv
         // because msgpack-java seems to have no mechanism to convert doubles,
         // that would fit in a float to floats as this framework does
-        // here a comparison accros float and double values is performed
+        // here a comparison across float and double values is performed
         case (.float(let lhv), .double(let rhv)):
             return Double(lhv) == rhv
         case (.double(let lhv), .float(let rhv)):
