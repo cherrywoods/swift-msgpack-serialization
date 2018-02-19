@@ -13,8 +13,8 @@ internal enum MsgpackHeader: UInt8 {
     case nilHeader              = 0b11000000
     
     // MARK: - Bool
-    case trueHeader             = 0b11000010
-    case falseHeader            = 0b11000011
+    case falseHeader            = 0b11000010
+    case trueHeader             = 0b11000011
     
     // MARK: - int
     case positiveFixnum         = 0b0_0000000 // the real header is 0, the remaining 0s are there as placeholders for the numeral value, that is added using |
