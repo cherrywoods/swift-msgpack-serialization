@@ -51,7 +51,7 @@ internal extension BinaryInteger {
         // if Self can not store negative values, Self.int(-16) would fail
         if Self.isSigned {
             
-            if (Self.init(-16) ... Self.init(-1)).contains(self) { // five bits containing a negative value
+            if (Self.init(-32) ... Self.init(-1)).contains(self) { // five bits containing a negative value
             
                 let byte = MsgpackHeader.negativeFixnum
                 .merge(additionalInformation: UInt8(bitPattern: Int8(self)))!
