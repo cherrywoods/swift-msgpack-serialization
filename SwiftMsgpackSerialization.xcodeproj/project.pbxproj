@@ -146,6 +146,7 @@
 		638199AA2034532A00020BB2 /* Encode MessagePackValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638199A82034532A00020BB2 /* Encode MessagePackValue.swift */; };
 		638199AB2034532A00020BB2 /* Encode MessagePackValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638199A82034532A00020BB2 /* Encode MessagePackValue.swift */; };
 		638199AC2034532A00020BB2 /* Encode MessagePackValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638199A82034532A00020BB2 /* Encode MessagePackValue.swift */; };
+		6386B226203B534D004BB72D /* TestJSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6386B224203B533A004BB72D /* TestJSONEncoder.swift */; };
 		639372891FEBD30800840D11 /* CustomTestClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639372881FEBD30800840D11 /* CustomTestClasses.swift */; };
 		639372981FEC4CBE00840D11 /* ExtensionTestClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639372971FEC4CBE00840D11 /* ExtensionTestClasses.swift */; };
 		6393729E1FEC532C00840D11 /* MsgpackSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -357,6 +358,7 @@
 		6381999D2034485400020BB2 /* MessagePack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessagePack.framework; path = Carthage/Build/watchOS/MessagePack.framework; sourceTree = "<group>"; };
 		6381999F2034487900020BB2 /* MessagePack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessagePack.framework; path = Carthage/Build/tvOS/MessagePack.framework; sourceTree = "<group>"; };
 		638199A82034532A00020BB2 /* Encode MessagePackValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encode MessagePackValue.swift"; sourceTree = "<group>"; };
+		6386B224203B533A004BB72D /* TestJSONEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestJSONEncoder.swift; sourceTree = "<group>"; };
 		639372881FEBD30800840D11 /* CustomTestClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTestClasses.swift; sourceTree = "<group>"; };
 		639372971FEC4CBE00840D11 /* ExtensionTestClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTestClasses.swift; sourceTree = "<group>"; };
 		63BB6CFD1FED1C65001DD28A /* MsgpackCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgpackCoder.swift; sourceTree = "<group>"; };
@@ -538,6 +540,7 @@
 		6379831B1FC1E8F6008BD5D5 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				6386B224203B533A004BB72D /* TestJSONEncoder.swift */,
 				63E967541FE6DF9200BA87BB /* BasicTests.swift */,
 				6314BD4220065613001AC48B /* CompatibilityTests.swift */,
 				6311F0F22007AC93002F68D8 /* Support types.swift */,
@@ -1298,6 +1301,7 @@
 				6311F0F32007AC93002F68D8 /* Support types.swift in Sources */,
 				639372981FEC4CBE00840D11 /* ExtensionTestClasses.swift in Sources */,
 				63E967551FE6DF9200BA87BB /* BasicTests.swift in Sources */,
+				6386B226203B534D004BB72D /* TestJSONEncoder.swift in Sources */,
 				639372891FEBD30800840D11 /* CustomTestClasses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
