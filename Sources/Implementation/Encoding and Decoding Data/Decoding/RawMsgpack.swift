@@ -134,8 +134,8 @@ internal class RawMsgpack {
             return false
         }
         
-        // if index is below valueDataLength + data.startIndex (and > 0 and valueDataLength != nil), then it is valid.
-        return index < valueDataLength!
+        // if index is below valueDataLength (and > 0 and valueDataLength != nil), then it is valid.
+        return index <= valueDataLength!
         
     }
     
