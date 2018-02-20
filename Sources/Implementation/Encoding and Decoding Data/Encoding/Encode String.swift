@@ -49,7 +49,7 @@ internal extension String {
                 
                 // bin32
                 let lengthBytes = breakUpUInt32ToBytes( uint32Length )
-                return combine(header: MsgpackHeader.bin32.rawValue,
+                return combine(header: MsgpackHeader.str32.rawValue,
                                length: lengthBytes,
                                furtherData: Data( primaryData ) )
                 
