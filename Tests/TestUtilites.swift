@@ -28,7 +28,7 @@ enum TestUtilites {
         
         do {
             let decoded = try dataSerialization.decode(toType: T.self, from: payload)
-            XCTAssert(decoded == value, "\(type(of:value)) did not round-trip to an equal value.")
+            XCTAssert(decoded == value, "\(type(of:value)) did not round-trip to an equal value. Expected: \(value), actual: \(decoded)")
         } catch {
             XCTFail("Failed to decode \(type(of:value)): \(error)")
         }
