@@ -26,6 +26,7 @@ class BasicTest: XCTestCase {
         let int32: Int32 = -40000
         let uint64: UInt64 = 0
         
+        let a = "a"
         let string = "msgpack"
         
         let float: Float = 1.45574
@@ -44,6 +45,7 @@ class BasicTest: XCTestCase {
         roundWaySerializeAndTest(uint16)
         roundWaySerializeAndTest(int32)
         roundWaySerializeAndTest(uint64)
+        roundWaySerializeAndTest(a)
         roundWaySerializeAndTest(string)
         roundWaySerializeAndTest(float)
         roundWaySerializeAndTest(double)

@@ -14,23 +14,20 @@ enum TestUtilites {
     
     static func testRoundTrip<T>(of value: T, expected: Data? = nil) where T : Codable, T : Equatable {
         
-        var payload: Data! = nil
         do {
-            payload = try dataSerialization.encode(value)
-        } catch {
-            XCTFail("Failed to encode \(T.self): \(error)")
-        }
-        
-        if expected != nil {
             
-            XCTAssert(expected! == payload!, "Produced ( \(convertToHexString(data: payload!)) ) not identical to expected ( \(convertToHexString(data: expected!)) ).")
-        }
-        
-        do {
-            let decoded = try dataSerialization.decode(toType: T.self, from: payload)
+            let (encoded, decoded) = try testRoundTrip(of: value)
+            
+            if expected != nil {
+                
+                XCTAssert(expected! == encoded, "Produced ( \(convertToHexString(data: encoded)) ) not identical to expected ( \(convertToHexString(data: expected!)) ).")
+                
+            }
+            
             XCTAssert(decoded == value, "\(type(of:value)) did not round-trip to an equal value. Expected: \(value), actual: \(decoded)")
+            
         } catch {
-            XCTFail("Failed to decode \(type(of:value)): \(error)")
+            XCTFail("Failed to encode or decode \(T.self): \(error)")
         }
         
     }
@@ -38,6 +35,32 @@ enum TestUtilites {
     static func testRoundTrip<T>(of value: T, expected: [UInt8]) where T: Codable, T:Equatable {
         
         testRoundTrip(of: value, expected: Data(bytes: expected))
+        
+    }
+    
+    static func testRoundTrip<T>(of value: T, expectedLength: Int) where T: Codable, T: Equatable {
+        
+        do {
+            
+            let (encoded, decoded) = try testRoundTrip(of: value)
+            
+            XCTAssert(expectedLength == encoded.count, "Produced ( \(convertToHexString(data: encoded)) ) did not match the expected length of \(expectedLength) ).")
+            
+            XCTAssert(decoded == value, "\(type(of:value)) did not round-trip to an equal value. Expected: \(value), actual: \(decoded)")
+            
+        } catch {
+            XCTFail("Failed to encode or decode \(T.self): \(error)")
+        }
+        
+    }
+    
+    // encodes and decodes T and returns the encoded data and the decoded value then
+    fileprivate static func testRoundTrip<T>(of value: T) throws -> (Data, T) where T: Codable {
+        
+        let encoded = try dataSerialization.encode(value)
+        let decoded = try dataSerialization.decode(toType: T.self, from: encoded)
+        
+        return (encoded, decoded)
         
     }
     
