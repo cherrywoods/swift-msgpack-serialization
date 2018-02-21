@@ -13,10 +13,8 @@ internal extension String {
     func encodeToMsgpack(with optionSet: Configuration) throws -> Data {
         
         // msgpack specification sets utf8 as string encoding
-        guard let primaryData = self.data(using: .utf8, allowLossyConversion: optionSet.allowLoosyStringConversion) else {
-            // this will ony happen, if the encodingOption specifies that no loosy conversion is allowed
-            throw MsgpackError.stringCouldNotBeRepresentedUsingUTF8(string: self)
-        }
+        // this conversion will never fail
+        let primaryData = self.data(using: .utf8)!
         
         switch primaryData.count {
             
