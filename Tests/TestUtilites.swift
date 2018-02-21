@@ -64,6 +64,45 @@ enum TestUtilites {
         
     }
     
+    static func testEncodeFailure<T>(of value: T) where T: Encodable {
+        
+        testFailure(message: "Encoding type \(T.self) was expected to fail") {
+            
+            let _ = try dataSerialization.encode(value)
+            
+        }
+        
+    }
+    
+    static func testDecodeFailure<T>(of data: Data, type: T.Type) where T: Decodable {
+        
+        testFailure(message: "Decoding type \(T.self) from data \(convertToHexString(data: data)) was expected to fail") {
+            
+            let _ = try dataSerialization.decode(toType: type, from: data)
+            
+        }
+        
+    }
+    
+    static func testDecodeFailure<T>(of bytes: [UInt8], type: T.Type) where T: Decodable {
+        
+        testDecodeFailure(of: Data(bytes: bytes), type: type)
+        
+    }
+    
+    static func testFailure(message: String? = nil, of closure: () throws -> ()) {
+        
+        do {
+            
+            try closure()
+            XCTFail( message ?? "closure, that was expected to throw did not throw" )
+            
+        } catch {}
+        
+    }
+    
+    // MARK: printing msgpack
+    
     static func printForJava<T>(data: Data, type: T.Type) {
         
         print("Encoding type: \(T.self)")

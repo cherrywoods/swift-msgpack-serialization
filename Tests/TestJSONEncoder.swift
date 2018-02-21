@@ -235,25 +235,26 @@ class TestMetaSerializationByJSONEncoderTests : XCTestCase {
     // MARK: Helper Private Functions
     
     private func _testEncodeFailure<T : Encodable>(of value: T) {
-        do {
-            let _ = try serialization.encode(value)
-            XCTFail("Encode of top-level \(T.self) was expected to fail.")
-        } catch {}
+        
+        TestUtilites.testEncodeFailure(of: value)
+        
     }
     
-    private func _testRoundTrip<T>(of value: T,
-                                   expected: Data? = nil) where T : Codable, T : Equatable {
+    private func _testRoundTrip<T>(of value: T, expected: Data? = nil) where T : Codable, T : Equatable {
         
         TestUtilites.testRoundTrip(of: value, expected: expected)
         
     }
     
     private func _testRoundTripTypeCoercionFailure<T,U>(of value: T, as type: U.Type) where T : Codable, U : Codable {
-        do {
+        
+        TestUtilites.testFailure(message: "Coercion from \(T.self) to \(U.self) was expected to fail.") {
+            
             let data = try serialization.encode(value)
             let _ = try serialization.decode(toType: U.self, from: data)
-            XCTFail("Coercion from \(T.self) to \(U.self) was expected to fail.")
-        } catch {}
+            
+        }
+        
     }
 }
 

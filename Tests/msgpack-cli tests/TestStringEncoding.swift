@@ -10,7 +10,6 @@
 //
 
 import XCTest
-import MessagePack
 @testable import MsgpackSerialization
 
 class StringEncoding: XCTestCase {
@@ -53,7 +52,7 @@ class StringEncoding: XCTestCase {
     func testStr32Format() {
         
         // this test will take some time...
-        // ok, we are not going to do one million (don't want to wait an hour...),
+        // ok, we are not going to do one million (don't want to wait for ever...),
         // but just enough to get close to 2^16+2
         // therefor, we use 17.500 unicorns (but 17.500 unicorns are pretty cool to)
         let oneMillionUnicorns = String(repeating: "🦄", count: 17_500)
