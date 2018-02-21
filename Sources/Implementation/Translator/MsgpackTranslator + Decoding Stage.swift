@@ -36,8 +36,8 @@ extension MsgpackTranslator {
                 throw MsgpackError.invalidMsgpack
             }
             
-            let raw = try RawMsgpack(from: data)
-            return try raw.decode(with: self.optionSet)
+            let rawMsgpack = try RawMsgpack(from: data)
+            return try rawMsgpack.decode(with: self.optionSet)
             
         case is MessagePackValue:
             

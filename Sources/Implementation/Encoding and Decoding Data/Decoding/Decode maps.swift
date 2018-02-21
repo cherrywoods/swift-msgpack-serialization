@@ -22,8 +22,8 @@ extension RawMsgpack {
         for _ in 0..<self.valueDataLength! {
             
             // a map value should have two msgpack values for each i
-            let key = try trimAndDecode(subMsgpack: &subMsgpack, with: options)
-            let value = try trimAndDecode(subMsgpack: &subMsgpack, with: options)
+            let key = try RawMsgpack.trimAndDecode(subMsgpack: &subMsgpack, with: options)
+            let value = try RawMsgpack.trimAndDecode(subMsgpack: &subMsgpack, with: options)
             
             // insert this key-value pair into mapMeta
             mapMeta.add(key: key, value: value)
