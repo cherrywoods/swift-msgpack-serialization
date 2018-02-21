@@ -142,7 +142,6 @@ class Exceptions: XCTestCase {
         do {
             
             let _ = try TestUtilites.dataSerialization.decode(toType: Int8.self, from: Data(bytes: uint16))
-            
             XCTFail()
             
         } catch MsgpackError.numberCouldNotBeConvertedWithoutLoss(number: let number) {
@@ -164,7 +163,6 @@ class Exceptions: XCTestCase {
         do {
             
             let _ = try TestUtilites.dataSerialization.decode(toType: Float.self, from: Data(bytes: double))
-            
             XCTFail()
             
         } catch MsgpackError.numberCouldNotBeConvertedWithoutLoss(number: let number) {
@@ -179,6 +177,28 @@ class Exceptions: XCTestCase {
         } catch {
             // all other errors shouldn't be thrown
             XCTFail()
+        }
+        
+    }
+    
+    func testUnconvertibleTimestamp() {
+        
+        let uncoveredTimestamp: [UInt8] =
+        //            12    -1  ----- nano second ----  ------------------ seconds -------------------
+            [ 0xc7, 0x0c, 0xff, 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff ]
+        
+        do {
+            
+            let _ = try TestUtilites.dataSerialization.decode(toType: Date.self, from: Data(bytes: uncoveredTimestamp))
+            XCTFail()
+            
+        } catch MsgpackError.timestampUnconvertibleToDate {
+            
+            // this is fine
+            
+        } catch {
+            // all other errors shouldn't be thrown
+            XCTFail("\(error)")
         }
         
     }
