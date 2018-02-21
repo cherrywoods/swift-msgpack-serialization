@@ -25,7 +25,7 @@ class Exceptions: XCTestCase {
         // byte array contains one str less then expected
         TestUtilites.testDecodeFailure(of: [0x94, 0xa4, 0x6e, 0x61, 0x6d, 0x65, 0xa3, 0x61,0x67, 0x65, 0xad, 0x64, 0x61, 0x74, 0x65, 0x20, 0x6f, 0x66, 0x20, 0x62, 0x69, 0x72, 0x74, 0x68,], type: Array<String>.self)
         
-        // test specific for .invalidMsgpack
+        // test specificly for .invalidMsgpack
         do {
             
             let _ = try TestUtilites.dataSerialization.decode(toType: String.self, from: Data(bytes: [0xa3, 0x61, 0x62]))
@@ -47,7 +47,7 @@ class Exceptions: XCTestCase {
         // c1 is an unused header in msgpack
         TestUtilites.testDecodeFailure(of: [0xc1], type: Int.self)
         
-        // test specific for .unknownMsgpack
+        // test specificly for .unknownMsgpack
         do {
             
             let _ = try TestUtilites.dataSerialization.decode(toType: Dictionary<String, Int>.self,
@@ -82,6 +82,59 @@ class Exceptions: XCTestCase {
          */
         
         // also don't test dictionary
+        
+        // test specificly for .valueExceededSupportedLength
+        do {
+            
+            let _ = try MsgpackExtensionValue(type: 12, data: overlengthedData)
+            XCTFail()
+            
+        } catch MsgpackError.valueExceededSupportedLength {
+            
+            // this is fine
+            
+        } catch {
+            // all other errors shouldn't be thrown
+            XCTFail()
+        }
+        
+    }
+    
+    func testInvalidStringData() {
+        
+        // test allow loosy conversion
+        let loosySerialization = Packer<Data>(with: Configuration(allowLoosyStringConversion: true))
+        TestUtilites.testDecoding(of: [0xa3, 0x61, 0x80, 0x63], type: String.self, using: loosySerialization)
+        
+        do {
+            
+            let _ = try TestUtilites.dataSerialization.decode(toType: String.self,
+                                                              // third byte is invalid utf8
+                                                              from: Data(bytes: [0xa3, 0x61, 0x80, 0x63]))
+            XCTFail()
+            
+        } catch MsgpackError.invalidStringData(rawData: let data) {
+            
+            // check that the returned invalid data is the encoded string data
+            if data != Data(bytes: [0x61, 0x80, 0x63]) {
+                XCTFail("Encoded data did not match thrown data")
+            } else {
+                // this is fine
+            }
+            
+        } catch {
+            // all other errors shouldn't be thrown
+            XCTFail()
+        }
+        
+    }
+    
+    func testNumberCouldNotBeConvertedWithoutLoss() {
+        
+        let uint16 = [0xcd, 0x01, 0x00]
+        let double = [0xcb, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,0x01]
+        
+        let loosySerialization = Packer<Data>(with: Configuration(allowLoosyNumberConversion: true, allowLoosyFloatingPointNumberConversion: true))
         
     }
     
