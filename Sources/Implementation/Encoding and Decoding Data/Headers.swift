@@ -10,58 +10,58 @@ import Foundation
 internal enum MsgpackHeader: UInt8 {
     
     // MARK: - nil
-    case nilHeader              = 0b11000000
+    case nilHeader              = 0xc0 // 0b11000000
     
     // MARK: - Bool
-    case falseHeader            = 0b11000010
-    case trueHeader             = 0b11000011
+    case falseHeader            = 0xc2 // 0b11000010
+    case trueHeader             = 0xc3 // 0b11000011
     
     // MARK: - int
     case positiveFixnum         = 0b0_0000000 // the real header is 0, the remaining 0s are there as placeholders for the numeral value, that is added using |
     case negativeFixnum         = 0b111_00000 // header is just 111
-    case uint8                  = 0b11001100
-    case uint16                 = 0b11001101
-    case uint32                 = 0b11001110
-    case uint64                 = 0b11001111
-    case int8                   = 0b11010000
-    case int16                  = 0b11010001
-    case int32                  = 0b11010010
-    case int64                  = 0b11010011
+    case uint8                  = 0xcc // 0b11001100
+    case uint16                 = 0xcd // 0b11001101
+    case uint32                 = 0xce // 0b11001110
+    case uint64                 = 0xcf // 0b11001111
+    case int8                   = 0xd0 // 0b11010000
+    case int16                  = 0xd1 // 0b11010001
+    case int32                  = 0xd2 // 0b11010010
+    case int64                  = 0xd3 // 0b11010011
     
     // MARK: - float
-    case float32                = 0b11001010
-    case float64                = 0b11001011
+    case float32                = 0xca // 0b11001010
+    case float64                = 0xcb // 0b11001011
     
     // MARK: - str
     case fixstr                 = 0b101_00000 // header is just 101
-    case str8                   = 0b11011001
-    case str16                  = 0b11011010
-    case str32                  = 0b11011011
+    case str8                   = 0xd9 // 0b11011001
+    case str16                  = 0xda // 0b11011010
+    case str32                  = 0xdb // 0b11011011
     
     // MARK: - bin
-    case bin8                   = 0b11000100
-    case bin16                  = 0b11000101
-    case bin32                  = 0b11000110
+    case bin8                   = 0xc4 // 0b11000100
+    case bin16                  = 0xc5 // 0b11000101
+    case bin32                  = 0xc6 // 0b11000110
     
     // MARK: - array
     case fixarray               = 0b1001_0000 // header's just 1001
-    case array16                = 0b11011100
-    case array32                = 0b11011101
+    case array16                = 0xdc // 0b11011100
+    case array32                = 0xdd // 0b11011101
     
     // MARK: - map
     case fixmap                 = 0b1000_0000 // header's just 1000
-    case map16                  = 0b11011110
-    case map32                  = 0b11011111
+    case map16                  = 0xde // 0b11011110
+    case map32                  = 0xdf // 0b11011111
     
     // MARK: - ext
-    case fixext1                = 0b11010100
-    case fixext2                = 0b11010101
-    case fixext4                = 0b11010110
-    case fixext8                = 0b11010111
-    case fixext16               = 0b11011000
-    case ext8                   = 0b11000111
-    case ext16                  = 0b11001000
-    case ext32                  = 0b11001001
+    case fixext1                = 0xd4 // 0b11010100
+    case fixext2                = 0xd5 // 0b11010101
+    case fixext4                = 0xd6 // 0b11010110
+    case fixext8                = 0xd7 // 0b11010111
+    case fixext16               = 0xd8 // 0b11011000
+    case ext8                   = 0xc7 // 0b11000111
+    case ext16                  = 0xc8 // 0b11001000
+    case ext32                  = 0xc9 // 0b11001001
     
     // MARK: FormatFamily
     
@@ -201,6 +201,7 @@ internal enum MsgpackHeader: UInt8 {
         } else if MsgpackHeader.negativeFixnum.rawValue == headerByte & Mask.firstThreeBits {
             // negative fixnum
             rawValue = MsgpackHeader.negativeFixnum.rawValue
+            
         } else if MsgpackHeader.fixstr.rawValue == headerByte & Mask.firstThreeBits {
             // fix str
             rawValue = MsgpackHeader.fixstr.rawValue
@@ -209,13 +210,16 @@ internal enum MsgpackHeader: UInt8 {
         } else if MsgpackHeader.fixarray.rawValue == headerByte & Mask.firstFourBits {
             // fix array
             rawValue = MsgpackHeader.fixarray.rawValue
+            
         } else if MsgpackHeader.fixmap.rawValue == headerByte & Mask.firstFourBits {
             // fix map
             rawValue = MsgpackHeader.fixmap.rawValue
             
         // full byte values
         } else {
+            
             rawValue = headerByte
+            
         }
         
         // returns nil, if the header is unknown
