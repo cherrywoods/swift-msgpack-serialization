@@ -97,12 +97,9 @@ extension Date {
             // the 32 bit data value carries the seconds since 1.1.1970 00:00:00 UTC
             let secondsSince1970 = combineUInt32(from: data, startIndex: data.startIndex)
             
-            guard let timeInterval = TimeInterval(exactly: secondsSince1970) else {
-                // if the UInt32 value is not expressible as Double
-                // (which sould be verry rare) all we can do is throw an error
-                // TODO: decode to special type Timestamp
-                throw MsgpackError.timestampUnconvertibleToDate
-            }
+            // all UInt32 values can be represented as Double
+            let timeInterval = TimeInterval(exactly: secondsSince1970)!
+            
             return Date(timeIntervalSince1970: timeInterval)
             
         } else if data.count == 64 {
@@ -116,15 +113,14 @@ extension Date {
             // and shift them down 34 bits
             // now, nanoSeconds is the number that was written to the first 30 bits
             let nanoSeconds = numericValueOfWholeData & 0xfffffffc_00000000 >> 34
-            // take jsut the lower 34 bits
+            // take just the lower 34 bits
             let secondsSince1970 = numericValueOfWholeData & 0x00000003_ffffffff
             
-            guard let secondsAsTI = TimeInterval(exactly: secondsSince1970), let nanosAsTI = TimeInterval(exactly: nanoSeconds) else {
-                // both values need to be representatble as Double
-                throw MsgpackError.timestampUnconvertibleToDate
-            }
+            // also "UInt34" and "UInt30" values can be represented as Double
+            let secondsAsTI = TimeInterval(exactly: secondsSince1970)!
+            let nanosAsTI = TimeInterval(exactly: nanoSeconds)!
             
-            // TODO: check whether the following code realy works!
+            // TODO: check whether the following code really works!
             
             // divide nanosAsTI by 2^30 to shift the value behind the decimal dot
             let timeInterval = secondsAsTI + nanosAsTI/Double(1<<30)
@@ -142,6 +138,8 @@ extension Date {
             
             guard let secondsAsTI = TimeInterval(exactly: secondsSinceYear1), let nanosAsTI = TimeInterval(exactly: nanoSeconds) else {
                 // both values need to be representatble as Double
+                // (nanoSeconds is always convertible, but code is more compact this way)
+                // TODO: decode to special type Timestamp
                 throw MsgpackError.timestampUnconvertibleToDate
             }
             
