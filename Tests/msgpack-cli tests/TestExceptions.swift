@@ -67,17 +67,19 @@ class Exceptions: XCTestCase {
     }
     
     func testOverlengthed() {
-        /*
+        
         let overlengthedData = Data(repeating: 1, count: 4_294_967_297)
         TestUtilites.testEncodeFailure(of: overlengthedData)
-        */
+ 
         /* Creating this string takes to long, so skip this test
         let overlengthedString = String(repeating: "o", count: 4_294_967_297)
         TestUtilites.testEncodeFailure(of: overlengthedString)
          */
         
+        /* Encoding this array also takes to long
         let overlengthedArray = Array<Int8>(repeating: -1, count: 4_294_967_297)
         TestUtilites.testEncodeFailure(of: overlengthedArray)
+         */
         
         // also don't test dictionary
         
