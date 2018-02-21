@@ -89,8 +89,8 @@ extension Date {
         
         let data = extensionValue.data
         
-        // data may be 32, 64 or 96 bytes long.
-        if data.count == 32 {
+        // data may be 4, 8 or 12 bytes long.
+        if data.count == 4 {
             
             // timestamp 32
             
@@ -102,7 +102,7 @@ extension Date {
             
             return Date(timeIntervalSince1970: timeInterval)
             
-        } else if data.count == 64 {
+        } else if data.count == 8 {
             
             // timestamp 64
             
@@ -127,7 +127,7 @@ extension Date {
             
             return Date(timeIntervalSince1970: timeInterval)
             
-        } else if data.count == 96 {
+        } else if data.count == 12 {
             
             // timestamp 96
             
