@@ -102,10 +102,6 @@ class Exceptions: XCTestCase {
     
     func testInvalidStringData() {
         
-        // test allow loosy conversion
-        let loosySerialization = Packer<Data>(with: Configuration(allowLoosyStringConversion: true))
-        TestUtilites.testDecoding(of: [0xa3, 0x61, 0x80, 0x63], type: String.self, using: loosySerialization)
-        
         do {
             
             let _ = try TestUtilites.dataSerialization.decode(toType: String.self,
@@ -131,10 +127,59 @@ class Exceptions: XCTestCase {
     
     func testNumberCouldNotBeConvertedWithoutLoss() {
         
-        let uint16 = [0xcd, 0x01, 0x00]
-        let double = [0xcb, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,0x01]
+        let uint16: [UInt8] = [0xcd, 0x01, 0x00]
+        let double: [UInt8] = [0xcb, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,0x01]
+        
+        // test whether disabeling throwing works
         
         let loosySerialization = Packer<Data>(with: Configuration(allowLoosyNumberConversion: true, allowLoosyFloatingPointNumberConversion: true))
+        
+        TestUtilites.testDecoding(of: uint16, type: Int8.self, using: loosySerialization)
+        TestUtilites.testDecoding(of: double, type: Float.self, using: loosySerialization)
+        
+        // now test for the errors
+        
+        do {
+            
+            let _ = try TestUtilites.dataSerialization.decode(toType: Int8.self, from: Data(bytes: uint16))
+            
+            XCTFail()
+            
+        } catch MsgpackError.numberCouldNotBeConvertedWithoutLoss(number: let number) {
+            
+            // check that the returned number is the right double
+            if !(number is UInt16) || (number as! UInt16) != 256 {
+                XCTFail("Encoded data did not match thrown data")
+            } else {
+                // this is fine
+            }
+            
+        } catch {
+            // all other errors shouldn't be thrown
+            XCTFail()
+        }
+        
+        // the same for double
+        
+        do {
+            
+            let _ = try TestUtilites.dataSerialization.decode(toType: Float.self, from: Data(bytes: double))
+            
+            XCTFail()
+            
+        } catch MsgpackError.numberCouldNotBeConvertedWithoutLoss(number: let number) {
+            
+            // check that the returned number is the right double
+            if !(number is Double) || (number as! Double) != 4.94065645841246544176568792868E-324 {
+                XCTFail("Encoded data did not match thrown data")
+            } else {
+                // this is fine
+            }
+            
+        } catch {
+            // all other errors shouldn't be thrown
+            XCTFail()
+        }
         
     }
     
