@@ -22,7 +22,7 @@ extension RawMsgpack {
         for _ in 0..<self.valueDataLength! {
             
             // decode the next element (at the beginning of subMsgpack)
-            unkeyedMeta.append(element: try trimAndDecode(subMsgpack: &subMsgpack, with: options))
+            unkeyedMeta.append(element: try RawMsgpack.trimAndDecode(subMsgpack: &subMsgpack, with: options))
             
         }
         
@@ -38,15 +38,11 @@ extension RawMsgpack {
     // used by array and by map:
     
     /// trims the last msgpack value of subMsgpack and then decodes the next element. subMsgpack will be trimmed of the old last msgpack value.
-    internal func trimAndDecode(subMsgpack: inout RawMsgpack, with options: Configuration) throws -> Meta {
-        
-        guard subMsgpack.remainingData != nil else {
-            throw MsgpackError.invalidMsgpack
-        }
+    internal static func trimAndDecode(subMsgpack: inout RawMsgpack, with options: Configuration) throws -> Meta {
         
         // trim of the last decoded element (or the array or map header)
-        // we assert here that subMsgpack has remainingData
-        subMsgpack = try RawMsgpack(from: subMsgpack.remainingData!)
+        // RawMsgpack will throw invalidMsgpack, if remainingData is empty
+        subMsgpack = try RawMsgpack(from: subMsgpack.remainingData)
         
         // decode the next value (at the beginning of subMsgpack)
         return try subMsgpack.decode(with: options)
