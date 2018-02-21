@@ -29,7 +29,8 @@ public struct Configuration {
     public var allowLoosyFloatingPointNumberConversion: Bool
     
     /**
-     Indicates whether to throw an error if a string can not be converted to utf8 without loss
+     Indicates whether to throw an error if a string can not be converted to utf8 without loss during encoding.
+     An error will be thrown, at a value of false.
      
      Default is false.
      */
