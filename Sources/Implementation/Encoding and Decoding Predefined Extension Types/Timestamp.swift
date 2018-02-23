@@ -11,7 +11,7 @@ extension Date {
     
     // MARK: encode
 
-    func toMsgpackExtensionValue() -> MsgpackExtensionValue {
+    func toMsgpackExtensionValue() throws -> MsgpackExtensionValue {
         
         // encode as timestamp
         
@@ -29,18 +29,15 @@ extension Date {
             
             // timeInterval is in seconds
             // cutting away the part smaller than 1, seconds stay
-            var seconds = UInt64( timeInterval.rounded(.down) )
-            var nanoSeconds = UInt32( timeInterval - TimeInterval(seconds) )
-            
-            // msgpack sets the condition, that "nanoseconds must not be larger than 999999999".
-            while nanoSeconds > 999999999 {
-                // if nanoSeconds are larger, we add 1 to seconds and lower nanoSeconds by 1000000000
-                nanoSeconds -= 1000000000
-                seconds += 1
+            let seconds = UInt64( timeInterval.rounded(.down) )
+            // to get the nano seconds, calculate the decimal part and multiply by 1_000_000_000
+            guard let nanoSeconds = UInt32(exactly: timeInterval - TimeInterval(seconds) * 1_000_000_000) else {
+                // dates may not be preciser than nano seconds
+                throw MsgpackError.dateWasTooPrecise
             }
             
             // check whether seconds fit in the available space of a timestamp 64
-            if 0 < seconds && seconds < UInt64(1<<34) {
+            if 0 <= seconds && seconds < UInt64(1<<34) {
                 
                 // can be represented as timestamp 64
                 

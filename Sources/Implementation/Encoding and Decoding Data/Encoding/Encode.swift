@@ -57,7 +57,7 @@ internal func encodeToData(with options: Configuration, meta: Meta) throws -> Da
     } else if meta is SimpleGenericMeta<Date> { // MARK: data
         
         // encode as MsgpackExtensionValue
-        let extensionValue = (meta as! SimpleGenericMeta<Date>).value.toMsgpackExtensionValue()
+        let extensionValue = try (meta as! SimpleGenericMeta<Date>).value.toMsgpackExtensionValue()
         return extensionValue.encodeToMsgpack()
         
     } else if meta is SimpleGenericMeta<MsgpackExtensionValue> { // MARK: ext
