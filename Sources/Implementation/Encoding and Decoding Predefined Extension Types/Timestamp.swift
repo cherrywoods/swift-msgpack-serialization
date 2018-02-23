@@ -31,7 +31,7 @@ extension Date {
             // cutting away the part smaller than 1, seconds stay
             let seconds = UInt64( timeInterval.rounded(.down) )
             // to get the nano seconds, calculate the decimal part and multiply by 1_000_000_000
-            guard let nanoSeconds = UInt32(exactly: timeInterval - TimeInterval(seconds) * 1_000_000_000) else {
+            guard let nanoSeconds = UInt32(exactly: ( timeInterval - TimeInterval(seconds) ) * 1_000_000_000) else {
                 // dates may not be preciser than nano seconds
                 throw MsgpackError.dateWasTooPrecise
             }
