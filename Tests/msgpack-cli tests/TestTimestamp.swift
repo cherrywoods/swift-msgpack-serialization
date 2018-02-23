@@ -28,9 +28,9 @@ class TimestampEncoding: XCTestCase {
         
         let date1 = Date(timeIntervalSince1970: 0.5)
         let date2 = Date(timeIntervalSince1970: 9_000.125)
-        //                         the separation between nanoseconds and seconds is here | at the second bit
-        TestUtilites.testRoundTrip(of: date1, expected: [0xd7, 0xff, 0x77, 0x35, 0x94, 0x00, 0x00, 0x00, 0x00, 0x00])
-        TestUtilites.testRoundTrip(of: date2, expected: [0xd7, 0xff, 0x01, 0xdc, 0xd6, 0x50, 0x00, 0x00, 0x23, 0x28])
+        //                             the separation between nanoseconds and seconds is here |
+        TestUtilites.testRoundTrip(of: date1, expected: [0xd7, 0xff, 0x77, 0x35, 0x94, 0b00000000, 0x00, 0x00, 0x00, 0x00])
+        TestUtilites.testRoundTrip(of: date2, expected: [0xd7, 0xff, 0x01, 0xdc, 0xd6, 0b01010000, 0x00, 0x00, 0x23, 0x28])
         
     }
     
