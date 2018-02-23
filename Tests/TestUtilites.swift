@@ -44,7 +44,7 @@ enum TestUtilites {
             
             let (encoded, decoded) = try testRoundTrip(of: value, using: serialization)
             
-            XCTAssert(expectedLength == encoded.count, "Produced ( \(convertToHexString(data: encoded)) ) did not match the expected length of \(expectedLength) ).")
+            XCTAssert(expectedLength == encoded.count, "Produceed ( \(convertToHexString(data: encoded)) - length: \(encoded.count) ) did not match the expected length of \(expectedLength) ).")
             
             XCTAssert(decoded == value, "\(type(of:value)) did not round-trip to an equal value. Expected: \(value), actual: \(decoded)")
             

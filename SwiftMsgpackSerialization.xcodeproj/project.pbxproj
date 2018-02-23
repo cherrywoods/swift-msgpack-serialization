@@ -40,6 +40,7 @@
 		63161B5D20094D9500CEAB28 /* MetaUnkeyedEncodingContainer + nestedGeneralContainer function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63161B5A20094D9500CEAB28 /* MetaUnkeyedEncodingContainer + nestedGeneralContainer function.swift */; };
 		63161B5E20094D9500CEAB28 /* MetaUnkeyedEncodingContainer + nestedGeneralContainer function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63161B5A20094D9500CEAB28 /* MetaUnkeyedEncodingContainer + nestedGeneralContainer function.swift */; };
 		6318DE7B203DAA750014107E /* TestExceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318DE7A203DAA750014107E /* TestExceptions.swift */; };
+		632F4D9F20409435003074D9 /* TestTimestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F4D9E20409435003074D9 /* TestTimestamp.swift */; };
 		6334083E202F6390004C3F99 /* MetaSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637984CA1FC1EBB6008BD5D5 /* MetaSerialization.framework */; };
 		63340840202F6397004C3F99 /* MetaSerialization.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6334083F202F6396004C3F99 /* MetaSerialization.framework.dSYM */; };
 		63340843202F63B6004C3F99 /* MetaSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637984C41FC1EBA0008BD5D5 /* MetaSerialization.framework */; };
@@ -59,6 +60,10 @@
 		6338A940203460F90018AA6C /* Decode MessagePackValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6338A93E203460F90018AA6C /* Decode MessagePackValue.swift */; };
 		6338A941203460F90018AA6C /* Decode MessagePackValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6338A93E203460F90018AA6C /* Decode MessagePackValue.swift */; };
 		6338A942203460F90018AA6C /* Decode MessagePackValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6338A93E203460F90018AA6C /* Decode MessagePackValue.swift */; };
+		636D745A203F410D0051113B /* TestDataEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636D7459203F410D0051113B /* TestDataEncoding.swift */; };
+		636D745C203F46620051113B /* TestArrayEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636D745B203F46620051113B /* TestArrayEncoding.swift */; };
+		636D745E203F4D360051113B /* TestMapEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636D745D203F4D360051113B /* TestMapEncoding.swift */; };
+		636D7460203F52300051113B /* TestExtensionEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636D745F203F52300051113B /* TestExtensionEncoding.swift */; };
 		637982F81FC1D639008BD5D5 /* MsgpackSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		637983171FC1D734008BD5D5 /* MsgpackSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		637983181FC1D735008BD5D5 /* MsgpackSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -324,6 +329,7 @@
 		63161B5520094C4000CEAB28 /* MetaKeyedEncodingContainer + nestedGeneralContainer function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetaKeyedEncodingContainer + nestedGeneralContainer function.swift"; sourceTree = "<group>"; };
 		63161B5A20094D9500CEAB28 /* MetaUnkeyedEncodingContainer + nestedGeneralContainer function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetaUnkeyedEncodingContainer + nestedGeneralContainer function.swift"; sourceTree = "<group>"; };
 		6318DE7A203DAA750014107E /* TestExceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExceptions.swift; sourceTree = "<group>"; };
+		632F4D9E20409435003074D9 /* TestTimestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTimestamp.swift; sourceTree = "<group>"; };
 		6334083A202F6364004C3F99 /* MessagePack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessagePack.framework; path = Carthage/Build/Mac/MessagePack.framework; sourceTree = "<group>"; };
 		6334083F202F6396004C3F99 /* MetaSerialization.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = MetaSerialization.framework.dSYM; path = Carthage/Build/Mac/MetaSerialization.framework.dSYM; sourceTree = "<group>"; };
 		63340841202F63AD004C3F99 /* MetaSerialization.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = MetaSerialization.framework.dSYM; path = Carthage/Build/iOS/MetaSerialization.framework.dSYM; sourceTree = "<group>"; };
@@ -332,6 +338,10 @@
 		63368C3B1FC9ACFA0069D052 /* OptionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSet.swift; sourceTree = "<group>"; };
 		6338A93920345CF80018AA6C /* Timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timestamp.swift; sourceTree = "<group>"; };
 		6338A93E203460F90018AA6C /* Decode MessagePackValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decode MessagePackValue.swift"; sourceTree = "<group>"; };
+		636D7459203F410D0051113B /* TestDataEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataEncoding.swift; sourceTree = "<group>"; };
+		636D745B203F46620051113B /* TestArrayEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestArrayEncoding.swift; sourceTree = "<group>"; };
+		636D745D203F4D360051113B /* TestMapEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMapEncoding.swift; sourceTree = "<group>"; };
+		636D745F203F52300051113B /* TestExtensionEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensionEncoding.swift; sourceTree = "<group>"; };
 		637982DC1FC1D617008BD5D5 /* MsgpackSerialization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MsgpackSerialization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		637982F41FC1D639008BD5D5 /* MsgpackSerialization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MsgpackSerialization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		637982F61FC1D639008BD5D5 /* MsgpackSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MsgpackSerialization.h; sourceTree = "<group>"; };
@@ -690,6 +700,11 @@
 				6386B22B203B5622004BB72D /* TestIntegerEncoding.swift */,
 				63E5CC18203C3FE2001F7215 /* TestFloatingPointEncoding.swift */,
 				63E5CC1A203C7112001F7215 /* TestStringEncoding.swift */,
+				636D7459203F410D0051113B /* TestDataEncoding.swift */,
+				636D745B203F46620051113B /* TestArrayEncoding.swift */,
+				636D745D203F4D360051113B /* TestMapEncoding.swift */,
+				636D745F203F52300051113B /* TestExtensionEncoding.swift */,
+				632F4D9E20409435003074D9 /* TestTimestamp.swift */,
 				6318DE7A203DAA750014107E /* TestExceptions.swift */,
 			);
 			path = "msgpack-cli tests";
@@ -1336,8 +1351,13 @@
 				6386B22E203B56E9004BB72D /* TestUtilites.swift in Sources */,
 				6386B22C203B5622004BB72D /* TestIntegerEncoding.swift in Sources */,
 				6311F0F12007A2D0002F68D8 /* CustomTestClasses2.swift in Sources */,
+				636D745A203F410D0051113B /* TestDataEncoding.swift in Sources */,
+				636D745C203F46620051113B /* TestArrayEncoding.swift in Sources */,
+				632F4D9F20409435003074D9 /* TestTimestamp.swift in Sources */,
+				636D745E203F4D360051113B /* TestMapEncoding.swift in Sources */,
 				6311F0F32007AC93002F68D8 /* Support types.swift in Sources */,
 				639372981FEC4CBE00840D11 /* ExtensionTestClasses.swift in Sources */,
+				636D7460203F52300051113B /* TestExtensionEncoding.swift in Sources */,
 				63E967551FE6DF9200BA87BB /* BasicTests.swift in Sources */,
 				63E5CC1B203C7112001F7215 /* TestStringEncoding.swift in Sources */,
 				6318DE7B203DAA750014107E /* TestExceptions.swift in Sources */,
