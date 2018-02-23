@@ -48,7 +48,7 @@ internal func encodeToMessagePackValue(with options: Configuration, meta: Meta) 
     // MARK: date
     else if let date = (meta as? SimpleGenericMeta<Date>)?.value {
         // TODO:
-        let extensionValue = date.toMsgpackExtensionValue()
+        let extensionValue = try date.toMsgpackExtensionValue()
         return MessagePackValue.extended(extensionValue.type, extensionValue.data)
         
     }

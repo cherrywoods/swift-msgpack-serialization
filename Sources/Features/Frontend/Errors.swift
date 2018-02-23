@@ -22,6 +22,9 @@ public enum MsgpackError: Error {
     /// Thrown if a certain msgpack timestamp value could not be converted to Date
     case timestampUnconvertibleToDate
     
+    /// Thrown if a Date's TimeIntervalSince1970 property had a precision beyond nano seconds and was tried to be encoded as msgpack timestamp. timestamp does not allow precisions beyond nano seconds. If you wan't to encode such a value, change the Configuration to use Date's own encoding capabilities.
+    case dateWasTooPrecise
+    
     /// Thrown if a certain Data object is no valid msgpack code.
     case invalidMsgpack
     
