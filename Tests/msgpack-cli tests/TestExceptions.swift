@@ -183,11 +183,15 @@ class Exceptions: XCTestCase {
     
     func testUnconvertibleDate() {
         
-        let date1 = Date(timeIntervalSince1970: -62135769600.0)
+        let date1 = Date(timeIntervalSince1970: 1e128)
+        let date2 = Date(timeIntervalSince1970: -1e64)
+        // found no candidates with precision below nano seconds :(
+        
+        TestUtilites.testEncodeFailure(of: date1)
         
         do {
             
-            let _ = try TestUtilites.dataSerialization.encode(date1)
+            let _ = try TestUtilites.dataSerialization.encode(date2)
             XCTFail()
             
         } catch MsgpackError.dateUnconvertibleToTimestamp {
