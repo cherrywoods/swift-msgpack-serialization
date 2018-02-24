@@ -24,6 +24,12 @@ enum TestUtilites {
                 
             }
             
+            if let dateDec = decoded as? Date, let dateVal = value as? Date {
+                
+                print("\(dateDec.timeIntervalSince1970) : \(dateVal.timeIntervalSince1970)")
+                
+            }
+            
             XCTAssert(decoded == value, "\(type(of:value)) did not round-trip to an equal value. Expected: \(value), actual: \(decoded)")
             
         } catch {
