@@ -37,11 +37,11 @@ class TimestampEncoding: XCTestCase {
     
     func testTimestamp96() {
         
-        let date1 = Date(timeIntervalSince1970: -62135596800)
-        let date2 = Date(timeIntervalSince1970: -1)
+        let date1 = Date(timeIntervalSince1970: -1)
+        let date2 = Date(timeIntervalSince1970: -1.5)
         let date3 = Date(timeIntervalSince1970: -62135596801)
         
-        TestUtilites.testRoundTrip(of: date1, expected: [0xc7, 12, 0xff, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+        TestUtilites.testRoundTrip(of: date1, expected: [0xc7, 12, 0xff, 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff])
         
         TestUtilites.testRoundTrip(of: date2, expectedLength: 15)
         TestUtilites.testRoundTrip(of: date3, expectedLength: 15)
