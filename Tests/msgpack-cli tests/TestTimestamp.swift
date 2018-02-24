@@ -26,13 +26,16 @@ class TimestampEncoding: XCTestCase {
     
     func testTimestamp64() {
         
-        // TODO: there is a bug in the decoding code!
-        
         let date1 = Date(timeIntervalSince1970: 0.5)
         let date2 = Date(timeIntervalSince1970: 9_000.125)
+        
         //                             the separation between nanoseconds and seconds is here |
         TestUtilites.testRoundTrip(of: date1, expected: [0xd7, 0xff, 0x77, 0x35, 0x94, 0b00000000, 0x00, 0x00, 0x00, 0x00])
         TestUtilites.testRoundTrip(of: date2, expected: [0xd7, 0xff, 0x1d, 0xcd, 0x65, 0b00000000, 0x00, 0x00, 0x23, 0x28])
+        
+        let date3 = Date.distantPast
+        
+        TestUtilites.testRoundTrip(of: date3, expectedLength: 10)
         
     }
     
