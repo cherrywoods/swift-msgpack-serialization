@@ -37,7 +37,8 @@ extension Date {
             // the decimal part of timeInterval may not be preciser than nano seconds
             // this is the only condition. due to the representation format of dates in swift,
             // it is not possible that nano seconds is larger than 999999999 (a condition msgpack sets)
-            guard let nanoSeconds = UInt32(exactly: ( timeInterval - TimeInterval(seconds) ) * 1_000_000_000) else {
+            
+            guard let nanoSeconds = UInt32(exactly: ( abs(timeInterval) - abs(seconds) ) * 1_000_000_000) else {
                 throw MsgpackError.dateUnconvertibleToTimestamp
             }
             
