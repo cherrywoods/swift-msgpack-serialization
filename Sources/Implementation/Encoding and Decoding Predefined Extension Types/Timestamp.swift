@@ -133,17 +133,18 @@ extension Date {
             // the first 32 bits (4 bytes)
             let nanoSeconds = combineUInt32(from: data, startIndex: data.startIndex)
             // the remaining 64 bits (8 bytes)
-            let secondsSinceYear1 = Int64(bitPattern: combineUInt64(from: data, startIndex: data.startIndex+4))
+            let seconds = Int64(bitPattern: combineUInt64(from: data, startIndex: data.startIndex+4))
             
-            guard let secondsAsTI = TimeInterval(exactly: secondsSinceYear1), let nanosAsTI = TimeInterval(exactly: nanoSeconds) else {
+            guard let secondsAsTI = TimeInterval(exactly: seconds), let nanosAsTI = TimeInterval(exactly: nanoSeconds) else {
                 // both values need to be representatble as Double
                 // (nanoSeconds is always convertible, but code is more compact this way)
                 // TODO: decode to special type Timestamp
                 throw MsgpackError.timestampUnconvertibleToDate
             }
             
-            // 62135596800 is the 1.1.1970 relative to the 1.1.1 (both at 00:00:00, both UTC)
-            let timeIntervalSince1970 = secondsAsTI + (nanosAsTI * 0.000_000_001)
+            // depending on the sign of seconds, the nano seconds need to be added or substracted
+            // respectivaly need to have the same sign to be added to seconds to get the right value
+            let timeIntervalSince1970 = secondsAsTI + ( TimeInterval(seconds.signum()) * (nanosAsTI * 0.000_000_001) )
             
             return Date(timeIntervalSince1970: timeIntervalSince1970)
             
