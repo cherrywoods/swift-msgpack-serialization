@@ -106,21 +106,14 @@ extension Date {
             // the first 30 bits carry a nanoseconds value
             // and the remaining 34 bits carry the seconds since 1.1.1970 00:00:00 UTC
             let numericValueOfWholeData = combineUInt64(from: data, startIndex: data.startIndex)
-            // take just the the first 30 bits
-            // and shift them down 34 bits
-            // now, nanoSeconds is the number that was written to the first 30 bits
+            
             let nanoSeconds = numericValueOfWholeData & 0xfffffffc_00000000 >> 34
-            // take just the lower 34 bits
             let secondsSince1970 = numericValueOfWholeData & 0x00000003_ffffffff
             
-            // also "UInt34" and "UInt30" values can be represented as Double
             let secondsAsTI = TimeInterval(exactly: secondsSince1970)!
             let nanosAsTI = TimeInterval(exactly: nanoSeconds)!
             
-            // TODO: check whether the following code really works!
-            
-            // divide nanosAsTI by 2^30 to shift the value behind the decimal dot
-            let timeInterval = secondsAsTI + nanosAsTI/Double(1<<30)
+            let timeInterval = secondsAsTI + nanosAsTI * 0.000_000_001
             
             return Date(timeIntervalSince1970: timeInterval)
             
@@ -141,7 +134,7 @@ extension Date {
             }
             
             // 62135596800 is the 1.1.1970 relative to the 1.1.1 (both at 00:00:00, both UTC)
-            let timeIntervalSince1970 = (secondsAsTI + 62135596800.0) + nanosAsTI/Double(1<<32)
+            let timeIntervalSince1970 = (secondsAsTI + 62135596800.0) + (nanosAsTI * 0.000_000_001)
             
             return Date(timeIntervalSince1970: timeIntervalSince1970)
             
