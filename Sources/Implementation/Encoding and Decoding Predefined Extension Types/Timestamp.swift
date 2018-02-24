@@ -66,18 +66,13 @@ extension Date {
                 
                 // timestamp 96
                 
-                // recalculate the base, now relative to 1.1.1 00:00:00 (UTC)
-                // 1.1.1970 00:00:00 relative to 1.1.1 00:00:00 is 62135596800
-                
-                let secondsRelativeToYear1 = 62135596800+seconds
-                
-                // we still need to check that seconds can be represented by UInt64
-                guard let secs = UInt64(exactly: secondsRelativeToYear1) else {
+                // we still need to check that seconds can be represented by Int64
+                guard let secs = Int64(exactly: seconds) else {
                     throw MsgpackError.dateUnconvertibleToTimestamp
                 }
                 
                 let nanosecondsBytes = breakUpUInt32ToBytes(nanoSeconds)
-                let secondsBytes = breakUpUInt64ToBytes(secs)
+                let secondsBytes = breakUpUInt64ToBytes( UInt64(bitPattern: secs) )
                 
                 // data is 12 bytes long, so init won't throws
                 return try! MsgpackExtensionValue(type: PredefinedExtensionType.timeStamp.rawValue,
@@ -147,7 +142,7 @@ extension Date {
             }
             
             // 62135596800 is the 1.1.1970 relative to the 1.1.1 (both at 00:00:00, both UTC)
-            let timeIntervalSince1970 = (secondsAsTI + 62135596800.0) + (nanosAsTI * 0.000_000_001)
+            let timeIntervalSince1970 = secondsAsTI + (nanosAsTI * 0.000_000_001)
             
             return Date(timeIntervalSince1970: timeIntervalSince1970)
             
