@@ -22,8 +22,16 @@ public enum MsgpackError: Error {
     /// Thrown if a certain msgpack timestamp value could not be converted to Date
     case timestampUnconvertibleToDate
     
-    /// Thrown if a Date's TimeIntervalSince1970 property had a precision beyond nano seconds and was tried to be encoded as msgpack timestamp. timestamp does not allow precisions beyond nano seconds. If you wan't to encode such a value, change the Configuration to use Date's own encoding capabilities.
-    case dateWasTooPrecise
+    /**
+     Thrown if a Date wasn't convertible to msgpack timestamp, but was tried to be encoded as timestamp.
+     This may happen, if a date's timeIntervalSince1970 property had a precision beyond nano seconds
+     (timestamp does not allow precisions beyond nano seconds),
+     or if it was to large or to small to be represented as Int64.
+     
+     If you wan't to encode such values, change the Configuration to use Date's own encoding capabilities
+     (set convertSwiftDateToMsgpackTimestamp to false).
+     */
+    case dateUnconvertibleToTimestamp
     
     /// Thrown if a certain Data object is no valid msgpack code.
     case invalidMsgpack

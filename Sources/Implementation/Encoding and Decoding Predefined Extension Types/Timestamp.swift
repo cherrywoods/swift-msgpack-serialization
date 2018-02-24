@@ -19,7 +19,8 @@ extension Date {
         
         if let uint32Interval = UInt32(exactly: timeInterval) {
             
-            // the date can be represented as timestamp 32
+            // timestamp 32
+            
             let timestampData = Data( breakUpUInt32ToBytes(uint32Interval) )
             // data is 4 bytes long, so init won't throws
             return try! MsgpackExtensionValue(type: PredefinedExtensionType.timeStamp.rawValue,
@@ -27,30 +28,37 @@ extension Date {
             
         } else {
             
-            // timeInterval is in seconds
-            // cutting away the part smaller than 1, seconds stay
-            let seconds = UInt64( timeInterval.rounded(.down) )
-            // to get the nano seconds, calculate the decimal part and multiply by 1_000_000_000
+            // preambel for timestamp 64 and 96
+            
+            // round toward zero to get the seconds part
+            let seconds = timeInterval.rounded(.towardZero)
+            
+            // to get the nano seconds, calculate the decimal part and multiply it by 1_000_000_000
+            // the decimal part of timeInterval may not be preciser than nano seconds
+            // this is the only condition. due to the representation format of dates in swift,
+            // it is not possible that nano seconds is larger than 999999999 (a condition msgpack sets)
             guard let nanoSeconds = UInt32(exactly: ( timeInterval - TimeInterval(seconds) ) * 1_000_000_000) else {
-                // dates may not be preciser than nano seconds
-                throw MsgpackError.dateWasTooPrecise
+                throw MsgpackError.dateUnconvertibleToTimestamp
             }
             
             // check whether seconds fit in the available space of a timestamp 64
-            if 0 <= seconds && seconds < UInt64(1<<34) {
+            if 0 <= seconds && seconds < Double(1<<34) {
                 
-                // can be represented as timestamp 64
+                // timestamp 64
+                
+                // can be converted due to the previously checked conditions
+                // and the construction of seconds
+                let secs = UInt64(seconds)
                 
                 // nanoseconds should be filled into 30 bits and seconds into 34
                 // (but the seconds are already just in 34 bits, because seconds is smaller than 1<<34)
                 let nanos = nanoSeconds & 0xfffffffc // cut away the smallest two bits
                 
                 // combine nano seconds and seconds into one UInt64
-                let nanosAndSeconds = UInt64( nanos ) << 34 | seconds
+                let combined = UInt64( nanos ) << 34 | secs
+                let timestampData = Data( breakUpUInt64ToBytes(combined) )
                 
-                let timestampData = Data( breakUpUInt64ToBytes(nanosAndSeconds) )
-                
-                // data is 8 bytes long, so init won't throws
+                // data is 8 bytes long, so init won't throw
                 return try! MsgpackExtensionValue(type: PredefinedExtensionType.timeStamp.rawValue,
                                                   data: timestampData)
                 
@@ -61,10 +69,15 @@ extension Date {
                 // recalculate the base, now relative to 1.1.1 00:00:00 (UTC)
                 // 1.1.1970 00:00:00 relative to 1.1.1 00:00:00 is 62135596800
                 
-                let secondsRelativeToYear1 = seconds-62135596800
+                let secondsRelativeToYear1 = 62135596800+seconds
+                
+                // we still need to check that seconds can be represented by UInt64
+                guard let secs = UInt64(exactly: secondsRelativeToYear1) else {
+                    throw MsgpackError.dateUnconvertibleToTimestamp
+                }
                 
                 let nanosecondsBytes = breakUpUInt32ToBytes(nanoSeconds)
-                let secondsBytes = breakUpUInt64ToBytes(secondsRelativeToYear1)
+                let secondsBytes = breakUpUInt64ToBytes(secs)
                 
                 // data is 12 bytes long, so init won't throws
                 return try! MsgpackExtensionValue(type: PredefinedExtensionType.timeStamp.rawValue,
