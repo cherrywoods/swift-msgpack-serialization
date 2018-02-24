@@ -107,7 +107,7 @@ extension Date {
             // and the remaining 34 bits carry the seconds since 1.1.1970 00:00:00 UTC
             let numericValueOfWholeData = combineUInt64(from: data, startIndex: data.startIndex)
             
-            let nanoSeconds = numericValueOfWholeData & 0xfffffffc_00000000 >> 34
+            let nanoSeconds = (numericValueOfWholeData & 0xfffffffc_00000000) >> 34
             let secondsSince1970 = numericValueOfWholeData & 0x00000003_ffffffff
             
             let secondsAsTI = TimeInterval(exactly: secondsSince1970)!
