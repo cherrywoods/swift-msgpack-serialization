@@ -181,6 +181,26 @@ class Exceptions: XCTestCase {
         
     }
     
+    func testUnconvertibleDate() {
+        
+        let date1 = Date(timeIntervalSince1970: -62135769600.0)
+        
+        do {
+            
+            let _ = try TestUtilites.dataSerialization.encode(date1)
+            XCTFail()
+            
+        } catch MsgpackError.dateUnconvertibleToTimestamp {
+            
+            // this is fine
+            
+        } catch {
+            // all other errors shouldn't be thrown
+            XCTFail()
+        }
+        
+    }
+    
     // FIXME: uncomment with next swift release, or 4.1 beta
     /*
     func testUnconvertibleTimestamp() {

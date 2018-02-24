@@ -33,9 +33,18 @@ class TimestampEncoding: XCTestCase {
         TestUtilites.testRoundTrip(of: date1, expected: [0xd7, 0xff, 0x77, 0x35, 0x94, 0b00000000, 0x00, 0x00, 0x00, 0x00])
         TestUtilites.testRoundTrip(of: date2, expected: [0xd7, 0xff, 0x1d, 0xcd, 0x65, 0b00000000, 0x00, 0x00, 0x23, 0x28])
         
-        let date3 = Date.distantPast
+    }
+    
+    func testTimestamp96() {
         
-        TestUtilites.testRoundTrip(of: date3, expectedLength: 10)
+        let date1 = Date(timeIntervalSince1970: -62135596800)
+        let date2 = Date(timeIntervalSince1970: -1)
+        let date3 = Date(timeIntervalSince1970: -62135596801)
+        
+        TestUtilites.testRoundTrip(of: date1, expected: [0xc7, 12, 0xff, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+        
+        TestUtilites.testRoundTrip(of: date2, expectedLength: 15)
+        TestUtilites.testRoundTrip(of: date3, expectedLength: 15)
         
     }
     
