@@ -144,7 +144,7 @@ extension Date {
             
             // depending on the sign of seconds, the nano seconds need to be added or substracted
             // respectivaly need to have the same sign to be added to seconds to get the right value
-            let timeIntervalSince1970 = abs(secondsAsTI) + ( TimeInterval(seconds.signum()) * (nanosAsTI * 0.000_000_001) )
+            let timeIntervalSince1970 = secondsAsTI + ( TimeInterval(seconds.signum()) * (nanosAsTI * 0.000_000_001) )
             
             return Date(timeIntervalSince1970: timeIntervalSince1970)
             
