@@ -40,6 +40,7 @@
 		63161B5D20094D9500CEAB28 /* MetaUnkeyedEncodingContainer + nestedGeneralContainer function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63161B5A20094D9500CEAB28 /* MetaUnkeyedEncodingContainer + nestedGeneralContainer function.swift */; };
 		63161B5E20094D9500CEAB28 /* MetaUnkeyedEncodingContainer + nestedGeneralContainer function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63161B5A20094D9500CEAB28 /* MetaUnkeyedEncodingContainer + nestedGeneralContainer function.swift */; };
 		6318DE7B203DAA750014107E /* TestExceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318DE7A203DAA750014107E /* TestExceptions.swift */; };
+		631D8AB3204451B000B5BF43 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631D8AB2204451B000B5BF43 /* PerformanceTests.swift */; };
 		632F4D9F20409435003074D9 /* TestTimestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F4D9E20409435003074D9 /* TestTimestamp.swift */; };
 		6334083E202F6390004C3F99 /* MetaSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637984CA1FC1EBB6008BD5D5 /* MetaSerialization.framework */; };
 		63340840202F6397004C3F99 /* MetaSerialization.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6334083F202F6396004C3F99 /* MetaSerialization.framework.dSYM */; };
@@ -329,6 +330,7 @@
 		63161B5520094C4000CEAB28 /* MetaKeyedEncodingContainer + nestedGeneralContainer function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetaKeyedEncodingContainer + nestedGeneralContainer function.swift"; sourceTree = "<group>"; };
 		63161B5A20094D9500CEAB28 /* MetaUnkeyedEncodingContainer + nestedGeneralContainer function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetaUnkeyedEncodingContainer + nestedGeneralContainer function.swift"; sourceTree = "<group>"; };
 		6318DE7A203DAA750014107E /* TestExceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExceptions.swift; sourceTree = "<group>"; };
+		631D8AB2204451B000B5BF43 /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 		632F4D9E20409435003074D9 /* TestTimestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTimestamp.swift; sourceTree = "<group>"; };
 		6334083A202F6364004C3F99 /* MessagePack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessagePack.framework; path = Carthage/Build/Mac/MessagePack.framework; sourceTree = "<group>"; };
 		6334083F202F6396004C3F99 /* MetaSerialization.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = MetaSerialization.framework.dSYM; path = Carthage/Build/Mac/MetaSerialization.framework.dSYM; sourceTree = "<group>"; };
@@ -565,6 +567,7 @@
 				63E967541FE6DF9200BA87BB /* BasicTests.swift */,
 				6314BD4220065613001AC48B /* CompatibilityTests.swift */,
 				6386B224203B533A004BB72D /* TestJSONEncoder.swift */,
+				631D8AB2204451B000B5BF43 /* PerformanceTests.swift */,
 				6386B22D203B56E9004BB72D /* TestUtilites.swift */,
 				6386B228203B5553004BB72D /* msgpack-cli tests */,
 				6386B227203B543D004BB72D /* Supporting */,
@@ -1354,6 +1357,7 @@
 				636D745A203F410D0051113B /* TestDataEncoding.swift in Sources */,
 				636D745C203F46620051113B /* TestArrayEncoding.swift in Sources */,
 				632F4D9F20409435003074D9 /* TestTimestamp.swift in Sources */,
+				631D8AB3204451B000B5BF43 /* PerformanceTests.swift in Sources */,
 				636D745E203F4D360051113B /* TestMapEncoding.swift in Sources */,
 				6311F0F32007AC93002F68D8 /* Support types.swift in Sources */,
 				639372981FEC4CBE00840D11 /* ExtensionTestClasses.swift in Sources */,
