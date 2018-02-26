@@ -10,6 +10,8 @@ import XCTest
 
 enum TestUtilites {
     
+    // MARK: round trips et cetera
+    
     static let dataSerialization = Packer<Data>()
     
     static func testRoundTrip<T>(of value: T, expected: Data? = nil, using serialization: Packer<Data> = dataSerialization) where T : Codable, T : Equatable {
